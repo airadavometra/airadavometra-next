@@ -20,7 +20,6 @@ const Home: NextPage = () => {
           layout="fill"
           objectFit="contain"
           objectPosition="right bottom"
-          placeholder="blur"
           alt="My photo"
         />
       </div>
