@@ -7,12 +7,18 @@
   font-size: 24rem;
   background-color: var(--yellow);
   z-index: 2;
+  @media (max-width: 768px) {
+    padding: 24rem;
+  }
 }
 .navigation {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 70rem;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .link {
   display: inline-block;
@@ -29,20 +35,12 @@
   width: 32rem;
   height: 32rem;
   display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
 .menuIcon {
   width: 32rem;
   height: 32rem;
   fill: var(--black);
-}
-@media (max-width: 700px) {
-  .header {
-    padding: 24rem;
-  }
-  .menuButton {
-    display: block;
-  }
-  .navigation {
-    display: none;
-  }
 }
