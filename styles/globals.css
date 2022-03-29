@@ -48,7 +48,7 @@ select {
 
 html {
   font-family: var(--simple-text-font);
-  font-size: 0.24155vw;
+  font-size: 1px;
 }
 body {
   line-height: 1.5;
@@ -83,7 +83,14 @@ button {
 a {
   color: inherit;
   text-decoration: inherit;
+  font-size: inherit;
 }
 .frozen {
   overflow: hidden;
+}
+
+@media (max-width: 562px) {
+  html {
+    font-size: 0.24155vw;
+  }
 }

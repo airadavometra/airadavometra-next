@@ -1,0 +1,44 @@
+.navigation {
+  width: 100%;
+  padding: 32rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 70rem;
+  font-family: var(--header-text-font);
+  font-size: 24rem;
+  background-color: var(--yellow);
+  z-index: 2;
+}
+.link {
+  display: inline-block;
+  opacity: 50%;
+}
+.link:hover,
+.link:focus {
+  opacity: 100%;
+}
+.link.selected {
+  opacity: 100%;
+}
+.menuButton {
+  display: none;
+}
+.menuIcon {
+  width: 36px;
+  fill: var(--main-font-color);
+  padding: 0.25em;
+  transition: fill 0.2s;
+}
+@media (max-width: 700px) {
+  .navigation {
+    padding: 24rem;
+  }
+  .menuButton {
+    display: block;
+  }
+  .navigation {
+    display: none;
+  }
+}

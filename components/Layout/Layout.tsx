@@ -1,4 +1,5 @@
 import { FC, ReactNode } from "react";
+import Header from "../Header/Header";
 import { PageHead } from "../PageHead/PageHead";
 import s from "./Layout.module.css";
 
@@ -9,7 +10,10 @@ type LayoutProps = {
 const Layout: FC<LayoutProps> = ({ children }) => (
   <>
     <PageHead />
-    <div className={s.layout}>{children}</div>
+    <div className={s.layout}>
+      <Header />
+      {children}
+    </div>
   </>
 );
 
