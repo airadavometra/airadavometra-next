@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           src={photo}
           layout="fill"
           objectFit="contain"
-          objectPosition="right"
+          objectPosition="right bottom"
           placeholder="blur"
           alt="My photo"
         />

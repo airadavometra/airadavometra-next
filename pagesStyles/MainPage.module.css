@@ -23,4 +23,9 @@
   height: 100%;
 }
 @media (max-width: 562px) {
+  .description {
+    bottom: unset;
+    top: 0;
+    padding: 24rem;
+  }
 }
