@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         </p>
         <p className={s.text}>
           Besides my love for development, I am also interested in design,
-          especially UX. I may be not really good in it now, and still I'm
+          especially UX. I may be not really good in it now, and still I’m
           trying.
         </p>
         <p className={s.text}>
