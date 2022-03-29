@@ -1,9 +1,5 @@
 module.exports = {
   plugins: {
-    "postcss-custom-properties": {
-      importFrom: "./styles/globals.css",
-      preserve: true,
-    },
     "postcss-nested-ancestors": {},
     "postcss-nested": {},
     "postcss-flexbugs-fixes": {},
@@ -13,7 +9,7 @@ module.exports = {
       },
       stage: 3,
       features: {
-        "custom-properties": true,
+        "custom-properties": false,
       },
     },
   },
