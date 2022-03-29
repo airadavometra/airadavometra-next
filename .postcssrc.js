@@ -1,11 +1,11 @@
 module.exports = {
   plugins: {
-    "postcss-nested-ancestors": {},
-    "postcss-nested": {},
     "postcss-custom-properties": {
       importFrom: "./styles/globals.css",
       preserve: false,
     },
+    "postcss-nested-ancestors": {},
+    "postcss-nested": {},
     "postcss-flexbugs-fixes": {},
     "postcss-preset-env": {
       autoprefixer: {
@@ -13,7 +13,7 @@ module.exports = {
       },
       stage: 3,
       features: {
-        "custom-properties": false,
+        "custom-properties": true,
       },
     },
   },
