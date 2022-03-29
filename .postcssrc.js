@@ -2,7 +2,7 @@ module.exports = {
   plugins: {
     "postcss-custom-properties": {
       importFrom: "./styles/globals.css",
-      preserve: false,
+      preserve: true,
     },
     "postcss-nested-ancestors": {},
     "postcss-nested": {},
