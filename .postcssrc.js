@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
     "postcss-custom-properties": {
-      importFrom: "./styles/global.css",
+      importFrom: "./styles/globals.css",
       preserve: false,
     },
     "postcss-flexbugs-fixes": {},
