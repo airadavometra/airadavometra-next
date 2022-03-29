@@ -5,56 +5,37 @@
   top: 0;
   left: 0;
   display: flex;
-  background-color: var(--background-color);
-  z-index: 10;
+  background-color: var(--yellow);
+  z-index: 3;
 }
 .closedMenu {
   display: none;
+}
+.closeIcon {
+  width: 32rem;
+  position: absolute;
+  top: 24rem;
+  right: 24rem;
+  fill: var(--black);
 }
 .menu {
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-}
-.closeIcon {
-  width: 36px;
-  position: absolute;
-  top: 1.2rem;
-  right: 3rem;
-  fill: rgba(255, 255, 255, 0.8);
-  transition: fill 0.2s;
+  align-items: center;
+  gap: 48rem;
 }
 .link {
   width: fit-content;
   display: inline-block;
-  position: relative;
-  color: var(--font-color);
-  font-size: 2.5rem;
+  font-family: var(--header-text-font);
+  font-size: 24rem;
+  opacity: 50%;
 }
 .link:hover,
 .link:focus {
-  color: var(--main-font-color);
+  opacity: 100%;
 }
 .link.selected {
-  color: var(--main-font-color);
-}
-.link.selected::after {
-  content: "";
-  margin-bottom: -1.6rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: inline-block;
-  width: 100%;
-  border-left: 0px;
-  border-right: 0px;
-  border-top: 0px;
-  border-bottom: 3px solid;
-  border-image: linear-gradient(
-      270deg,
-      var(--gradient-from-color) 0%,
-      var(--gradient-to-color) 96.35%
-    )
-    1;
+  opacity: 100%;
 }
