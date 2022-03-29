@@ -17,8 +17,7 @@ const Home: NextPage = () => {
       <div className={s.pictureWrapper}>
         <Image
           src={photo}
-          layout="fill"
-          objectFit="contain"
+          layout="responsive"
           objectPosition="right bottom"
           alt="My photo"
         />

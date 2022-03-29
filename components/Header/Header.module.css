@@ -1,15 +1,18 @@
-.navigation {
+.navbar {
   width: 100%;
   padding: 32rem;
   position: sticky;
   top: 0;
-  display: flex;
-  align-items: center;
-  gap: 70rem;
   font-family: var(--header-text-font);
   font-size: 24rem;
   background-color: var(--yellow);
   z-index: 2;
+}
+.navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 70rem;
 }
 .link {
   display: inline-block;
