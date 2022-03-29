@@ -1,23 +1,15 @@
 module.exports = {
   plugins: {
-    "postcss-custom-properties": {
-      importFrom: "./styles/globals.css",
-      preserve: false,
-    },
-    "postcss-flexbugs-fixes": {},
     "postcss-nested-ancestors": {},
-    "postcss-current-selector": {},
-    "postcss-nested": {
-      preserveEmpty: true,
-    },
+    "postcss-nested": {},
+    "postcss-flexbugs-fixes": {},
     "postcss-preset-env": {
       autoprefixer: {
         flexbox: "no-2009",
-        grid: "autoplace",
       },
       stage: 3,
       features: {
-        "custom-properties": true,
+        "custom-properties": false,
       },
     },
   },
