@@ -14,19 +14,18 @@ const Home: NextPage = () => {
           </b>
         </p>
         <p className={s.text}>
-          Besides my love for development, I am also interested in design,
-          especially UX. I may be not really good in it now, and still I’m
-          trying.
+          Besides my love for web development, I’m also interested in design,
+          especially UX, and working on improving my designer skills.
         </p>
         <p className={s.text}>
-          I’m currently working with the fine folks in Raiffeisen, but have
-          limited availibility for freelance.
+          I’m currently working with the fine folks in Raiffeisen, but also open
+          for freelance. So feel free to contact me, we’ll come up with
+          something.
         </p>
         <p className={s.text}>
           When I’m not coding, you can catch me outside exploring, taking
-          photos, flying drone, hiking... Or laying on my couch and complaining
-          about the lockdown. I just adore nature and hope someday to see the
-          whole world.
+          photos, flying drone, hiking. Or laying on my couch and gaining
+          strength. I just adore nature and hope someday to see the whole world.
         </p>
       </div>
       <div className={s.pictureWrapper}>
