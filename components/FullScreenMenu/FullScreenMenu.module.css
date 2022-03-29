@@ -7,9 +7,9 @@
   display: flex;
   background-color: var(--yellow);
   z-index: 3;
-}
-.closedMenu {
-  display: none;
+  &.closedMenu {
+    display: none;
+  }
 }
 .closeIcon {
   width: 32rem;
@@ -31,11 +31,11 @@
   font-family: var(--header-text-font);
   font-size: 24rem;
   opacity: 50%;
-}
-.link:hover,
-.link:focus {
-  opacity: 100%;
-}
-.link.selected {
-  opacity: 100%;
+  &:hover,
+  &:focus {
+    opacity: 100%;
+  }
+  &.selected {
+    opacity: 100%;
+  }
 }

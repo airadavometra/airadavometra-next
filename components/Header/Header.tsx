@@ -46,7 +46,7 @@ const Header: FC = () => {
   const queryRootId = root ? (Array.isArray(root) ? root[0] : root) : undefined;
 
   return (
-    <header className={s.navbar}>
+    <header className={s.header}>
       <nav className={s.navigation}>
         {navigation.map(({ id, title, path }) => {
           let fullPath = path;

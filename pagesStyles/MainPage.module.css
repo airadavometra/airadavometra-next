@@ -31,7 +31,6 @@
 }
 .pictureWrapper {
   width: 600rem;
-  //height: 100%;
   @media (max-width: 768px) {
     width: 100vw;
     height: unset;

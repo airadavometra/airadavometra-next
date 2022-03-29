@@ -1,6 +1,5 @@
 import { CloseIcon } from "@/icons/CloseIcon";
 import classNames from "classnames";
-import { useRouter } from "next/router";
 import { FC } from "react";
 import { Navigation } from "../Header/Header";
 import s from "./FullScreenMenu.module.css";
@@ -20,7 +19,6 @@ const FullScreenMenu: FC<FullScreenMenuProps> = ({
   onCloseMenu,
   onMenuItemClick,
 }) => {
-  const router = useRouter();
   return (
     <div
       className={classNames(s.menuContainer, {
