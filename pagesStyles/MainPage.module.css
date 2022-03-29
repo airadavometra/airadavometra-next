@@ -24,10 +24,19 @@
 }
 .textHeader {
   font-weight: 700;
-  font-size: 24rem;
+  font-size: 70rem;
+  @media (max-width: 768px) {
+    font-size: 48rem;
+  }
 }
 .text {
-  font-size: 18rem;
+  font-size: 24rem;
+  &:not(:last-child) {
+    margin-bottom: 32rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 16rem;
+  }
 }
 .pictureWrapper {
   width: 600rem;

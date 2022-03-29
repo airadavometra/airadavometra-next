@@ -7,11 +7,26 @@ const Home: NextPage = () => {
   return (
     <div className={s.main}>
       <div className={s.description}>
-        <h2 className={s.textHeader}>Hi. I’m Daria.</h2>
+        <h2 className={s.textHeader}>Hey. I’m Daria,</h2>
         <p className={s.text}>
-          A holistic software developer
-          <br /> and photography enthusiast located in Moscow, Russia.
-          <br /> Sometimes I’m also a traveller.
+          <b>
+            a passionate front-end developer <br /> based in Moscow, Russia.
+          </b>
+        </p>
+        <p className={s.text}>
+          Besides my love for development, I am also interested in design,
+          especially UX. I may be not really good in it now, and still I'm
+          trying.
+        </p>
+        <p className={s.text}>
+          I’m currently working with the fine folks in Raiffeisen, but have
+          limited availibility for freelance.
+        </p>
+        <p className={s.text}>
+          When I’m not coding, you can catch me outside exploring, taking
+          photos, flying drone, hiking... Or laying on my couch and complaining
+          about the lockdown. I just adore nature and hope someday to see the
+          whole world.
         </p>
       </div>
       <div className={s.pictureWrapper}>
