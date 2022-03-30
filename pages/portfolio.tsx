@@ -20,7 +20,7 @@ import { Sass } from "@/icons/skills/Sass";
 import { Photoshop } from "@/icons/skills/Photoshop";
 import { Figma } from "@/icons/skills/Figma";
 import { Github } from "@/icons/contacts/Github";
-import watchList from "@/public/projects/watchList.jpg";
+import watchList from "@/public/projects/watchlist.jpg";
 import typesCoersion from "@/public/projects/typesCoersion.jpg";
 
 const experienceInfoArray: ExperienceInfo[] = [
