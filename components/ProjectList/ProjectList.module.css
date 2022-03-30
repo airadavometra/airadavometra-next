@@ -1,0 +1,16 @@
+.title {
+  padding: 32rem 0;
+  font-family: var(--header-text-font);
+  font-size: 32rem;
+  @media (max-width: 768px) {
+    font-size: 24rem;
+  }
+}
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 32rem;
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+}

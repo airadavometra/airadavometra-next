@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         </p>
         <p className={s.text}>
           Besides my love for web development, I’m also interested in design,
-          especially UX, and working on improving my designer skills.
+          especially UX, and I’m working on improving my designer skills.
         </p>
         <p className={s.text}>
           I’m currently working with the fine folks in Raiffeisen, but also open

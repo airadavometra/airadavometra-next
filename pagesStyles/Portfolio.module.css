@@ -1,0 +1,82 @@
+.main {
+  padding: 112rem 32rem;
+  font-size: 24rem;
+  @media (max-width: 768px) {
+    padding: 24rem;
+  }
+}
+.download {
+  width: fit-content;
+  padding: 16rem 24rem;
+  margin-bottom: 32rem;
+  font-family: var(--header-text-font);
+  font-size: 32rem;
+  outline: 1px solid var(--black);
+  transition: all 0.5s ease-in-out;
+  &:hover,
+  :focus {
+    color: var(--yellow);
+    box-shadow: inset 6.5em 0 0 0 var(--black);
+  }
+  @media (max-width: 768px) {
+    max-width: 50%;
+    font-size: 24rem;
+  }
+}
+.skillsAndExperience {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & > *:not(:first-child) {
+    @media (max-width: 768px) {
+      margin-bottom: 32rem;
+    }
+  }
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  @media (max-width: 768px) {
+    align-items: flex-start;
+  }
+}
+.githubSection {
+  width: fit-content;
+  margin: auto;
+  margin-top: 112rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  justify-items: center;
+  grid-gap: 24rem;
+  transition: all 0.3s ease-in-out;
+  &:hover,
+  :focus {
+    transform: scale(1.1);
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(1, auto);
+  }
+  @media (max-width: 768px) {
+    margin-top: 48rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.githubLogo {
+  height: 32rem;
+}
+.githubText {
+  font-family: var(--header-text-font);
+  font-size: 32rem;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 24rem;
+  }
+}

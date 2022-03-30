@@ -1,0 +1,29 @@
+.icon {
+  width: 64rem;
+  height: 64rem;
+  @media (max-width: 768px) {
+    width: 48rem;
+    height: 48rem;
+  }
+}
+.header {
+  padding-bottom: 24rem;
+  font-family: var(--header-text-font);
+  font-size: 32rem;
+  @media (max-width: 768px) {
+    font-size: 24rem;
+  }
+}
+.iconsContainer {
+  max-width: 25vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 24rem;
+  @media (max-width: 768px) {
+    max-width: 70vw;
+    gap: 18rem;
+    justify-content: flex-start;
+  }
+}

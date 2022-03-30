@@ -3,7 +3,7 @@ import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FC, useEffect, useState } from "react";
-import FullScreenMenu from "../FullScreenMenu/FullScreenMenu";
+import MobileMenu from "../MobileMenu/MobileMenu";
 import s from "./Header.module.css";
 
 export type Navigation = {
@@ -69,7 +69,7 @@ const Header: FC = () => {
       <button className={s.menuButton} onClick={openMenu}>
         <MenuIcon className={s.menuIcon} />
       </button>
-      <FullScreenMenu
+      <MobileMenu
         navigation={navigation}
         selectedMenuItemId={selectedMenuItemId}
         onCloseMenu={closeMenu}
