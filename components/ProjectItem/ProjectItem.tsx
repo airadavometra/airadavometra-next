@@ -1,7 +1,5 @@
 import React, { FunctionComponent } from "react";
 import s from "./ProjectItem.module.css";
-import { LinkIcon } from "@/icons/LinkIcon";
-import { Github } from "@/icons/contacts/Github";
 import classNames from "classnames";
 import { ProjectInfo } from "@/types/projectInfo";
 import Image from "next/image";
