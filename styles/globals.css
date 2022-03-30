@@ -22,7 +22,8 @@ html {
 }
 
 html,
-body {
+body,
+#__next {
   height: 100%;
 }
 
@@ -99,7 +100,6 @@ a {
 .frozen {
   overflow: hidden;
 }
-
 [class*="ymaps-2"][class*="-ground-pane"] {
   filter: grayscale(1);
 }
