@@ -18,7 +18,7 @@ export const SkillItem: FunctionComponent<SkillItemProps> = ({
       <h2 className={classes.header}>{skillName}</h2>
       <div className={classes.iconsContainer}>
         {skillLogos.map(({ logo: Logo }, index) => (
-          <Logo className={classes.icon} />
+          <Logo className={classes.icon} key={index} />
         ))}
       </div>
     </div>
