@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
-import classes from "./ExperienceItem.module.css";
+import s from "./ExperienceItem.module.css";
 import classNames from "classnames";
-import { ExpandIcon } from "@/icons/ExpandIcon";
+import { Expand } from "@/icons/Expand";
 import classnames from "classnames";
 
 export interface ExperienceItemProps {
@@ -21,20 +21,18 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
 
   return (
     <>
-      <button className={classes.titleButton} onClick={() => setOpen(!open)}>
-        <div className={classNames(classes.titleContainer)}>
-          <h2 className={classNames(classes.year)}>{year}</h2>
-          <h2 className={classNames(classes.title)}>{title}</h2>
+      <button className={s.titleButton} onClick={() => setOpen(!open)}>
+        <div className={classNames(s.titleContainer)}>
+          <h2 className={classNames(s.year)}>{year}</h2>
+          <h2 className={classNames(s.title)}>{title}</h2>
         </div>
-        <ExpandIcon
-          className={classNames(classes.expandBtn, {
-            [classes.collapse]: !open,
+        <Expand
+          className={classNames(s.expandBtn, {
+            [s.collapse]: !open,
           })}
         />
       </button>
-      <p className={classNames(classes.text, { [classes.hiddenText]: !open })}>
-        {text}
-      </p>
+      <p className={classNames(s.text, { [s.hiddenText]: !open })}>{text}</p>
     </>
   );
 };

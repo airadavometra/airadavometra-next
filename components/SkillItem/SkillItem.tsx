@@ -1,6 +1,6 @@
 import { SkillLogo } from "@/types/skillLogo";
 import React, { FunctionComponent } from "react";
-import classes from "./SkillItem.module.css";
+import s from "./SkillItem.module.css";
 
 export interface SkillItemProps {
   skillLogos: SkillLogo[];
@@ -15,10 +15,10 @@ export const SkillItem: FunctionComponent<SkillItemProps> = ({
 }) => {
   return (
     <div className={className}>
-      <h2 className={classes.header}>{skillName}</h2>
-      <div className={classes.iconsContainer}>
+      <h2 className={s.header}>{skillName}</h2>
+      <div className={s.iconsContainer}>
         {skillLogos.map(({ logo: Logo }, index) => (
-          <Logo className={classes.icon} key={index} />
+          <Logo className={s.icon} key={index} />
         ))}
       </div>
     </div>

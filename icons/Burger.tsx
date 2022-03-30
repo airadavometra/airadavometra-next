@@ -1,7 +1,7 @@
 import { WithClassName } from "@/types/common";
 import { FC } from "react";
 
-export const MenuIcon: FC<WithClassName> = ({ className }) => {
+export const Burger: FC<WithClassName> = ({ className }) => {
   return (
     <svg
       className={className}

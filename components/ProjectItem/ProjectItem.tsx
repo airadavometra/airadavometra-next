@@ -1,7 +1,5 @@
 import React, { FunctionComponent } from "react";
-import classes from "./ProjectItem.module.css";
-import { LinkIcon } from "@/icons/LinkIcon";
-import { Github } from "@/icons/contacts/Github";
+import s from "./ProjectItem.module.css";
 import classNames from "classnames";
 import { ProjectInfo } from "@/types/projectInfo";
 import Image from "next/image";
@@ -16,14 +14,12 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
 }) => {
   const isTablet = useMedia("(max-width: 1024px)");
   return (
-    <div className={classes.main}>
-      {isTablet && (
-        <div className={classes.title}>{projectInfo.projectName}</div>
-      )}
-      <section className={classes.imageContainer}>
-        <div className={classes.linksContainer}>
+    <div className={s.main}>
+      {isTablet && <div className={s.title}>{projectInfo.projectName}</div>}
+      <section className={s.imageContainer}>
+        <div className={s.linksContainer}>
           <a
-            className={classNames(classes.link)}
+            className={classNames(s.link)}
             href={projectInfo.projectGithubLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -31,7 +27,7 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
             Github
           </a>
           <a
-            className={classNames(classes.link)}
+            className={classNames(s.link)}
             href={projectInfo.projectLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -43,7 +39,7 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
           href={projectInfo.projectLink}
           target="_blank"
           rel="noopener noreferrer"
-          className={classes.imageWrapper}
+          className={s.imageWrapper}
         >
           <Image
             layout="responsive"
@@ -52,11 +48,9 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
           />
         </a>
       </section>
-      <section className={classes.descriptionContainer}>
-        {!isTablet && (
-          <div className={classes.title}>{projectInfo.projectName}</div>
-        )}
-        <div className={classes.description}>{projectInfo.projectDesc}</div>
+      <section className={s.descriptionContainer}>
+        {!isTablet && <div className={s.title}>{projectInfo.projectName}</div>}
+        <div className={s.description}>{projectInfo.projectDesc}</div>
       </section>
     </div>
   );

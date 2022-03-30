@@ -1,0 +1,18 @@
+.title {
+  margin-bottom: 32rem;
+  font-family: var(--header-text-font);
+  font-size: 32rem;
+  @media (max-width: 768px) {
+    margin-bottom: 24rem;
+    //font-size: 24rem;
+  }
+}
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 32rem;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32rem 64rem;
+  }
+}
