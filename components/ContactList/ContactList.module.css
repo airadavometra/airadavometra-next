@@ -3,7 +3,7 @@
   font-family: var(--header-text-font);
   font-size: 32rem;
   @media (max-width: 768px) {
-    margin-bottom: 24rem;
+    margin-bottom: 16rem;
   }
 }
 .contacts {
@@ -13,5 +13,8 @@
   @media (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
     grid-gap: 32rem 64rem;
+  }
+  @media (max-width: 768px) {
+    grid-gap: 16rem 32rem;
   }
 }
