@@ -7,11 +7,20 @@
   }
 }
 .imageContainer {
+  width: 55vw;
   flex-shrink: 0;
   display: flex;
   gap: 12rem;
   @media (max-width: 768px) {
+    width: 100%;
     flex-direction: column-reverse;
+    gap: 4rem;
+  }
+}
+.imageWrapper {
+  width: 55vw;
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }
 .linksContainer {
@@ -45,7 +54,7 @@
   font-family: var(--header-text-font);
   font-size: 32rem;
   @media (max-width: 768px) {
-    font-size: 24rem;
+    font-size: 18rem;
   }
 }
 .description {

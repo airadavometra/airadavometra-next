@@ -5,6 +5,7 @@ import { Github } from "@/icons/contacts/Github";
 import classNames from "classnames";
 import { ProjectInfo } from "@/types/projectInfo";
 import Image from "next/image";
+import { useMedia } from "react-use";
 
 export interface ProjectItemProps {
   projectInfo: ProjectInfo;
@@ -13,8 +14,12 @@ export interface ProjectItemProps {
 export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
   projectInfo,
 }) => {
+  const isMobile = useMedia("(max-width: 768px)");
   return (
     <div className={classes.main}>
+      {isMobile && (
+        <div className={classes.title}>{projectInfo.projectName}</div>
+      )}
       <section className={classes.imageContainer}>
         <div className={classes.linksContainer}>
           <a
@@ -34,10 +39,23 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
             Project
           </a>
         </div>
-        <Image src={projectInfo.projectPic} alt={projectInfo.projectName} />
+        <a
+          href={projectInfo.projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.imageWrapper}
+        >
+          <Image
+            layout="responsive"
+            src={projectInfo.projectPic}
+            alt={projectInfo.projectName}
+          />
+        </a>
       </section>
       <section className={classes.descriptionContainer}>
-        <div className={classes.title}>{projectInfo.projectName}</div>
+        {!isMobile && (
+          <div className={classes.title}>{projectInfo.projectName}</div>
+        )}
         <div className={classes.description}>{projectInfo.projectDesc}</div>
       </section>
     </div>
