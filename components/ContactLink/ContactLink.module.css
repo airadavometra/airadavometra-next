@@ -20,7 +20,4 @@ a:focus > .linkLogo {
 .linkText {
   font-family: var(--header-text-font);
   font-size: 24rem;
-  @media (max-width: 768px) {
-    //font-size: 18rem;
-  }
 }

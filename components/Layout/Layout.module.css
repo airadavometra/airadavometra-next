@@ -5,4 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  @media (max-width: 768px) {
+    min-height: 100%;
+  }
 }

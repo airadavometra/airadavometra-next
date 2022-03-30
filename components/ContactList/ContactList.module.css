@@ -4,7 +4,6 @@
   font-size: 32rem;
   @media (max-width: 768px) {
     margin-bottom: 24rem;
-    //font-size: 24rem;
   }
 }
 .contacts {
