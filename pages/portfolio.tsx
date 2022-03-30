@@ -20,8 +20,9 @@ import { Sass } from "@/icons/skills/Sass";
 import { Photoshop } from "@/icons/skills/Photoshop";
 import { Figma } from "@/icons/skills/Figma";
 import { Github } from "@/icons/contacts/Github";
-import watchList from "@/public/projects/watchlist.jpg";
-import typesCoersion from "@/public/projects/typesCoersion.jpg";
+import WatchList from "@/public/projects/WatchList.png";
+import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
+import FamilyTree from "@/public/projects/FamilyTree.png";
 
 const experienceInfoArray: ExperienceInfo[] = [
   {
@@ -79,20 +80,28 @@ const skillInfoArray: SkillInfo[] = [
 ];
 const projectInfoArray: ProjectInfo[] = [
   {
-    projectName: "Watch List",
+    projectName: "Family tree",
     projectDesc:
-      "This is a pet project to save all the interesting upcoming premieres and already released content in a local storage of your browser (for now). And every time you face a problem like you dont know what to watch, this app can help you.",
-    projectPic: watchList,
-    projectLink: "https://watch-list.vercel.app/",
-    projectGithubLink: "https://github.com/airadavometra/watch-list",
+      "Here you can explore the Artemov family tree. And also find some additional info about each person and a list of other families connected with Artemov family members. This project is made in partnership with Vladimir Ivanov. The information is provided by my father and uncles.",
+    projectPic: FamilyTree,
+    projectLink: "https://family-tree-tau.vercel.app/",
+    projectGithubLink: "https://github.com/airadavometra/family-tree",
   },
   {
     projectName: "JS Types Coersion Quiz",
     projectDesc:
-      "Quiz to practice JS types coersion rules with absolutely random levels and neon design. You gonna love it!",
-    projectPic: typesCoersion,
+      "Two little but tricky quizzes to practice JS types coersion rules with absolutely random levels and awesome neon design. You gonna love it!",
+    projectPic: TypesCoersionQuiz,
     projectLink: "https://type-coersion-quiz.vercel.app/",
     projectGithubLink: "https://github.com/airadavometra/type-coersion-quiz",
+  },
+  {
+    projectName: "Watch List",
+    projectDesc:
+      "My first useful pet project to save all the interesting upcoming premieres and already released content. And every time you face a problem like you dont know what to watch, this app can help you.",
+    projectPic: WatchList,
+    projectLink: "https://watch-list.vercel.app/",
+    projectGithubLink: "https://github.com/airadavometra/watch-list",
   },
 ];
 

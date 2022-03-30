@@ -1,4 +1,5 @@
 import { MenuIcon } from "@/icons/MenuIcon";
+import { toggleFreezePage } from "@/utils/toggleFreezePage";
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -38,9 +39,11 @@ const Header: FC = () => {
 
   const openMenu = () => {
     setMenuOpen(true);
+    toggleFreezePage();
   };
   const closeMenu = () => {
     setMenuOpen(false);
+    toggleFreezePage();
   };
   const { root } = router.query;
   const queryRootId = root ? (Array.isArray(root) ? root[0] : root) : undefined;
