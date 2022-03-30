@@ -1,8 +1,12 @@
 .main {
   padding: 112rem 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: 112rem;
   font-size: 24rem;
   @media (max-width: 768px) {
     padding: 24rem;
+    gap: 48rem;
   }
 }
 .download {
@@ -21,6 +25,7 @@
   @media (max-width: 768px) {
     max-width: 50%;
     font-size: 24rem;
+    margin-bottom: 0;
   }
 }
 .skillsAndExperience {
@@ -29,7 +34,7 @@
   justify-content: space-between;
   & > *:not(:first-child) {
     @media (max-width: 768px) {
-      margin-bottom: 32rem;
+      margin-bottom: 48rem;
     }
   }
   @media (max-width: 768px) {
@@ -42,13 +47,13 @@
   flex-direction: column;
   align-items: flex-end;
   @media (max-width: 768px) {
+    margin-bottom: 48rem;
     align-items: flex-start;
   }
 }
 .githubSection {
   width: fit-content;
   margin: auto;
-  margin-top: 112rem;
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
@@ -63,7 +68,6 @@
     grid-template-columns: repeat(1, auto);
   }
   @media (max-width: 768px) {
-    margin-top: 48rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;

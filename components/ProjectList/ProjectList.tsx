@@ -13,7 +13,7 @@ export const ProjectList: FunctionComponent<ProjectListProps> = ({
   return (
     <div className={classes.main}>
       <div className={classes.title}>Projects</div>
-      <div className={classes.projectsGrid}>
+      <div className={classes.projects}>
         {projectInfoArray.map((item, index) => (
           <ProjectItem projectInfo={item} key={index} />
         ))}

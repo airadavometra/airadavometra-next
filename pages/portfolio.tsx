@@ -20,6 +20,8 @@ import { Sass } from "@/icons/skills/Sass";
 import { Photoshop } from "@/icons/skills/Photoshop";
 import { Figma } from "@/icons/skills/Figma";
 import { Github } from "@/icons/contacts/Github";
+import watchList from "@/public/projects/watchList.jpg";
+import typesCoersion from "@/public/projects/typesCoersion.jpg";
 
 const experienceInfoArray: ExperienceInfo[] = [
   {
@@ -80,18 +82,17 @@ const projectInfoArray: ProjectInfo[] = [
     projectName: "Watch List",
     projectDesc:
       "This is a pet project to save all the interesting upcoming premieres and already released content in a local storage of your browser (for now). And every time you face a problem like you dont know what to watch, this app can help you.",
-    projectPic: "watchList",
+    projectPic: watchList,
     projectLink: "https://watch-list.vercel.app/",
     projectGithubLink: "https://github.com/airadavometra/watch-list",
   },
   {
-    projectName: "JS Type Coersion Game",
+    projectName: "JS Types Coersion Quiz",
     projectDesc:
-      "Game to practice JS types coersion rules with absolutely random levels and neon design. You gonna love it!",
-    projectPic: "typesCoersion",
-    projectLink: "https://8-out-of-10-cats-does-types-coersion.vercel.app/",
-    projectGithubLink:
-      "https://github.com/airadavometra/8-out-of-10-cats-does-types-coersion",
+      "Quiz to practice JS types coersion rules with absolutely random levels and neon design. You gonna love it!",
+    projectPic: typesCoersion,
+    projectLink: "https://type-coersion-quiz.vercel.app/",
+    projectGithubLink: "https://github.com/airadavometra/type-coersion-quiz",
   },
 ];
 

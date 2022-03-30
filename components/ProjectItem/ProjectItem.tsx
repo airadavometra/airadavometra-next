@@ -1,9 +1,10 @@
 import React, { FunctionComponent } from "react";
 import classes from "./ProjectItem.module.css";
-// import githubLinkImg from "../../icons/githubYellow.svg";
-// import linkImg from "../../icons/link.svg";
+import { LinkIcon } from "@/icons/LinkIcon";
+import { Github } from "@/icons/contacts/Github";
 import classNames from "classnames";
 import { ProjectInfo } from "@/types/projectInfo";
+import Image from "next/image";
 
 export interface ProjectItemProps {
   projectInfo: ProjectInfo;
@@ -14,41 +15,31 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
 }) => {
   return (
     <div className={classes.main}>
-      <img
-        className={classes.projectPreviewImg}
-        src={projectInfo.projectPic}
-        alt={projectInfo.projectName}
-      />
-      <div className={classes.overlay}>
-        <section className={classes.text}>
-          <div className={classes.title}>{projectInfo.projectName}</div>
-          <div className={classes.description}>{projectInfo.projectDesc}</div>
-        </section>
-        <a
-          className={classNames(classes.link, classes.projectLink)}
-          href={projectInfo.projectLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {/* <img
-            className={classNames(classes.icon, classes.projectIcon)}
-            src={linkImg}
-            alt="App link"
-          /> */}
-        </a>
-        <a
-          className={classNames(classes.link, classes.projectGithubLink)}
-          href={projectInfo.projectGithubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {/* <img
-            className={classNames(classes.icon, classes.projectGithubIcon)}
-            src={githubLinkImg}
-            alt="App github link"
-          /> */}
-        </a>
-      </div>
+      <section className={classes.imageContainer}>
+        <div className={classes.linksContainer}>
+          <a
+            className={classNames(classes.link)}
+            href={projectInfo.projectGithubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
+          </a>
+          <a
+            className={classNames(classes.link)}
+            href={projectInfo.projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Project
+          </a>
+        </div>
+        <Image src={projectInfo.projectPic} alt={projectInfo.projectName} />
+      </section>
+      <section className={classes.descriptionContainer}>
+        <div className={classes.title}>{projectInfo.projectName}</div>
+        <div className={classes.description}>{projectInfo.projectDesc}</div>
+      </section>
     </div>
   );
 };
