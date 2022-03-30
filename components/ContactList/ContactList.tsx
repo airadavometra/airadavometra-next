@@ -13,8 +13,8 @@ export const ContactList: FC<ContactListProps> = ({ contacts }) => {
       <h2 className={classes.title}>You can reach me here</h2>
       <ul className={classes.contacts}>
         {contacts.map((item, index) => (
-          <li className={classes.contactItem}>
-            <ContactLink contact={item} key={index} />
+          <li className={classes.contactItem} key={index}>
+            <ContactLink contact={item} />
           </li>
         ))}
       </ul>
