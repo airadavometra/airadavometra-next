@@ -1,0 +1,14 @@
+.main {
+  padding: 32rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 32rem;
+  background-color: var(--white);
+  @media (max-width: 1024px) {
+    padding: 24rem;
+    grid-gap: 24rem;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

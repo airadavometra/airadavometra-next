@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { ContactLink } from "../ContactLink/ContactLink";
-import classes from "./ContactList.module.css";
+import s from "./ContactList.module.css";
 import { ContactInfo } from "@/types/contactInfo";
 
 export interface ContactListProps {
@@ -9,11 +9,11 @@ export interface ContactListProps {
 
 export const ContactList: FC<ContactListProps> = ({ contacts }) => {
   return (
-    <div className={classes.contactsContainer}>
-      <h2 className={classes.title}>You can reach me here</h2>
-      <ul className={classes.contacts}>
+    <div className={s.contactsContainer}>
+      <h2 className={s.title}>You can reach me here</h2>
+      <ul className={s.contacts}>
         {contacts.map((item, index) => (
-          <li className={classes.contactItem} key={index}>
+          <li className={s.contactItem} key={index}>
             <ContactLink contact={item} />
           </li>
         ))}
