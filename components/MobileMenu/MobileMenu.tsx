@@ -2,9 +2,9 @@ import { CloseIcon } from "@/icons/CloseIcon";
 import classNames from "classnames";
 import { FC } from "react";
 import { Navigation } from "../Header/Header";
-import s from "./FullScreenMenu.module.css";
+import s from "./MobileMenu.module.css";
 
-type FullScreenMenuProps = {
+type MobileMenuProps = {
   isOpen: boolean;
   navigation: Navigation[];
   onMenuItemClick: (path: string) => void;
@@ -12,7 +12,7 @@ type FullScreenMenuProps = {
   selectedMenuItemId: number;
 };
 
-const FullScreenMenu: FC<FullScreenMenuProps> = ({
+const MobileMenu: FC<MobileMenuProps> = ({
   isOpen,
   navigation,
   selectedMenuItemId,
@@ -45,4 +45,4 @@ const FullScreenMenu: FC<FullScreenMenuProps> = ({
   );
 };
 
-export default FullScreenMenu;
+export default MobileMenu;
