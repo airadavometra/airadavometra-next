@@ -1,7 +1,7 @@
 .titleButton {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   justify-content: flex-start;
   gap: 24rem;
   @media (max-width: 768px) {
@@ -13,7 +13,6 @@
 .titleContainer {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-start;
   gap: 24rem;
   @media (max-width: 768px) {

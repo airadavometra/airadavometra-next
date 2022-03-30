@@ -14,10 +14,10 @@ export interface ProjectItemProps {
 export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
   projectInfo,
 }) => {
-  const isMobile = useMedia("(max-width: 768px)");
+  const isTablet = useMedia("(max-width: 1024px)");
   return (
     <div className={classes.main}>
-      {isMobile && (
+      {isTablet && (
         <div className={classes.title}>{projectInfo.projectName}</div>
       )}
       <section className={classes.imageContainer}>
@@ -53,7 +53,7 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
         </a>
       </section>
       <section className={classes.descriptionContainer}>
-        {!isMobile && (
+        {!isTablet && (
           <div className={classes.title}>{projectInfo.projectName}</div>
         )}
         <div className={classes.description}>{projectInfo.projectDesc}</div>
