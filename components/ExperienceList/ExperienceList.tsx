@@ -1,7 +1,7 @@
 import { ExperienceInfo } from "@/types/experienceInfo";
 import React, { FunctionComponent } from "react";
 import { ExperienceItem } from "../ExperienceItem/ExperienceItem";
-import classes from "./ExperienceList.module.css";
+import s from "./ExperienceList.module.css";
 
 export interface ExperienceListProps {
   experienceInfoArray: ExperienceInfo[];
@@ -11,9 +11,9 @@ export const ExperienceList: FunctionComponent<ExperienceListProps> = ({
   experienceInfoArray,
 }) => {
   return (
-    <ul className={classes.experienceList}>
+    <ul className={s.experienceList}>
       {experienceInfoArray.map((item, index) => (
-        <li className={classes.experienceItem} key={index}>
+        <li className={s.experienceItem} key={index}>
           <ExperienceItem
             isOpen={item.isOpen}
             year={item.year}

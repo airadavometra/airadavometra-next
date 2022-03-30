@@ -1,7 +1,7 @@
 import { SkillLogo } from "@/types/skillLogo";
 import React, { FunctionComponent } from "react";
 import { SkillItem } from "../SkillItem/SkillItem";
-import classes from "./SkillList.module.css";
+import s from "./SkillList.module.css";
 
 export interface SkillListProps {
   skillInfoArray: SkillInfo[];
@@ -20,7 +20,7 @@ export const SkillList: FunctionComponent<SkillListProps> = ({
       {skillInfoArray.map((item, index) => (
         <SkillItem
           key={index}
-          className={classes.skillsItem}
+          className={s.skillsItem}
           skillName={item.skillName}
           skillLogos={item.skillLogos}
         />
