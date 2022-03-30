@@ -1,4 +1,4 @@
-import { CloseIcon } from "@/icons/CloseIcon";
+import { Close } from "@/icons/Close";
 import classNames from "classnames";
 import { FC } from "react";
 import { Navigation } from "../Header/Header";
@@ -26,7 +26,7 @@ const MobileMenu: FC<MobileMenuProps> = ({
       })}
     >
       <button onClick={onCloseMenu}>
-        <CloseIcon className={s.closeIcon} />
+        <Close className={s.closeIcon} />
       </button>
       <nav className={s.menu}>
         {navigation.map(({ id, title, path }) => (

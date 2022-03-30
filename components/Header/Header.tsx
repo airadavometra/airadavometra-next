@@ -1,4 +1,4 @@
-import { MenuIcon } from "@/icons/MenuIcon";
+import { Burger } from "@/icons/Burger";
 import { toggleFreezePage } from "@/utils/toggleFreezePage";
 import classNames from "classnames";
 import Link from "next/link";
@@ -70,7 +70,7 @@ const Header: FC = () => {
         })}
       </nav>
       <button className={s.menuButton} onClick={openMenu}>
-        <MenuIcon className={s.menuIcon} />
+        <Burger className={s.menuIcon} />
       </button>
       <MobileMenu
         navigation={navigation}

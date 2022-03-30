@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
 import s from "./ExperienceItem.module.css";
 import classNames from "classnames";
-import { ExpandIcon } from "@/icons/ExpandIcon";
+import { Expand } from "@/icons/Expand";
 import classnames from "classnames";
 
 export interface ExperienceItemProps {
@@ -26,7 +26,7 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
           <h2 className={classNames(s.year)}>{year}</h2>
           <h2 className={classNames(s.title)}>{title}</h2>
         </div>
-        <ExpandIcon
+        <Expand
           className={classNames(s.expandBtn, {
             [s.collapse]: !open,
           })}

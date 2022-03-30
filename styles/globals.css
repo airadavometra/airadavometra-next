@@ -100,6 +100,12 @@ a {
   overflow: hidden;
 }
 
+[class*="ymaps-2"][class*="-ground-pane"] {
+  filter: grayscale(1);
+}
+[class*="ymaps-2"][class*="-copyright"] {
+  display: none;
+}
 @media (max-width: 562px) {
   html {
     font-size: 0.24155vw;

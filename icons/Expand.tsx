@@ -1,7 +1,7 @@
 import { WithClassName } from "@/types/common";
 import { FC } from "react";
 
-export const ExpandIcon: FC<WithClassName> = ({ className }) => {
+export const Expand: FC<WithClassName> = ({ className }) => {
   return (
     <svg
       className={className}
