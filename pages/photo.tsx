@@ -61,7 +61,11 @@ const PhotoPage: NextPage<PhotoPageProps> = ({
       </div>
       {isBigPhotoOpen && (
         <FullScreenImg
-          img={[...verticalPhotos, ...horizontalPhotos][bigImgId]}
+          img={
+            [...verticalPhotos, ...horizontalPhotos].find(
+              (photo) => photo.photoId === bigImgId
+            ) || verticalPhotos[0]
+          }
           onCloseClick={closePhoto}
           onMoveClick={changePhoto}
         ></FullScreenImg>

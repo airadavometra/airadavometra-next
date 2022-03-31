@@ -4,6 +4,8 @@ import { ClosePhoto } from "@/icons/ClosePhoto";
 import { Next } from "@/icons/Next";
 import { Previous } from "@/icons/Previous";
 import { PhotoInfo } from "@/types/photoInfo";
+import classnames from "classnames";
+import Image from "next/image";
 
 type FullScreenImgProps = {
   img: PhotoInfo;
@@ -18,11 +20,12 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
 }) => {
   return (
     <div className={s.main}>
-      <div className={s.closeButton}>
-        <button className={s.button} onClick={() => onCloseClick()}>
-          <ClosePhoto />
-        </button>
-      </div>
+      <button
+        className={classnames(s.button, s.closeButton)}
+        onClick={() => onCloseClick()}
+      >
+        <ClosePhoto />
+      </button>
       <div className={s.photoContainer}>
         <button
           className={s.button}
@@ -30,12 +33,16 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
         >
           <Previous />
         </button>
-        <img
-          className={s.photo}
-          src={img.bigPath}
-          alt="Photo"
-          onContextMenu={(e) => e.preventDefault()}
-        />
+        <div className={s.photo}>
+          <Image
+            src={img.bigPath}
+            alt="Photo"
+            onContextMenu={(e) => e.preventDefault()}
+            quality={100}
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         <button
           className={s.button}
           onClick={() => onMoveClick(img.photoId + 1)}
