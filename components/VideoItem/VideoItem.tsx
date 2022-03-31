@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from "react";
 import s from "./VideoItem.module.css";
 
-export interface VideoItemProps {
+type VideoItemProps = {
   src: string;
-}
+};
 
 export const VideoItem: FunctionComponent<VideoItemProps> = ({ src }) => {
   return (

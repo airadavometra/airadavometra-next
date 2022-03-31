@@ -1,0 +1,17 @@
+.main {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 32rem;
+  @media (max-width: 1024px) {
+    grid-gap: 24rem;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+.horizontalImg {
+  aspect-ratio: 3 / 2;
+}

@@ -1,0 +1,34 @@
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 32rem;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--black-transparent);
+  @media (max-width: 1024px) {
+    padding: 24rem;
+  }
+}
+.button {
+  width: 24rem;
+  height: 32rem;
+}
+.photo {
+  height: calc(100vh - 72px - 72px);
+  width: calc(100vw - 120px - 120px);
+  position: relative;
+}
+.closeButton {
+  position: absolute;
+  top: 32rem;
+  right: 32rem;
+}
+.photoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -2,11 +2,11 @@ import { SkillLogo } from "@/types/skillLogo";
 import React, { FunctionComponent } from "react";
 import s from "./SkillItem.module.css";
 
-export interface SkillItemProps {
+type SkillItemProps = {
   skillLogos: SkillLogo[];
   skillName: string;
   className: string;
-}
+};
 
 export const SkillItem: FunctionComponent<SkillItemProps> = ({
   skillLogos,

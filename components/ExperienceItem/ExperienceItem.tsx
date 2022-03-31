@@ -4,12 +4,12 @@ import classNames from "classnames";
 import { Expand } from "@/icons/Expand";
 import classnames from "classnames";
 
-export interface ExperienceItemProps {
+type ExperienceItemProps = {
   text: string;
   title: string;
   year: string;
   isOpen: boolean;
-}
+};
 
 export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
   text,

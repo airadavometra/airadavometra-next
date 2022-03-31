@@ -2,9 +2,9 @@ import { ContactInfo } from "@/types/contactInfo";
 import React, { FunctionComponent } from "react";
 import s from "./ContactLink.module.css";
 
-export interface ContactLinkProps {
+type ContactLinkProps = {
   contact: ContactInfo;
-}
+};
 
 export const ContactLink: FunctionComponent<ContactLinkProps> = ({
   contact: { contactLogo: Logo, contactLink: link, contactText: text },
