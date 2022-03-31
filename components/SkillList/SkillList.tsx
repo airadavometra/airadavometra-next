@@ -1,15 +1,10 @@
-import { SkillLogo } from "@/types/skillLogo";
+import { SkillInfo } from "@/types/skillInfo";
 import React, { FunctionComponent } from "react";
 import { SkillItem } from "../SkillItem/SkillItem";
 import s from "./SkillList.module.css";
 
-export interface SkillListProps {
+type SkillListProps = {
   skillInfoArray: SkillInfo[];
-}
-
-export type SkillInfo = {
-  skillName: string;
-  skillLogos: SkillLogo[];
 };
 
 export const SkillList: FunctionComponent<SkillListProps> = ({

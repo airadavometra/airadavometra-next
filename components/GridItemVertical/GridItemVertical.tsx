@@ -1,15 +1,16 @@
+import { PhotoInfo } from "@/types/photoInfo";
 import classNames from "classnames";
 import React, { FunctionComponent } from "react";
-import { ImgInfo } from "../../utils/getPhotos";
+import { useMedia } from "react-use";
 import { PhotoItem } from "../PhotoItem/PhotoItem";
-import classes from "./GridItemVertical.module.css";
+import s from "./GridItemVertical.module.css";
 
-export interface GridItemVerticalProps {
-  verticalImg: ImgInfo;
-  horizontalImgs: ImgInfo[];
+type GridItemVerticalProps = {
+  verticalImg: PhotoInfo;
+  horizontalPhotos: PhotoInfo[];
   verticalImgPosition: VerticalImgPosition;
   onClick(imgId: number): void;
-}
+};
 export enum VerticalImgPosition {
   Left = 1,
   Right = 2,
@@ -18,31 +19,31 @@ export enum VerticalImgPosition {
 
 export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
   verticalImg,
-  horizontalImgs,
+  horizontalPhotos,
   verticalImgPosition,
   onClick,
 }) => {
+  const isMobile = useMedia("(max-width: 768px)");
   return (
-    <div className={classes.main}>
+    <div className={s.main}>
       <PhotoItem
-        cssClassNames={classNames(classes.verticalImg, {
-          [classes.verticalImgLeft]:
-            verticalImgPosition === VerticalImgPosition.Left,
-          [classes.verticalImgMiddle]:
+        cssClassNames={classNames(s.verticalImg, {
+          [s.verticalImgLeft]: verticalImgPosition === VerticalImgPosition.Left,
+          [s.verticalImgMiddle]:
             verticalImgPosition === VerticalImgPosition.Middle,
-          [classes.verticalImgRight]:
+          [s.verticalImgRight]:
             verticalImgPosition === VerticalImgPosition.Right,
         })}
-        src={verticalImg.imgPath}
-        imgId={verticalImg.imgId}
+        src={isMobile ? verticalImg.smallPath : verticalImg.mediumPath}
+        imgId={verticalImg.photoId}
         onClick={onClick}
       />
-      {horizontalImgs.map((item) => (
+      {horizontalPhotos.map((item) => (
         <PhotoItem
-          cssClassNames={classes.horizontalImg}
-          src={item.imgPath}
-          key={item.imgId}
-          imgId={item.imgId}
+          cssClassNames={s.horizontalImg}
+          src={isMobile ? item.smallPath : item.mediumPath}
+          key={item.photoId}
+          imgId={item.photoId}
           onClick={onClick}
         />
       ))}

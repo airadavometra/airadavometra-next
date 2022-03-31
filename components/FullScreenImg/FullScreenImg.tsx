@@ -1,15 +1,15 @@
 import React, { FunctionComponent } from "react";
-import classes from "./FullScreenImg.module.css";
-import closeImg from "../../icons/close.svg";
-import nextImg from "../../icons/next.svg";
-import previousImg from "../../icons/previous.svg";
-import { ImgInfo } from "../../utils/getPhotos";
+import s from "./FullScreenImg.module.css";
+import { ClosePhoto } from "@/icons/ClosePhoto";
+import { Next } from "@/icons/Next";
+import { Previous } from "@/icons/Previous";
+import { PhotoInfo } from "@/types/photoInfo";
 
-export interface FullScreenImgProps {
-  img: ImgInfo;
+type FullScreenImgProps = {
+  img: PhotoInfo;
   onCloseClick(): void;
   onMoveClick(imgId: number): void;
-}
+};
 
 export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
   img,
@@ -17,32 +17,30 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
   onMoveClick,
 }) => {
   return (
-    <div className={classes.main}>
-      <div className={classes.closeButton}>
-        <button className={classes.button} onClick={() => onCloseClick()}>
-          <img src={closeImg} alt="Close button" />
+    <div className={s.main}>
+      <div className={s.closeButton}>
+        <button className={s.button} onClick={() => onCloseClick()}>
+          <ClosePhoto />
         </button>
       </div>
-      <div className={classes.photoContainer}>
-        <button className={classes.button}>
-          <img
-            src={previousImg}
-            alt="Previous image button"
-            onClick={() => onMoveClick(img.imgId - 1)}
-          />
+      <div className={s.photoContainer}>
+        <button
+          className={s.button}
+          onClick={() => onMoveClick(img.photoId - 1)}
+        >
+          <Previous />
         </button>
         <img
-          className={classes.photo}
-          src={img.imgPath}
+          className={s.photo}
+          src={img.bigPath}
           alt="Photo"
           onContextMenu={(e) => e.preventDefault()}
         />
-        <button className={classes.button}>
-          <img
-            src={nextImg}
-            alt="Next image button"
-            onClick={() => onMoveClick(img.imgId + 1)}
-          />
+        <button
+          className={s.button}
+          onClick={() => onMoveClick(img.photoId + 1)}
+        >
+          <Next />
         </button>
       </div>
     </div>

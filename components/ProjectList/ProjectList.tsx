@@ -3,9 +3,9 @@ import React, { FunctionComponent } from "react";
 import { ProjectItem } from "../ProjectItem/ProjectItem";
 import s from "./ProjectList.module.css";
 
-export interface ProjectListProps {
+type ProjectListProps = {
   projectInfoArray: ProjectInfo[];
-}
+};
 
 export const ProjectList: FunctionComponent<ProjectListProps> = ({
   projectInfoArray,

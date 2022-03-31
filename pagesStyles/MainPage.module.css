@@ -39,6 +39,7 @@
 }
 .pictureWrapper {
   width: 600rem;
+  align-self: flex-end;
   @media (max-width: 1024px) {
     width: 100vw;
     height: unset;

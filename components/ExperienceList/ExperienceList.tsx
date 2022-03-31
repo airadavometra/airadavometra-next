@@ -3,9 +3,9 @@ import React, { FunctionComponent } from "react";
 import { ExperienceItem } from "../ExperienceItem/ExperienceItem";
 import s from "./ExperienceList.module.css";
 
-export interface ExperienceListProps {
+type ExperienceListProps = {
   experienceInfoArray: ExperienceInfo[];
-}
+};
 
 export const ExperienceList: FunctionComponent<ExperienceListProps> = ({
   experienceInfoArray,

@@ -1,25 +1,27 @@
+import { PhotoInfo } from "@/types/photoInfo";
 import React, { FunctionComponent } from "react";
-import { ImgInfo } from "../../utils/getPhotos";
+import { useMedia } from "react-use";
 import { PhotoItem } from "../PhotoItem/PhotoItem";
-import classes from "./GridItemHorizontal.module.css";
+import s from "./GridItemHorizontal.module.css";
 
-export interface GridItemHorizontalProps {
-  imgPaths: ImgInfo[];
+type GridItemHorizontalProps = {
+  imgPaths: PhotoInfo[];
   onClick(imgId: number): void;
-}
+};
 
 export const GridItemHorizontal: FunctionComponent<GridItemHorizontalProps> = ({
   imgPaths,
   onClick,
 }) => {
+  const isMobile = useMedia("(max-width: 768px)");
   return (
-    <div className={classes.main}>
+    <div className={s.main}>
       {imgPaths.map((item) => (
         <PhotoItem
-          cssClassNames={classes.horizontalImg}
-          src={item.imgPath}
-          key={item.imgId}
-          imgId={item.imgId}
+          cssClassNames={s.horizontalImg}
+          src={isMobile ? item.smallPath : item.mediumPath}
+          key={item.photoId}
+          imgId={item.photoId}
           onClick={onClick}
         />
       ))}

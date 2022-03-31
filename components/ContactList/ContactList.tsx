@@ -3,9 +3,9 @@ import { ContactLink } from "../ContactLink/ContactLink";
 import s from "./ContactList.module.css";
 import { ContactInfo } from "@/types/contactInfo";
 
-export interface ContactListProps {
+type ContactListProps = {
   contacts: ContactInfo[];
-}
+};
 
 export const ContactList: FC<ContactListProps> = ({ contacts }) => {
   return (

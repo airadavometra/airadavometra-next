@@ -5,9 +5,9 @@ import { ProjectInfo } from "@/types/projectInfo";
 import Image from "next/image";
 import { useMedia } from "react-use";
 
-export interface ProjectItemProps {
+type ProjectItemProps = {
   projectInfo: ProjectInfo;
-}
+};
 
 export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
   projectInfo,
@@ -45,6 +45,7 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
             layout="responsive"
             src={projectInfo.projectPic}
             alt={projectInfo.projectName}
+            placeholder="blur"
           />
         </a>
       </section>
