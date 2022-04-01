@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import s from "./FullScreenImg.module.css";
-import { ClosePhoto } from "@/icons/ClosePhoto";
+import { Close } from "@/icons/Close";
 import { Next } from "@/icons/Next";
 import { Previous } from "@/icons/Previous";
 import { PhotoInfo } from "@/types/photoInfo";
@@ -24,14 +24,11 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
         className={classnames(s.button, s.closeButton)}
         onClick={() => onCloseClick()}
       >
-        <ClosePhoto />
+        <Close className={s.icon} />
       </button>
       <div className={s.photoContainer}>
-        <button
-          className={s.button}
-          onClick={() => onMoveClick(img.photoId - 1)}
-        >
-          <Previous />
+        <button onClick={() => onMoveClick(img.photoId - 1)}>
+          <Previous className={s.icon} />
         </button>
         <div className={s.photo}>
           <Image
@@ -43,11 +40,8 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
             objectFit="contain"
           />
         </div>
-        <button
-          className={s.button}
-          onClick={() => onMoveClick(img.photoId + 1)}
-        >
-          <Next />
+        <button onClick={() => onMoveClick(img.photoId + 1)}>
+          <Next className={s.icon} />
         </button>
       </div>
     </div>

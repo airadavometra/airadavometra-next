@@ -1,13 +1,13 @@
 .icon {
   width: 64rem;
   height: 64rem;
+  fill: var(--black);
   @media (max-width: 768px) {
     width: 48rem;
     height: 48rem;
   }
 }
 .header {
-  padding-bottom: 24rem;
   font-family: var(--header-text-font);
   font-size: 32rem;
   @media (max-width: 768px) {

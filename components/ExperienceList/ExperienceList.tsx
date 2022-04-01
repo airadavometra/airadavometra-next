@@ -11,17 +11,20 @@ export const ExperienceList: FunctionComponent<ExperienceListProps> = ({
   experienceInfoArray,
 }) => {
   return (
-    <ul className={s.experienceList}>
-      {experienceInfoArray.map((item, index) => (
-        <li className={s.experienceItem} key={index}>
-          <ExperienceItem
-            isOpen={item.isOpen}
-            year={item.year}
-            title={item.title}
-            text={item.text}
-          />
-        </li>
-      ))}
-    </ul>
+    <div>
+      <div className={s.title}>Experience</div>
+      <ul className={s.experienceList}>
+        {experienceInfoArray.map((item, index) => (
+          <li className={s.experienceItem} key={index}>
+            <ExperienceItem
+              isOpen={item.isOpen}
+              year={item.year}
+              title={item.title}
+              text={item.text}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };

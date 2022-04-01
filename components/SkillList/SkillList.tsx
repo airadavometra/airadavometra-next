@@ -11,15 +11,18 @@ export const SkillList: FunctionComponent<SkillListProps> = ({
   skillInfoArray,
 }) => {
   return (
-    <>
-      {skillInfoArray.map((item, index) => (
-        <SkillItem
-          key={index}
-          className={s.skillsItem}
-          skillName={item.skillName}
-          skillLogos={item.skillLogos}
-        />
-      ))}
-    </>
+    <section className={s.skillsSection}>
+      <div className={s.title}>Skills</div>
+      <div className={s.skillsContainer}>
+        {skillInfoArray.map((item, index) => (
+          <SkillItem
+            key={index}
+            className={s.skillsItem}
+            skillName={item.skillName}
+            skillLogos={item.skillLogos}
+          />
+        ))}
+      </div>
+    </section>
   );
 };

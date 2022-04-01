@@ -1,12 +1,12 @@
 import { Close } from "@/icons/Close";
+import { NavigationItem } from "@/types/navigationItem";
 import classNames from "classnames";
 import { FC } from "react";
-import { Navigation } from "../Header/Header";
 import s from "./MobileMenu.module.css";
 
 type MobileMenuProps = {
   isOpen: boolean;
-  navigation: Navigation[];
+  navigation: NavigationItem[];
   onMenuItemClick: (path: string) => void;
   onCloseMenu: () => void;
   selectedMenuItemId: number;
@@ -25,7 +25,7 @@ const MobileMenu: FC<MobileMenuProps> = ({
         [s.closedMenu]: !isOpen,
       })}
     >
-      <button onClick={onCloseMenu}>
+      <button className={s.closeIconButton} onClick={onCloseMenu}>
         <Close className={s.closeIcon} />
       </button>
       <nav className={s.menu}>

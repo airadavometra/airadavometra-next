@@ -1,4 +1,5 @@
 import { Burger } from "@/icons/Burger";
+import { NavigationItem } from "@/types/navigationItem";
 import { toggleFreezePage } from "@/utils/toggleFreezePage";
 import classNames from "classnames";
 import Link from "next/link";
@@ -7,44 +8,19 @@ import { FC, useEffect, useState } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import s from "./Header.module.css";
 
-export type Navigation = {
-  id: number;
-  title: string;
-  path: string;
+type HeaderProps = {
+  navigation: NavigationItem[];
+  selectedMenuItemId: number;
+  onOpenMenu(): void;
 };
 
-const navigation: Navigation[] = [
-  { id: 1, title: "About me", path: "/" },
-  { id: 2, title: "Portfolio", path: "/portfolio" },
-  { id: 3, title: "Photo", path: "/photo" },
-  { id: 4, title: "Video", path: "/video" },
-  { id: 5, title: "Contact", path: "/contact" },
-];
-
-const Header: FC = () => {
+const Header: FC<HeaderProps> = ({
+  navigation,
+  selectedMenuItemId,
+  onOpenMenu,
+}) => {
   const router = useRouter();
-  const [isMenuOpen, setMenuOpen] = useState(false);
-  const [selectedMenuItemId, setSelectedMenuItemId] = useState<number>(1);
 
-  useEffect(() => {
-    const selectedMenuItem = navigation.find(
-      (nav) => nav.path === router.pathname
-    );
-    if (selectedMenuItem) {
-      setSelectedMenuItemId(selectedMenuItem.id);
-    } else {
-      setSelectedMenuItemId(0);
-    }
-  }, [router.pathname]);
-
-  const openMenu = () => {
-    setMenuOpen(true);
-    toggleFreezePage();
-  };
-  const closeMenu = () => {
-    setMenuOpen(false);
-    toggleFreezePage();
-  };
   const { root } = router.query;
   const queryRootId = root ? (Array.isArray(root) ? root[0] : root) : undefined;
 
@@ -69,23 +45,9 @@ const Header: FC = () => {
           );
         })}
       </nav>
-      <button className={s.menuButton} onClick={openMenu}>
+      <button className={s.menuButton} onClick={onOpenMenu}>
         <Burger className={s.menuIcon} />
       </button>
-      <MobileMenu
-        navigation={navigation}
-        selectedMenuItemId={selectedMenuItemId}
-        onCloseMenu={closeMenu}
-        onMenuItemClick={(path: string) => {
-          let fullPath = path;
-          if (queryRootId) {
-            fullPath = `${fullPath}?root=${queryRootId}`;
-          }
-          router.push(fullPath);
-          closeMenu();
-        }}
-        isOpen={isMenuOpen}
-      />
     </header>
   );
 };

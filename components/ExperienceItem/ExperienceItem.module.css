@@ -1,11 +1,12 @@
 .titleButton {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   justify-content: flex-start;
   gap: 24rem;
   @media (max-width: 768px) {
     width: 100%;
+    align-items: baseline;
     justify-content: flex-end;
     flex-direction: row-reverse;
   }
@@ -28,10 +29,11 @@
   font-size: 24rem;
 }
 .expandBtn {
-  height: 24rem;
-  width: 24rem;
+  height: 32rem;
+  width: 32rem;
   flex-shrink: 0;
   transition: all 0.5s ease-in-out;
+  stroke: var(--black);
   @media (max-width: 768px) {
     height: 18rem;
     width: 18rem;
@@ -57,9 +59,9 @@
   padding-left: 80rem;
   padding-top: 32rem;
   @media (max-width: 768px) {
-    width: 100%;
     max-width: 100%;
-    padding: 24rem 0;
+    padding-left: 0;
+    padding-top: 24rem;
     font-size: 18rem;
   }
 }
