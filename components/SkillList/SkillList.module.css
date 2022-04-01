@@ -11,8 +11,9 @@
   font-family: var(--header-text-font);
   font-size: 48rem;
   @media (max-width: 768px) {
+    padding: 0;
+    padding-bottom: 48rem;
     font-size: 32rem;
-    padding: 48rem 0;
   }
 }
 .skillsContainer {

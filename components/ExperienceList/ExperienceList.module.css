@@ -3,8 +3,8 @@
   font-family: var(--header-text-font);
   font-size: 48rem;
   @media (max-width: 768px) {
-    font-size: 32rem;
     padding: 48rem 0;
+    font-size: 32rem;
   }
 }
 .experienceList {
