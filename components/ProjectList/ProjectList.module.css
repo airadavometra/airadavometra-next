@@ -1,10 +1,10 @@
 .title {
   padding: 80rem 0;
   font-family: var(--header-text-font);
-  font-size: 32rem;
+  font-size: 48rem;
   @media (max-width: 768px) {
-    font-size: 24rem;
-    padding: 32rem 0;
+    font-size: 32rem;
+    padding: 48rem 0;
   }
 }
 .projects {

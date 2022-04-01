@@ -1,5 +1,5 @@
 .main {
-  padding: 112rem 32rem;
+  padding: 32rem;
   display: flex;
   flex-direction: column;
   gap: 112rem;
@@ -12,9 +12,9 @@
 .download {
   width: fit-content;
   padding: 16rem 24rem;
-  margin-bottom: 32rem;
+  align-self: flex-end;
   font-family: var(--header-text-font);
-  font-size: 32rem;
+  font-size: 48rem;
   outline: 1px solid var(--black);
   transition: all 0.5s ease-in-out;
   &:hover,
@@ -23,20 +23,16 @@
     box-shadow: inset 6.5em 0 0 0 var(--black);
   }
   @media (max-width: 768px) {
-    max-width: 50%;
-    font-size: 24rem;
-    margin-bottom: 0;
+    margin-top: 80rem;
+    align-self: center;
+    font-size: 32rem;
   }
 }
 .skillsAndExperience {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  & > *:not(:first-child) {
-    @media (max-width: 768px) {
-      margin-bottom: 48rem;
-    }
-  }
+  align-items: baseline;
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     justify-content: space-between;
@@ -53,6 +49,7 @@
 }
 .githubSection {
   width: fit-content;
+  padding: 80rem 0;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -64,10 +61,11 @@
   :focus {
     transform: scale(1.1);
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     grid-template-columns: repeat(1, auto);
   }
   @media (max-width: 768px) {
+    padding: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;

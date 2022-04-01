@@ -128,10 +128,10 @@ const PortfolioPage: NextPage = () => {
         <section>
           <ExperienceList experienceInfoArray={experienceInfoArray} />
         </section>
-        <section className={s.skills}>
+        <div className={s.skills}>
           {!isMobile && downloadButton}
           <SkillList skillInfoArray={skillInfoArray} />
-        </section>
+        </div>
       </div>
       <ProjectList projectInfoArray={projectInfoArray} />
       <a

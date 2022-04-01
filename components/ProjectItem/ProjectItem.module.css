@@ -46,15 +46,12 @@
   display: flex;
   flex-direction: column;
   gap: 32rem;
-  @media (max-width: 1024px) {
-    gap: 18rem;
-  }
 }
 .title {
   font-family: var(--header-text-font);
   font-size: 32rem;
   @media (max-width: 768px) {
-    font-size: 18rem;
+    font-size: 24rem;
   }
 }
 .description {

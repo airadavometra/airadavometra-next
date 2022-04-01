@@ -1,11 +1,21 @@
+.title {
+  padding: 80rem 0;
+  font-family: var(--header-text-font);
+  font-size: 48rem;
+  @media (max-width: 768px) {
+    font-size: 32rem;
+    padding: 48rem 0;
+  }
+}
 .experienceList {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 48rem;
+  @media (max-width: 768px) {
+    gap: 32rem;
+  }
 }
 .experienceItem {
   width: 100%;
-  &:not(:last-child) {
-    margin-bottom: 32rem;
-  }
 }
