@@ -1,12 +1,11 @@
 import { Burger } from "@/icons/Burger";
 import { NavigationItem } from "@/types/navigationItem";
-import { toggleFreezePage } from "@/utils/toggleFreezePage";
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FC, useEffect, useState } from "react";
-import MobileMenu from "../MobileMenu/MobileMenu";
+import { FC } from "react";
 import s from "./Header.module.css";
+import { motion } from "framer-motion";
 
 type HeaderProps = {
   navigation: NavigationItem[];
@@ -26,7 +25,17 @@ const Header: FC<HeaderProps> = ({
 
   return (
     <header className={s.header}>
-      <nav className={s.navigation}>
+      <motion.nav
+        className={s.navigation}
+        initial={{ x: "150vw", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          type: "tween",
+          duration: 1.3,
+          ease: "easeOut",
+        }}
+      >
         {navigation.map(({ id, title, path }) => {
           let fullPath = path;
           if (queryRootId) {
@@ -44,7 +53,7 @@ const Header: FC<HeaderProps> = ({
             </Link>
           );
         })}
-      </nav>
+      </motion.nav>
       <button className={s.menuButton} onClick={onOpenMenu}>
         <Burger className={s.menuIcon} />
       </button>
