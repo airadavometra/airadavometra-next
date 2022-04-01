@@ -6,4 +6,5 @@ export type ProjectInfo = {
   projectPic: StaticImageData;
   projectLink: string;
   projectGithubLink: string;
+  projectTechnologies: string[];
 };

@@ -1,7 +1,7 @@
 .main {
   display: flex;
   gap: 80rem;
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     gap: 24rem;
   }
@@ -11,7 +11,7 @@
   flex-shrink: 0;
   display: flex;
   gap: 12rem;
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     width: 100%;
     flex-direction: column-reverse;
     gap: 4rem;
@@ -19,7 +19,7 @@
 }
 .imageWrapper {
   width: 55vw;
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     width: 100%;
   }
 }
@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     flex-direction: row;
   }
 }
@@ -37,7 +37,7 @@
   text-orientation: upright;
   font-family: var(--header-text-font);
   font-size: 18rem;
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     writing-mode: unset;
     text-orientation: unset;
   }
@@ -46,6 +46,9 @@
   display: flex;
   flex-direction: column;
   gap: 32rem;
+  @media (max-width: 768px) {
+    gap: 18rem;
+  }
 }
 .title {
   font-family: var(--header-text-font);
@@ -57,5 +60,21 @@
 .description {
   @media (max-width: 768px) {
     font-size: 18rem;
+  }
+}
+.tagsContainer {
+  display: flex;
+  gap: 18rem;
+  flex-wrap: wrap;
+}
+.tag {
+  width: max-content;
+  padding: 8rem 12rem;
+  background: var(--black);
+  color: var(--yellow);
+  font-size: 16rem;
+  font-weight: 600;
+  @media (max-width: 768px) {
+    font-weight: 500;
   }
 }
