@@ -1,0 +1,32 @@
+.tooltipContainer {
+  position: relative;
+}
+
+.tooltipBox {
+  width: max-content;
+  max-width: 50vw;
+  padding: 12rem 18rem;
+  position: absolute;
+  top: calc(100% + 8rem);
+  right: 50%;
+  border-radius: 12rem;
+  background: var(--black);
+  color: var(--white);
+  font-size: 16rem;
+  font-weight: 600;
+  display: none;
+  z-index: 2;
+  &.visible {
+    display: block;
+  }
+  @media (max-width: 768px) {
+    left: 50%;
+    right: unset;
+  }
+}
+.childrenContainer {
+  height: fit-content;
+  & > svg {
+    pointer-events: none;
+  }
+}
