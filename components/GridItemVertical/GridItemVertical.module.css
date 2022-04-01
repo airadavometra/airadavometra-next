@@ -19,6 +19,7 @@
   grid-row-end: 3;
 }
 .horizontalImg {
+  aspect-ratio: 2.8 / 2;
   @media (max-width: 768px) {
     aspect-ratio: 3 / 2;
   }
