@@ -10,7 +10,7 @@ import { ExperienceList } from "@/components/ExperienceList/ExperienceList";
 import { ProjectList } from "@/components/ProjectList/ProjectList";
 import { Firebase } from "@/icons/skills/backend/Firebase";
 import { Css3 } from "@/icons/skills/frontend/Css3";
-import { Framer } from "@/icons/skills/frontend/Framer";
+import { FramerMotion } from "@/icons/skills/frontend/FramerMotion";
 import { GraphQL } from "@/icons/skills/frontend/GraphQL";
 import { Html5 } from "@/icons/skills/frontend/Html5";
 import { JavaScript } from "@/icons/skills/frontend/JavaScript";
@@ -66,7 +66,7 @@ const skillInfoArray: SkillInfo[] = [
       { logo: NextJS, logoAlt: "Next JS" },
       { logo: PostCss, logoAlt: "PostCSS" },
       { logo: StyledComponents, logoAlt: "styled-components" },
-      { logo: Framer, logoAlt: "Framer Motion" },
+      { logo: FramerMotion, logoAlt: "Framer Motion" },
       { logo: GraphQL, logoAlt: "GraphQL" },
     ],
   },
