@@ -75,6 +75,7 @@
 }
 .githubLogo {
   height: 32rem;
+  fill: var(--black);
 }
 .githubText {
   font-family: var(--header-text-font);

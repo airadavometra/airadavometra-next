@@ -1,20 +1,78 @@
-import { FC, ReactNode } from "react";
+import { NavigationItem } from "@/types/navigationItem";
+import { toggleFreezePage } from "@/utils/toggleFreezePage";
+import { useRouter } from "next/router";
+import { FC, ReactNode, useEffect, useState } from "react";
 import Header from "../Header/Header";
+import MobileMenu from "../MobileMenu/MobileMenu";
 import { PageHead } from "../PageHead/PageHead";
 import s from "./Layout.module.css";
+
+const navigation: NavigationItem[] = [
+  { id: 1, title: "About me", path: "/" },
+  { id: 2, title: "Portfolio", path: "/portfolio" },
+  { id: 3, title: "Photo", path: "/photo" },
+  { id: 4, title: "Video", path: "/video" },
+  { id: 5, title: "Contact", path: "/contact" },
+];
 
 type LayoutProps = {
   children: ReactNode;
 };
 
-const Layout: FC<LayoutProps> = ({ children }) => (
-  <>
-    <PageHead />
-    <div className={s.layout}>
-      <Header />
-      {children}
-    </div>
-  </>
-);
+const Layout: FC<LayoutProps> = ({ children }) => {
+  const router = useRouter();
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [selectedMenuItemId, setSelectedMenuItemId] = useState<number>(1);
+
+  useEffect(() => {
+    const selectedMenuItem = navigation.find(
+      (nav) => nav.path === router.pathname
+    );
+    if (selectedMenuItem) {
+      setSelectedMenuItemId(selectedMenuItem.id);
+    } else {
+      setSelectedMenuItemId(0);
+    }
+  }, [router.pathname]);
+
+  const openMenu = () => {
+    setMenuOpen(true);
+    toggleFreezePage();
+  };
+  const closeMenu = () => {
+    setMenuOpen(false);
+    toggleFreezePage();
+  };
+  const { root } = router.query;
+  const queryRootId = root ? (Array.isArray(root) ? root[0] : root) : undefined;
+
+  return (
+    <>
+      <PageHead />
+      <div className={s.layout}>
+        <Header
+          navigation={navigation}
+          onOpenMenu={openMenu}
+          selectedMenuItemId={selectedMenuItemId}
+        />
+        {children}
+      </div>
+      <MobileMenu
+        navigation={navigation}
+        selectedMenuItemId={selectedMenuItemId}
+        onCloseMenu={closeMenu}
+        onMenuItemClick={(path: string) => {
+          let fullPath = path;
+          if (queryRootId) {
+            fullPath = `${fullPath}?root=${queryRootId}`;
+          }
+          router.push(fullPath);
+          closeMenu();
+        }}
+        isOpen={isMenuOpen}
+      />
+    </>
+  );
+};
 
 export default Layout;

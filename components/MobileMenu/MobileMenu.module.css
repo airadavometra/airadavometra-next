@@ -1,9 +1,9 @@
 .menuContainer {
-  width: 100vw;
-  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   display: flex;
   background-color: var(--yellow);
   z-index: 3;
@@ -11,12 +11,15 @@
     display: none;
   }
 }
-.closeIcon {
-  width: 32rem;
+.closeIconButton {
   position: absolute;
   top: 24rem;
   right: 24rem;
-  fill: var(--black);
+}
+.closeIcon {
+  width: 32rem;
+  height: 32rem;
+  stroke: var(--black);
 }
 .menu {
   margin: auto;

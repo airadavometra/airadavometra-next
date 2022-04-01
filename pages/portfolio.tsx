@@ -8,17 +8,20 @@ import { useMedia } from "react-use";
 import { SkillList } from "@/components/SkillList/SkillList";
 import { ExperienceList } from "@/components/ExperienceList/ExperienceList";
 import { ProjectList } from "@/components/ProjectList/ProjectList";
-import { Csharp } from "@/icons/skills/Csharp";
-import { DotNet } from "@/icons/skills/DotNet";
-import { Html5 } from "@/icons/skills/Html5";
-import { Css3 } from "@/icons/skills/Css3";
-import { JavaScript } from "@/icons/skills/JavaScript";
-import { TypeScript } from "@/icons/skills/TypeScript";
-import { React } from "@/icons/skills/React";
-import { Redux } from "@/icons/skills/Redux";
-import { Sass } from "@/icons/skills/Sass";
-import { Photoshop } from "@/icons/skills/Photoshop";
-import { Figma } from "@/icons/skills/Figma";
+import { Firebase } from "@/icons/skills/backend/Firebase";
+import { Css3 } from "@/icons/skills/frontend/Css3";
+import { Framer } from "@/icons/skills/frontend/Framer";
+import { GraphQL } from "@/icons/skills/frontend/GraphQL";
+import { Html5 } from "@/icons/skills/frontend/Html5";
+import { JavaScript } from "@/icons/skills/frontend/JavaScript";
+import { NextJS } from "@/icons/skills/frontend/NextJS";
+import { PostCss } from "@/icons/skills/frontend/PostCss";
+import { TypeScript } from "@/icons/skills/frontend/TypeScript";
+import { React } from "@/icons/skills/frontend/React";
+import { Redux } from "@/icons/skills/frontend/Redux";
+import { StyledComponents } from "@/icons/skills/frontend/StyledComponents";
+import { Photoshop } from "@/icons/skills/design/Photoshop";
+import { Figma } from "@/icons/skills/design/Figma";
 import { Github } from "@/icons/contacts/Github";
 import WatchList from "@/public/projects/WatchList.png";
 import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
@@ -54,28 +57,29 @@ const skillInfoArray: SkillInfo[] = [
   {
     skillName: "Front-end",
     skillLogos: [
-      { logo: Html5, logoAlt: "html5" },
-      { logo: Css3, logoAlt: "css3" },
-      { logo: JavaScript, logoAlt: "javascript" },
-      { logo: TypeScript, logoAlt: "typescript" },
-      { logo: React, logoAlt: "react" },
-      { logo: Redux, logoAlt: "redux" },
-      { logo: Sass, logoAlt: "sass" },
+      { logo: Html5, logoAlt: "HTML5" },
+      { logo: Css3, logoAlt: "CSS3" },
+      { logo: TypeScript, logoAlt: "TypeScript" },
+      { logo: JavaScript, logoAlt: "JavaScript" },
+      { logo: React, logoAlt: "React" },
+      { logo: Redux, logoAlt: "Redux" },
+      { logo: NextJS, logoAlt: "Next JS" },
+      { logo: StyledComponents, logoAlt: "styled-components" },
+      { logo: PostCss, logoAlt: "PostCSS" },
+      { logo: Framer, logoAlt: "Framer Motion" },
+      { logo: GraphQL, logoAlt: "GraphQL" },
     ],
   },
   {
     skillName: "Design",
     skillLogos: [
-      { logo: Figma, logoAlt: "figma" },
-      { logo: Photoshop, logoAlt: "photoshop" },
+      { logo: Figma, logoAlt: "Figma" },
+      { logo: Photoshop, logoAlt: "Adobe Photoshop" },
     ],
   },
   {
     skillName: "Back-end",
-    skillLogos: [
-      { logo: DotNet, logoAlt: "dot-net" },
-      { logo: Csharp, logoAlt: "c-sharp" },
-    ],
+    skillLogos: [{ logo: Firebase, logoAlt: "Firebase" }],
   },
 ];
 const projectInfoArray: ProjectInfo[] = [

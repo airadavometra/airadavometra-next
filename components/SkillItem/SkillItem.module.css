@@ -1,6 +1,7 @@
 .icon {
   width: 64rem;
   height: 64rem;
+  fill: var(--black);
   @media (max-width: 768px) {
     width: 48rem;
     height: 48rem;

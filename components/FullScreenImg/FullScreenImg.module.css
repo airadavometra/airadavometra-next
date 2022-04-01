@@ -12,10 +12,6 @@
     padding: 24rem;
   }
 }
-.button {
-  width: 24rem;
-  height: 32rem;
-}
 .photo {
   height: calc(100vh - 72px - 72px);
   width: calc(100vw - 120px - 120px);
@@ -31,4 +27,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+.icon {
+  width: 48rem;
+  height: 48rem;
+  stroke: var(--white);
 }
