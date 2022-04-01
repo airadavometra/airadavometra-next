@@ -1,5 +1,6 @@
 import { SkillLogo } from "@/types/skillLogo";
 import React, { FunctionComponent } from "react";
+import { Tooltip } from "../Tooltip/Tooltip";
 import s from "./SkillItem.module.css";
 
 type SkillItemProps = {
@@ -17,8 +18,10 @@ export const SkillItem: FunctionComponent<SkillItemProps> = ({
     <div className={className}>
       <h2 className={s.header}>{skillName}</h2>
       <div className={s.iconsContainer}>
-        {skillLogos.map(({ logo: Logo }, index) => (
-          <Logo className={s.icon} key={index} />
+        {skillLogos.map(({ logo: Logo, logoAlt }, index) => (
+          <Tooltip text={logoAlt} key={index}>
+            <Logo className={s.icon} />
+          </Tooltip>
         ))}
       </div>
     </div>
