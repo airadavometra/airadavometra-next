@@ -12,10 +12,12 @@ type ProjectItemProps = {
 export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
   projectInfo,
 }) => {
-  const isTablet = useMedia("(max-width: 1024px)");
+  const isSmallScreen = useMedia("(max-width: 1200px)");
   return (
     <div className={s.main}>
-      {isTablet && <div className={s.title}>{projectInfo.projectName}</div>}
+      {isSmallScreen && (
+        <div className={s.title}>{projectInfo.projectName}</div>
+      )}
       <section className={s.imageContainer}>
         <div className={s.linksContainer}>
           <a
@@ -50,8 +52,17 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
         </a>
       </section>
       <section className={s.descriptionContainer}>
-        {!isTablet && <div className={s.title}>{projectInfo.projectName}</div>}
+        {!isSmallScreen && (
+          <div className={s.title}>{projectInfo.projectName}</div>
+        )}
         <div className={s.description}>{projectInfo.projectDesc}</div>
+        <div className={s.tagsContainer}>
+          {projectInfo.projectTechnologies.map((item, index) => (
+            <div className={s.tag} key={index}>
+              {`${item}`}
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

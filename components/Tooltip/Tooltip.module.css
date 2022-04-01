@@ -9,7 +9,6 @@
   position: absolute;
   top: calc(100% + 8rem);
   right: 50%;
-  border-radius: 12rem;
   background: var(--black);
   color: var(--white);
   font-size: 16rem;

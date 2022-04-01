@@ -90,6 +90,7 @@ const projectInfoArray: ProjectInfo[] = [
     projectPic: FamilyTree,
     projectLink: "https://family-tree-tau.vercel.app/",
     projectGithubLink: "https://github.com/airadavometra/family-tree",
+    projectTechnologies: ["TypeScript", "React", "NextJS"],
   },
   {
     projectName: "JS Types Coersion Quiz",
@@ -98,6 +99,7 @@ const projectInfoArray: ProjectInfo[] = [
     projectPic: TypesCoersionQuiz,
     projectLink: "https://type-coersion-quiz.vercel.app/",
     projectGithubLink: "https://github.com/airadavometra/type-coersion-quiz",
+    projectTechnologies: ["TypeScript", "React", "Redux", "Vite", "Firebase"],
   },
   {
     projectName: "Watch List",
@@ -106,6 +108,7 @@ const projectInfoArray: ProjectInfo[] = [
     projectPic: WatchList,
     projectLink: "https://watch-list.vercel.app/",
     projectGithubLink: "https://github.com/airadavometra/watch-list",
+    projectTechnologies: ["TypeScript", "React", "Redux", "Vite"],
   },
 ];
 
