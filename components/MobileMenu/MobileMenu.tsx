@@ -23,7 +23,7 @@ const MobileMenu: FC<MobileMenuProps> = ({
 }) => {
   return (
     <motion.div
-      key="mobile-menu"
+      key={Number(isOpen)}
       className={classNames(s.menuContainer)}
       variants={menuVariants}
       initial={false}
