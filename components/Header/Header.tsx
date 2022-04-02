@@ -3,7 +3,7 @@ import { NavigationItem } from "@/types/navigationItem";
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FC } from "react";
+import { FC, useMemo } from "react";
 import s from "./Header.module.css";
 import { motion } from "framer-motion";
 import { photoVariants } from "@/motions/openAboutPage";
@@ -22,8 +22,8 @@ const Header: FC<HeaderProps> = ({
 }) => {
   const router = useRouter();
 
-  const variants =
-    router.pathname === "/"
+  const variants = useMemo(() => {
+    return router.pathname === "/"
       ? photoVariants
       : router.pathname === "/contact"
       ? mapVariants
@@ -32,6 +32,7 @@ const Header: FC<HeaderProps> = ({
       : router.pathname === "/portfolio"
       ? photoVariants
       : photoVariants;
+  }, []);
 
   return (
     <header className={s.header}>

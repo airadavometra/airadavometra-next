@@ -6,6 +6,7 @@ import Header from "../Header/Header";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { PageHead } from "../PageHead/PageHead";
 import s from "./Layout.module.css";
+import { AnimatePresence } from "framer-motion";
 
 const navigation: NavigationItem[] = [
   { id: 1, title: "About me", path: "/" },
@@ -53,18 +54,24 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           onOpenMenu={openMenu}
           selectedMenuItemId={selectedMenuItemId}
         />
-        {children}
+        <AnimatePresence exitBeforeEnter>
+          <div className={s.pageContainer} key={router.pathname}>
+            {children}
+          </div>
+        </AnimatePresence>
       </div>
-      <MobileMenu
-        navigation={navigation}
-        selectedMenuItemId={selectedMenuItemId}
-        onCloseMenu={closeMenu}
-        onMenuItemClick={(path: string) => {
-          router.push(path);
-          closeMenu();
-        }}
-        isOpen={isMenuOpen}
-      />
+      {isMenuOpen && (
+        <MobileMenu
+          navigation={navigation}
+          selectedMenuItemId={selectedMenuItemId}
+          onCloseMenu={closeMenu}
+          onMenuItemClick={(path: string) => {
+            router.push(path);
+            closeMenu();
+          }}
+          isOpen={isMenuOpen}
+        />
+      )}
     </>
   );
 };

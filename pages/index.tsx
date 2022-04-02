@@ -13,6 +13,7 @@ const Home: NextPage = () => {
         variants={descriptionVariants}
         initial="hidden"
         animate="visible"
+        exit="exit"
       >
         <h2 className={s.textHeader}>Hey. I’m Daria,</h2>
         <p className={s.text}>
@@ -40,6 +41,7 @@ const Home: NextPage = () => {
         variants={photoVariants}
         initial="hidden"
         animate="visible"
+        exit="exit"
       >
         <Image
           src={photo}

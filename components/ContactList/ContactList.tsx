@@ -16,6 +16,7 @@ export const ContactList: FC<ContactListProps> = ({ contacts }) => {
         className={s.title}
         initial="hidden"
         animate="visible"
+        exit="exit"
         variants={headerVariants}
       >
         You can reach me here
@@ -27,6 +28,7 @@ export const ContactList: FC<ContactListProps> = ({ contacts }) => {
             key={index}
             initial="hidden"
             animate="visible"
+            exit="exit"
             variants={contactListVariants}
             transition={{
               delay: 2.5 + index * 0.5,

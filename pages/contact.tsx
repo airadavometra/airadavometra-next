@@ -54,6 +54,7 @@ const ContactPage: NextPage = () => (
       variants={mapVariants}
       initial="hidden"
       animate="visible"
+      exit="exit"
     >
       <YMaps key={"en_US"} query={{ lang: "en_US" }}>
         <Map
