@@ -26,7 +26,7 @@ const MobileMenu: FC<MobileMenuProps> = ({
       key={Number(isOpen)}
       className={classNames(s.menuContainer)}
       variants={menuVariants}
-      initial={false}
+      initial="hidden"
       animate="visible"
       exit="exit"
     >
