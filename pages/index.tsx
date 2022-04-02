@@ -3,20 +3,16 @@ import s from "@/pagesStyles/MainPage.module.css";
 import Image from "next/image";
 import photo from "@/public/myPhoto.webp";
 import { motion } from "framer-motion";
+import { descriptionVariants, photoVariants } from "@/motions/openAboutPage";
 
 const Home: NextPage = () => {
   return (
     <div className={s.main}>
       <motion.div
         className={s.description}
-        initial={{ y: "100vw", opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          delay: 1,
-          type: "tween",
-          duration: 1.3,
-          ease: "easeOut",
-        }}
+        variants={descriptionVariants}
+        initial="hidden"
+        animate="visible"
       >
         <h2 className={s.textHeader}>Hey. I’m Daria,</h2>
         <p className={s.text}>
@@ -41,14 +37,9 @@ const Home: NextPage = () => {
       </motion.div>
       <motion.div
         className={s.pictureWrapper}
-        initial={{ x: "150vw", opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{
-          delay: 0.2,
-          type: "tween",
-          duration: 1.3,
-          ease: "easeOut",
-        }}
+        variants={photoVariants}
+        initial="hidden"
+        animate="visible"
       >
         <Image
           src={photo}

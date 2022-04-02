@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React, { FC, useState } from "react";
 import classes from "./Tooltip.module.css";
+import { motion } from "framer-motion";
 
 type TooltipProps = {
   text: string;
@@ -11,13 +12,16 @@ export const Tooltip: FC<TooltipProps> = ({ children, text }) => {
 
   return (
     <div className={classes.tooltipContainer}>
-      <div
+      {
+        //TODO анимация всплывания тултипа из scale 0 в scale 1 из своего угла
+      }
+      <motion.div
         className={classNames(classes.tooltipBox, {
           [classes.visible]: show,
         })}
       >
         {text}
-      </div>
+      </motion.div>
       <div
         className={classes.childrenContainer}
         onMouseEnter={() => setShow(true)}

@@ -25,7 +25,7 @@
 }
 .childrenContainer {
   height: fit-content;
-  & > svg {
+  svg {
     pointer-events: none;
   }
 }

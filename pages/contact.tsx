@@ -10,6 +10,7 @@ import type { NextPage } from "next";
 import { ContactList } from "@/components/ContactList/ContactList";
 import { ContactInfo } from "@/types/contactInfo";
 import { motion } from "framer-motion";
+import { mapVariants } from "@/motions/openContactPage";
 
 const myCoords = [55.752068564993, 37.61748330508703];
 
@@ -50,14 +51,9 @@ const ContactPage: NextPage = () => (
   <div className={s.main}>
     <motion.div
       className={s.mapContainer}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        delay: 0.2,
-        type: "tween",
-        duration: 1.3,
-        ease: "easeOut",
-      }}
+      variants={mapVariants}
+      initial="hidden"
+      animate="visible"
     >
       <YMaps key={"en_US"} query={{ lang: "en_US" }}>
         <Map

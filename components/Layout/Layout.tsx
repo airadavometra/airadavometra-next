@@ -43,8 +43,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     setMenuOpen(false);
     toggleFreezePage();
   };
-  const { root } = router.query;
-  const queryRootId = root ? (Array.isArray(root) ? root[0] : root) : undefined;
 
   return (
     <>
@@ -62,11 +60,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         selectedMenuItemId={selectedMenuItemId}
         onCloseMenu={closeMenu}
         onMenuItemClick={(path: string) => {
-          let fullPath = path;
-          if (queryRootId) {
-            fullPath = `${fullPath}?root=${queryRootId}`;
-          }
-          router.push(fullPath);
+          router.push(path);
           closeMenu();
         }}
         isOpen={isMenuOpen}
