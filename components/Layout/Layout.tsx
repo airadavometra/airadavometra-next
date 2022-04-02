@@ -60,18 +60,20 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           </div>
         </AnimatePresence>
       </div>
-      {isMenuOpen && (
-        <MobileMenu
-          navigation={navigation}
-          selectedMenuItemId={selectedMenuItemId}
-          onCloseMenu={closeMenu}
-          onMenuItemClick={(path: string) => {
-            router.push(path);
-            closeMenu();
-          }}
-          isOpen={isMenuOpen}
-        />
-      )}
+      <AnimatePresence exitBeforeEnter>
+        {isMenuOpen && (
+          <MobileMenu
+            navigation={navigation}
+            selectedMenuItemId={selectedMenuItemId}
+            onCloseMenu={closeMenu}
+            onMenuItemClick={(path: string) => {
+              router.push(path);
+              closeMenu();
+            }}
+            isOpen={isMenuOpen}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 };

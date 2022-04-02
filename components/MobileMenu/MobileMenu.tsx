@@ -3,6 +3,8 @@ import { NavigationItem } from "@/types/navigationItem";
 import classNames from "classnames";
 import { FC } from "react";
 import s from "./MobileMenu.module.css";
+import { motion } from "framer-motion";
+import { menuVariants } from "@/motions/openMobileMenu";
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -20,10 +22,13 @@ const MobileMenu: FC<MobileMenuProps> = ({
   onMenuItemClick,
 }) => {
   return (
-    <div
-      className={classNames(s.menuContainer, {
-        [s.closedMenu]: !isOpen,
-      })}
+    <motion.div
+      key="mobile-menu"
+      className={classNames(s.menuContainer)}
+      variants={menuVariants}
+      initial={false}
+      animate="visible"
+      exit="exit"
     >
       <button className={s.closeIconButton} onClick={onCloseMenu}>
         <Close className={s.closeIcon} />
@@ -41,7 +46,7 @@ const MobileMenu: FC<MobileMenuProps> = ({
           </button>
         ))}
       </nav>
-    </div>
+    </motion.div>
   );
 };
 
