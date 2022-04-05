@@ -6,6 +6,9 @@ import { Previous } from "@/icons/Previous";
 import { PhotoInfo } from "@/types/photoInfo";
 import classnames from "classnames";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { closeButtonVariants, nextButtonVariants } from "@/motions/photo";
+import ReactDOM from "react-dom";
 
 type FullScreenImgProps = {
   img: PhotoInfo;
@@ -18,18 +21,25 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
   onCloseClick,
   onMoveClick,
 }) => {
-  return (
+  const container = document.querySelectorAll("div[class*='Layout_layout']")[0];
+  return ReactDOM.createPortal(
     <div className={s.main}>
-      <button
+      <motion.button
         className={classnames(s.button, s.closeButton)}
         onClick={() => onCloseClick()}
+        variants={closeButtonVariants}
+        whileHover="rotate"
       >
         <Close className={s.icon} />
-      </button>
+      </motion.button>
       <div className={s.photoContainer}>
-        <button onClick={() => onMoveClick(img.photoId - 1)}>
+        <motion.button
+          onClick={() => onMoveClick(img.photoId - 1)}
+          variants={nextButtonVariants}
+          whileHover="rotate"
+        >
           <Previous className={s.icon} />
-        </button>
+        </motion.button>
         <div className={s.photo}>
           <Image
             src={img.bigPath}
@@ -40,10 +50,15 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
             objectFit="contain"
           />
         </div>
-        <button onClick={() => onMoveClick(img.photoId + 1)}>
+        <motion.button
+          onClick={() => onMoveClick(img.photoId + 1)}
+          variants={nextButtonVariants}
+          whileHover="rotate"
+        >
           <Next className={s.icon} />
-        </button>
+        </motion.button>
       </div>
-    </div>
+    </div>,
+    container
   );
 };

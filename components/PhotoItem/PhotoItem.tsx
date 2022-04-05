@@ -3,6 +3,7 @@ import s from "./PhotoItem.module.css";
 import classNames from "classnames";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { photoContainerVariants, photoVariants } from "@/motions/photo";
 
 export interface PhotoItemProps {
   cssClassNames: string;
@@ -20,13 +21,22 @@ export const PhotoItem: FunctionComponent<PhotoItemProps> = ({
   return (
     <motion.div
       className={classNames(s.photoOuterContainer, cssClassNames)}
-      whileHover={{ scale: 0.95 }}
-      transition={{ type: "spring", stiffness: 120, duration: 1.5 }}
+      variants={photoContainerVariants}
+      whileHover="hover"
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      transition={{
+        delay: 0.2 + imgId * 0.3,
+        type: "tween",
+        duration: 0.6,
+        ease: "easeOut",
+      }}
     >
       <motion.div
         className={classNames(s.photoContainer, cssClassNames)}
-        whileHover={{ scale: 1.15 }}
-        transition={{ type: "spring", stiffness: 120, duration: 1.5 }}
+        variants={photoVariants}
+        whileHover="hover"
       >
         <Image
           onContextMenu={(e) => e.preventDefault()}
