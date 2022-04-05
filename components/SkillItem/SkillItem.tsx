@@ -23,7 +23,7 @@ export const SkillItem: FunctionComponent<SkillItemProps> = ({
           <Tooltip text={logoAlt} key={index}>
             <motion.div
               whileHover={{
-                rotate: [-2, 2, 0],
+                rotate: [0, -2, 0, 2, 0],
                 transition: {
                   repeat: Infinity,
                   duration: 0.3,
