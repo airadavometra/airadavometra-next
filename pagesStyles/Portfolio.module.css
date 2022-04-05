@@ -17,6 +17,7 @@
   font-family: var(--header-text-font);
   font-size: 48rem;
   outline: 1px solid var(--black);
+  white-space: nowrap;
   transition: all 0.5s ease-in-out;
   &:hover,
   :focus {

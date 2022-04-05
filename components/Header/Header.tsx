@@ -6,8 +6,9 @@ import { useRouter } from "next/router";
 import { FC, useMemo } from "react";
 import s from "./Header.module.css";
 import { motion } from "framer-motion";
-import { photoVariants } from "@/motions/openAboutPage";
-import { mapVariants } from "@/motions/openContactPage";
+import { photoVariants } from "@/motions/aboutPage";
+import { mapVariants } from "@/motions/contactPage";
+import { burgerVariants } from "@/motions/header";
 
 type HeaderProps = {
   navigation: NavigationItem[];
@@ -41,6 +42,7 @@ const Header: FC<HeaderProps> = ({
         variants={variants}
         initial="hidden"
         animate="visible"
+        exit="exit"
       >
         {navigation.map(({ id, title, path }) => (
           <Link key={id} href={path}>
@@ -54,9 +56,16 @@ const Header: FC<HeaderProps> = ({
           </Link>
         ))}
       </motion.nav>
-      <button className={s.menuButton} onClick={onOpenMenu}>
+      <motion.button
+        className={s.menuButton}
+        onClick={onOpenMenu}
+        variants={burgerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <Burger className={s.menuIcon} />
-      </button>
+      </motion.button>
     </header>
   );
 };

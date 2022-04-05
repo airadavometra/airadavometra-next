@@ -3,14 +3,20 @@ import s from "@/pagesStyles/MainPage.module.css";
 import Image from "next/image";
 import photo from "@/public/myPhoto.webp";
 import { motion } from "framer-motion";
-import { descriptionVariants, photoVariants } from "@/motions/openAboutPage";
+import {
+  descriptionVariants,
+  mobileVariants,
+  photoVariants,
+} from "@/motions/aboutPage";
+import { useMedia } from "react-use";
 
 const Home: NextPage = () => {
+  const isSmall = useMedia("(max-width: 1024px)");
   return (
     <div className={s.main}>
       <motion.div
         className={s.description}
-        variants={descriptionVariants}
+        variants={isSmall ? mobileVariants : descriptionVariants}
         initial="hidden"
         animate="visible"
         exit="exit"
@@ -38,7 +44,7 @@ const Home: NextPage = () => {
       </motion.div>
       <motion.div
         className={s.pictureWrapper}
-        variants={photoVariants}
+        variants={isSmall ? mobileVariants : photoVariants}
         initial="hidden"
         animate="visible"
         exit="exit"

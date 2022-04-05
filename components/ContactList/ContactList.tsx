@@ -3,13 +3,19 @@ import { ContactLink } from "../ContactLink/ContactLink";
 import s from "./ContactList.module.css";
 import { ContactInfo } from "@/types/contactInfo";
 import { motion } from "framer-motion";
-import { contactListVariants, headerVariants } from "@/motions/openContactPage";
+import {
+  contactListVariants,
+  headerVariants,
+  mobileContactListVariants,
+} from "@/motions/contactPage";
+import { useMedia } from "react-use";
 
 type ContactListProps = {
   contacts: ContactInfo[];
 };
 
 export const ContactList: FC<ContactListProps> = ({ contacts }) => {
+  const isSmall = useMedia("(max-width: 1024px)");
   return (
     <div className={s.contactsContainer}>
       <motion.h2
@@ -17,7 +23,7 @@ export const ContactList: FC<ContactListProps> = ({ contacts }) => {
         initial="hidden"
         animate="visible"
         exit="exit"
-        variants={headerVariants}
+        variants={isSmall ? mobileContactListVariants : headerVariants}
       >
         You can reach me here
       </motion.h2>
@@ -29,13 +35,17 @@ export const ContactList: FC<ContactListProps> = ({ contacts }) => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            variants={contactListVariants}
-            transition={{
-              delay: 2.5 + index * 0.5,
-              type: "tween",
-              duration: 0.6,
-              ease: "easeOut",
-            }}
+            variants={isSmall ? mobileContactListVariants : contactListVariants}
+            transition={
+              isSmall
+                ? undefined
+                : {
+                    delay: 2.5 + index * 0.5,
+                    type: "tween",
+                    duration: 0.6,
+                    ease: "easeOut",
+                  }
+            }
           >
             <ContactLink contact={item} />
           </motion.li>

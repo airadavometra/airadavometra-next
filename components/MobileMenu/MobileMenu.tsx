@@ -4,7 +4,7 @@ import classNames from "classnames";
 import { FC } from "react";
 import s from "./MobileMenu.module.css";
 import { motion } from "framer-motion";
-import { menuVariants } from "@/motions/openMobileMenu";
+import { menuVariants } from "@/motions/mobileMenu";
 
 type MobileMenuProps = {
   isOpen: boolean;

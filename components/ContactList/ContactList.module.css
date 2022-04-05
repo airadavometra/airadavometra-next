@@ -1,3 +1,10 @@
+.contactsContainer {
+  @media (max-width: 1024px) {
+    margin: auto;
+    margin-left: 48rem;
+  }
+}
+
 .title {
   margin-bottom: 32rem;
   font-family: var(--header-text-font);
