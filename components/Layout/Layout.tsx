@@ -6,6 +6,7 @@ import Header from "../Header/Header";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { PageHead } from "../PageHead/PageHead";
 import s from "./Layout.module.css";
+import { AnimatePresence } from "framer-motion";
 
 const navigation: NavigationItem[] = [
   { id: 1, title: "About me", path: "/" },
@@ -43,8 +44,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     setMenuOpen(false);
     toggleFreezePage();
   };
-  const { root } = router.query;
-  const queryRootId = root ? (Array.isArray(root) ? root[0] : root) : undefined;
 
   return (
     <>
@@ -55,22 +54,26 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           onOpenMenu={openMenu}
           selectedMenuItemId={selectedMenuItemId}
         />
-        {children}
+        <AnimatePresence exitBeforeEnter>
+          <div className={s.pageContainer} key={router.pathname}>
+            {children}
+          </div>
+        </AnimatePresence>
       </div>
-      <MobileMenu
-        navigation={navigation}
-        selectedMenuItemId={selectedMenuItemId}
-        onCloseMenu={closeMenu}
-        onMenuItemClick={(path: string) => {
-          let fullPath = path;
-          if (queryRootId) {
-            fullPath = `${fullPath}?root=${queryRootId}`;
-          }
-          router.push(fullPath);
-          closeMenu();
-        }}
-        isOpen={isMenuOpen}
-      />
+      <AnimatePresence exitBeforeEnter>
+        {isMenuOpen && (
+          <MobileMenu
+            navigation={navigation}
+            selectedMenuItemId={selectedMenuItemId}
+            onCloseMenu={closeMenu}
+            onMenuItemClick={(path: string) => {
+              router.push(path);
+              closeMenu();
+            }}
+            isOpen={isMenuOpen}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 };

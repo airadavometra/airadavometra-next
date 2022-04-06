@@ -1,8 +1,14 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
 import s from "./ExperienceItem.module.css";
 import classNames from "classnames";
 import { Expand } from "@/icons/Expand";
-import classnames from "classnames";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  expandExperienceItem,
+  experienceButtonIconVariants,
+  experienceButtonVariants,
+} from "@/motions/portfolio";
+import { useMedia } from "react-use";
 
 type ExperienceItemProps = {
   text: string;
@@ -17,22 +23,51 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
   year,
   isOpen,
 }) => {
-  const [open, setOpen] = useState(isOpen);
+  const [open, setOpen] = useState(false);
+  const isSmall = useMedia("(max-width: 768px)");
+
+  useEffect(() => {
+    if (!isSmall) {
+      setTimeout(() => setOpen(isOpen), 2700);
+    } else {
+      setTimeout(() => setOpen(isOpen), 1000);
+    }
+  }, []);
 
   return (
     <>
-      <button className={s.titleButton} onClick={() => setOpen(!open)}>
+      <motion.button
+        className={s.titleButton}
+        onClick={() => setOpen(!open)}
+        whileTap="rotate"
+        whileHover="hover"
+        exit="exit"
+        variants={experienceButtonVariants}
+      >
         <div className={classNames(s.titleContainer)}>
           <h2 className={classNames(s.year)}>{year}</h2>
           <h2 className={classNames(s.title)}>{title}</h2>
         </div>
-        <Expand
-          className={classNames(s.expandBtn, {
-            [s.collapse]: !open,
-          })}
-        />
-      </button>
-      <p className={classNames(s.text, { [s.hiddenText]: !open })}>{text}</p>
+        <motion.div variants={experienceButtonIconVariants}>
+          <Expand
+            className={classNames(s.expandBtn, {
+              [s.collapse]: !open,
+            })}
+          />
+        </motion.div>
+      </motion.button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={expandExperienceItem}
+          >
+            <p className={classNames(s.text)}>{text}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

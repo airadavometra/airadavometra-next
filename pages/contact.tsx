@@ -9,6 +9,9 @@ import { YouTube } from "@/icons/contacts/YouTube";
 import type { NextPage } from "next";
 import { ContactList } from "@/components/ContactList/ContactList";
 import { ContactInfo } from "@/types/contactInfo";
+import { motion } from "framer-motion";
+import { mapVariants, mobileMapVariants } from "@/motions/contactPage";
+import { useMedia } from "react-use";
 
 const myCoords = [55.752068564993, 37.61748330508703];
 
@@ -45,33 +48,42 @@ const skillInfoArray: ContactInfo[] = [
   },
 ];
 
-const ContactPage: NextPage = () => (
-  <div className={s.main}>
-    <div className={s.mapContainer}>
-      <YMaps key={"en_US"} query={{ lang: "en_US" }}>
-        <Map
-          className={s.map}
-          defaultState={{
-            center: myCoords,
-            zoom: 4,
-          }}
-          options={{
-            suppressMapOpenBlock: true,
-            suppressObsoleteBrowserNotifier: true,
-          }}
-        >
-          <Placemark
-            geometry={myCoords}
-            options={{
-              iconColor: "#f7c003",
-              preset: "islands#circleDotIcon",
+const ContactPage: NextPage = () => {
+  const isSmall = useMedia("(max-width: 1024px)");
+  return (
+    <div className={s.main}>
+      <motion.div
+        className={s.mapContainer}
+        variants={isSmall ? mobileMapVariants : mapVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        <YMaps key={"en_US"} query={{ lang: "en_US" }}>
+          <Map
+            className={s.map}
+            defaultState={{
+              center: myCoords,
+              zoom: 4,
             }}
-          />
-        </Map>
-      </YMaps>
+            options={{
+              suppressMapOpenBlock: true,
+              suppressObsoleteBrowserNotifier: true,
+            }}
+          >
+            <Placemark
+              geometry={myCoords}
+              options={{
+                iconColor: "#f7c003",
+                preset: "islands#circleDotIcon",
+              }}
+            />
+          </Map>
+        </YMaps>
+      </motion.div>
+      <ContactList contacts={skillInfoArray} />
     </div>
-    <ContactList contacts={skillInfoArray} />
-  </div>
-);
+  );
+};
 
 export default ContactPage;

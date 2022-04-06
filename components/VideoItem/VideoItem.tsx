@@ -1,13 +1,33 @@
 import React, { FunctionComponent } from "react";
 import s from "./VideoItem.module.css";
+import { motion } from "framer-motion";
+import { videoVariants } from "@/motions/video";
 
 type VideoItemProps = {
   src: string;
+  index: number;
 };
 
-export const VideoItem: FunctionComponent<VideoItemProps> = ({ src }) => {
+export const VideoItem: FunctionComponent<VideoItemProps> = ({
+  src,
+  index,
+}) => {
   return (
-    <div className={s.main}>
+    <motion.div
+      className={s.main}
+      variants={videoVariants}
+      initial={videoVariants.hidden}
+      animate={{
+        ...videoVariants.visible,
+        transition: {
+          delay: 0.2 + index * 0.5,
+          type: "tween",
+          duration: 0.6,
+          ease: "easeOut",
+        },
+      }}
+      exit={videoVariants.exit}
+    >
       <iframe
         className={s.videoItem}
         src={src}
@@ -16,6 +36,6 @@ export const VideoItem: FunctionComponent<VideoItemProps> = ({ src }) => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-    </div>
+    </motion.div>
   );
 };

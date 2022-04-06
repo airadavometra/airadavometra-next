@@ -13,11 +13,7 @@
   color: var(--white);
   font-size: 16rem;
   font-weight: 600;
-  display: none;
   z-index: 2;
-  &.visible {
-    display: block;
-  }
   @media (max-width: 768px) {
     left: 50%;
     right: unset;
@@ -25,7 +21,7 @@
 }
 .childrenContainer {
   height: fit-content;
-  & > svg {
+  svg {
     pointer-events: none;
   }
 }

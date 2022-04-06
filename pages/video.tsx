@@ -15,7 +15,7 @@ const videoLinks: string[] = [
 const VideoPage: NextPage = () => (
   <div className={s.main}>
     {videoLinks.map((item, index) => (
-      <VideoItem key={index} src={item} />
+      <VideoItem key={index} src={item} index={index} />
     ))}
   </div>
 );

@@ -7,9 +7,6 @@
   display: flex;
   background-color: var(--yellow);
   z-index: 3;
-  &.closedMenu {
-    display: none;
-  }
 }
 .closeIconButton {
   position: absolute;

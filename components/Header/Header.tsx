@@ -1,12 +1,17 @@
 import { Burger } from "@/icons/Burger";
 import { NavigationItem } from "@/types/navigationItem";
-import { toggleFreezePage } from "@/utils/toggleFreezePage";
 import classNames from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FC, useEffect, useState } from "react";
-import MobileMenu from "../MobileMenu/MobileMenu";
+import { FC, useMemo } from "react";
 import s from "./Header.module.css";
+import { motion } from "framer-motion";
+import { photoVariants } from "@/motions/aboutPage";
+import { mapVariants } from "@/motions/contactPage";
+import { burgerVariants, menuItemVariants } from "@/motions/header";
+import { photoHeaderVariants } from "@/motions/photo";
+import { videoHeaderVariants } from "@/motions/video";
+import { portfolioHeaderVariants } from "@/motions/portfolio";
 
 type HeaderProps = {
   navigation: NavigationItem[];
@@ -21,33 +26,73 @@ const Header: FC<HeaderProps> = ({
 }) => {
   const router = useRouter();
 
-  const { root } = router.query;
-  const queryRootId = root ? (Array.isArray(root) ? root[0] : root) : undefined;
+  const navVariants = useMemo(() => {
+    return router.pathname === "/"
+      ? photoVariants
+      : router.pathname === "/contact"
+      ? mapVariants
+      : router.pathname === "/video"
+      ? undefined
+      : router.pathname === "/portfolio"
+      ? portfolioHeaderVariants
+      : undefined;
+  }, []);
+  const linkVariants = useMemo(() => {
+    return router.pathname === "/"
+      ? undefined
+      : router.pathname === "/contact"
+      ? undefined
+      : router.pathname === "/video"
+      ? videoHeaderVariants
+      : router.pathname === "/portfolio"
+      ? undefined
+      : photoHeaderVariants;
+  }, []);
 
   return (
     <header className={s.header}>
-      <nav className={s.navigation}>
-        {navigation.map(({ id, title, path }) => {
-          let fullPath = path;
-          if (queryRootId) {
-            fullPath = `${fullPath}?root=${queryRootId}`;
-          }
-          return (
-            <Link key={id} href={fullPath}>
-              <a
-                className={classNames(s.link, {
-                  [s.selected]: id === selectedMenuItemId,
-                })}
-              >
-                {title}
-              </a>
-            </Link>
-          );
-        })}
-      </nav>
-      <button className={s.menuButton} onClick={onOpenMenu}>
+      <motion.nav
+        className={s.navigation}
+        variants={navVariants}
+        initial={navVariants?.hidden}
+        animate={navVariants?.visible}
+        exit={navVariants?.exit}
+      >
+        {navigation.map(({ id, title, path }, index) => (
+          <Link key={id} href={path}>
+            <motion.a
+              className={classNames(s.link, {
+                [s.selected]: id === selectedMenuItemId,
+              })}
+              variants={{ ...linkVariants, ...menuItemVariants }}
+              initial={linkVariants?.hidden}
+              whileHover={menuItemVariants.hover}
+              animate={{
+                ...linkVariants?.visible,
+                transition: {
+                  delay: 2 + index * 0.3,
+                  type: "tween",
+                  duration: 0.3,
+                  ease: "easeOut",
+                },
+              }}
+              exit={linkVariants?.exit}
+            >
+              {title}
+            </motion.a>
+          </Link>
+        ))}
+      </motion.nav>
+      <motion.button
+        className={s.menuButton}
+        onClick={onOpenMenu}
+        variants={burgerVariants}
+        initial={burgerVariants.hidden}
+        animate={burgerVariants.visible}
+        exit={burgerVariants.exit}
+      >
         <Burger className={s.menuIcon} />
-      </button>
+      </motion.button>
     </header>
   );
 };

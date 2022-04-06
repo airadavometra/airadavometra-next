@@ -10,7 +10,7 @@ import { ExperienceList } from "@/components/ExperienceList/ExperienceList";
 import { ProjectList } from "@/components/ProjectList/ProjectList";
 import { Firebase } from "@/icons/skills/backend/Firebase";
 import { Css3 } from "@/icons/skills/frontend/Css3";
-import { Framer } from "@/icons/skills/frontend/Framer";
+import { FramerMotion } from "@/icons/skills/frontend/FramerMotion";
 import { GraphQL } from "@/icons/skills/frontend/GraphQL";
 import { Html5 } from "@/icons/skills/frontend/Html5";
 import { JavaScript } from "@/icons/skills/frontend/JavaScript";
@@ -26,6 +26,12 @@ import { Github } from "@/icons/contacts/Github";
 import WatchList from "@/public/projects/WatchList.png";
 import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
 import FamilyTree from "@/public/projects/FamilyTree.png";
+import { motion } from "framer-motion";
+import {
+  downloadCvVariants,
+  githubLinkVariants,
+  mobileDownloadCvVariants,
+} from "@/motions/portfolio";
 
 const experienceInfoArray: ExperienceInfo[] = [
   {
@@ -66,7 +72,7 @@ const skillInfoArray: SkillInfo[] = [
       { logo: NextJS, logoAlt: "Next JS" },
       { logo: PostCss, logoAlt: "PostCSS" },
       { logo: StyledComponents, logoAlt: "styled-components" },
-      { logo: Framer, logoAlt: "Framer Motion" },
+      { logo: FramerMotion, logoAlt: "Framer Motion" },
       { logo: GraphQL, logoAlt: "GraphQL" },
     ],
   },
@@ -127,27 +133,58 @@ const PortfolioPage: NextPage = () => {
   return (
     <div className={s.main}>
       <div className={s.skillsAndExperience}>
-        {isMobile && downloadButton}
+        {isMobile && (
+          <motion.div
+            className={s.downloadContainer}
+            variants={mobileDownloadCvVariants}
+            exit="exit"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+          >
+            {downloadButton}
+          </motion.div>
+        )}
         <section>
           <ExperienceList experienceInfoArray={experienceInfoArray} />
         </section>
         <div className={s.skills}>
-          {!isMobile && downloadButton}
+          {!isMobile && (
+            <motion.div
+              className={s.downloadContainer}
+              variants={downloadCvVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              {downloadButton}
+            </motion.div>
+          )}
           <SkillList skillInfoArray={skillInfoArray} />
         </div>
       </div>
       <ProjectList projectInfoArray={projectInfoArray} />
-      <a
+      <motion.div
         className={s.githubSection}
-        href="https://github.com/airadavometra"
-        target="_blank"
-        rel="noopener noreferrer"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+        whileHover="hover"
+        exit="exit"
       >
-        <p className={s.githubText}>
-          Please feel free {isMobile && <br />} to check out my github account
-        </p>
-        <Github className={s.githubLogo} />
-      </a>
+        <motion.a
+          className={s.githubLink}
+          href="https://github.com/airadavometra"
+          target="_blank"
+          rel="noopener noreferrer"
+          variants={githubLinkVariants}
+        >
+          <p className={s.githubText}>
+            Please feel free {isMobile && <br />} to check out my github account
+          </p>
+          <Github className={s.githubLogo} />
+        </motion.a>
+      </motion.div>
     </div>
   );
 };

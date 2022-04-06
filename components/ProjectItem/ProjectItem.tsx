@@ -4,6 +4,14 @@ import classNames from "classnames";
 import { ProjectInfo } from "@/types/projectInfo";
 import Image from "next/image";
 import { useMedia } from "react-use";
+import { motion } from "framer-motion";
+import {
+  projectDescriptionVariants,
+  projectImageVariants,
+  projectLinkVariants,
+  projectPhotoLinkVariants,
+  projectTagsVariants,
+} from "@/motions/portfolio";
 
 type ProjectItemProps = {
   projectInfo: ProjectInfo;
@@ -14,34 +22,49 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
 }) => {
   const isSmallScreen = useMedia("(max-width: 1200px)");
   return (
-    <div className={s.main}>
+    <motion.div
+      className={s.main}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true }}
+      exit="exit"
+    >
       {isSmallScreen && (
         <div className={s.title}>{projectInfo.projectName}</div>
       )}
-      <section className={s.imageContainer}>
+      <motion.section
+        className={s.imageContainer}
+        variants={projectImageVariants}
+      >
         <div className={s.linksContainer}>
-          <a
+          <motion.a
             className={classNames(s.link)}
             href={projectInfo.projectGithubLink}
             target="_blank"
             rel="noopener noreferrer"
+            variants={projectLinkVariants}
+            whileHover="hover"
           >
             Github
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             className={classNames(s.link)}
             href={projectInfo.projectLink}
             target="_blank"
             rel="noopener noreferrer"
+            variants={projectLinkVariants}
+            whileHover="hover"
           >
             Project
-          </a>
+          </motion.a>
         </div>
-        <a
+        <motion.a
           href={projectInfo.projectLink}
           target="_blank"
           rel="noopener noreferrer"
           className={s.imageWrapper}
+          variants={projectPhotoLinkVariants}
+          whileHover="hover"
         >
           <Image
             layout="responsive"
@@ -49,21 +72,44 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
             alt={projectInfo.projectName}
             placeholder="blur"
           />
-        </a>
-      </section>
+        </motion.a>
+      </motion.section>
       <section className={s.descriptionContainer}>
         {!isSmallScreen && (
-          <div className={s.title}>{projectInfo.projectName}</div>
+          <motion.div className={s.title} variants={projectDescriptionVariants}>
+            {projectInfo.projectName}
+          </motion.div>
         )}
-        <div className={s.description}>{projectInfo.projectDesc}</div>
+        <motion.div
+          className={s.description}
+          variants={projectDescriptionVariants}
+        >
+          {projectInfo.projectDesc}
+        </motion.div>
         <div className={s.tagsContainer}>
           {projectInfo.projectTechnologies.map((item, index) => (
-            <div className={s.tag} key={index}>
+            <motion.div
+              className={s.tag}
+              key={index}
+              variants={projectTagsVariants}
+              initial="offscreen"
+              viewport={{ once: true }}
+              whileHover="hover"
+              whileInView={{
+                ...projectTagsVariants.onscreen,
+                transition: {
+                  delay: index * 0.6,
+                  type: "spring",
+                  stiffness: 120,
+                },
+              }}
+              exit="exit"
+            >
               {`${item}`}
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };

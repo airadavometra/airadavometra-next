@@ -1,4 +1,5 @@
 .main {
+  height: max-content;
   padding: 32rem;
   display: flex;
   flex-direction: column;
@@ -9,6 +10,12 @@
     gap: 48rem;
   }
 }
+.downloadContainer {
+  @media (max-width: 768px) {
+    margin-top: 80rem;
+    align-self: center;
+  }
+}
 .download {
   width: fit-content;
   padding: 16rem 24rem;
@@ -16,6 +23,7 @@
   font-family: var(--header-text-font);
   font-size: 48rem;
   outline: 1px solid var(--black);
+  white-space: nowrap;
   transition: all 0.5s ease-in-out;
   &:hover,
   :focus {
@@ -23,8 +31,6 @@
     box-shadow: inset 6.5em 0 0 0 var(--black);
   }
   @media (max-width: 768px) {
-    margin-top: 80rem;
-    align-self: center;
     font-size: 32rem;
   }
 }
@@ -48,7 +54,14 @@
   }
 }
 .githubSection {
+  width: 100%;
+  height: fit-content;
+  @media (max-width: 768px) {
+  }
+}
+.githubLink {
   width: fit-content;
+  height: fit-content;
   padding: 80rem 0;
   margin: auto;
   display: grid;
@@ -56,17 +69,12 @@
   align-items: center;
   justify-items: center;
   grid-gap: 24rem;
-  transition: all 0.3s ease-in-out;
-  &:hover,
-  :focus {
-    transform: scale(1.1);
-  }
   @media (max-width: 1024px) {
+    padding: 0;
+    padding-top: 48rem;
     grid-template-columns: repeat(1, auto);
   }
   @media (max-width: 768px) {
-    padding: 0;
-    padding-top: 48rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;

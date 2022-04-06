@@ -74,6 +74,7 @@
   color: var(--yellow);
   font-size: 16rem;
   font-weight: 600;
+  cursor: default;
   @media (max-width: 768px) {
     font-weight: 500;
   }

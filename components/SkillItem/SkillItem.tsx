@@ -2,6 +2,7 @@ import { SkillLogo } from "@/types/skillLogo";
 import React, { FunctionComponent } from "react";
 import { Tooltip } from "../Tooltip/Tooltip";
 import s from "./SkillItem.module.css";
+import { motion } from "framer-motion";
 
 type SkillItemProps = {
   skillLogos: SkillLogo[];
@@ -20,7 +21,17 @@ export const SkillItem: FunctionComponent<SkillItemProps> = ({
       <div className={s.iconsContainer}>
         {skillLogos.map(({ logo: Logo, logoAlt }, index) => (
           <Tooltip text={logoAlt} key={index}>
-            <Logo className={s.icon} />
+            <motion.div
+              whileHover={{
+                rotate: [0, -2, 0, 2, 0],
+                transition: {
+                  repeat: Infinity,
+                  duration: 0.3,
+                },
+              }}
+            >
+              <Logo className={s.icon} />
+            </motion.div>
           </Tooltip>
         ))}
       </div>

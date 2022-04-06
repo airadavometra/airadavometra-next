@@ -1,3 +1,6 @@
 .photoContainer {
   position: relative;
 }
+.photoOuterContainer {
+  overflow: hidden;
+}
