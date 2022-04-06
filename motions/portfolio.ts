@@ -85,6 +85,23 @@ export const downloadCvVariants = {
     transition: { type: "tween", duration: 0.7, ease: "easeInOut" },
   },
 };
+
+export const mobileDownloadCvVariants = {
+  offscreen: { scale: 0 },
+  onscreen: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+    },
+  },
+  exit: {
+    x: "150vw",
+    opacity: 0,
+    transition: { type: "tween", duration: 0.7, ease: "easeInOut" },
+  },
+};
+
 export const skillsVariants = {
   hidden: { x: "150vw", opacity: 0 },
   visible: {
@@ -98,6 +115,21 @@ export const skillsVariants = {
     transition: { type: "tween", duration: 0.7, ease: "easeInOut" },
   },
 };
+
+export const mobileSkillsVariants = {
+  hidden: { x: "-150vw", opacity: 0 },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "tween", duration: 1.3, ease: "easeOut" },
+  },
+  exit: {
+    x: "150vw",
+    opacity: 0,
+    transition: { type: "tween", duration: 0.7, ease: "easeInOut" },
+  },
+};
+
 export const tooltipVariants = {
   hidden: { scale: 0, originX: 1, originY: 0 },
   visible: {

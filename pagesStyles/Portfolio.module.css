@@ -10,6 +10,12 @@
     gap: 48rem;
   }
 }
+.downloadContainer {
+  @media (max-width: 768px) {
+    margin-top: 80rem;
+    align-self: center;
+  }
+}
 .download {
   width: fit-content;
   padding: 16rem 24rem;
@@ -25,8 +31,6 @@
     box-shadow: inset 6.5em 0 0 0 var(--black);
   }
   @media (max-width: 768px) {
-    margin-top: 80rem;
-    align-self: center;
     font-size: 32rem;
   }
 }

@@ -3,7 +3,8 @@ import React, { FunctionComponent } from "react";
 import { SkillItem } from "../SkillItem/SkillItem";
 import s from "./SkillList.module.css";
 import { motion } from "framer-motion";
-import { skillsVariants } from "@/motions/portfolio";
+import { mobileSkillsVariants, skillsVariants } from "@/motions/portfolio";
+import { useMedia } from "react-use";
 
 type SkillListProps = {
   skillInfoArray: SkillInfo[];
@@ -12,10 +13,11 @@ type SkillListProps = {
 export const SkillList: FunctionComponent<SkillListProps> = ({
   skillInfoArray,
 }) => {
+  const isSmall = useMedia("(max-width: 768px)");
   return (
     <motion.section
       className={s.skillsSection}
-      variants={skillsVariants}
+      variants={isSmall ? mobileSkillsVariants : skillsVariants}
       initial="hidden"
       animate="visible"
       exit="exit"

@@ -27,7 +27,11 @@ import WatchList from "@/public/projects/WatchList.png";
 import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
 import FamilyTree from "@/public/projects/FamilyTree.png";
 import { motion } from "framer-motion";
-import { downloadCvVariants, githubLinkVariants } from "@/motions/portfolio";
+import {
+  downloadCvVariants,
+  githubLinkVariants,
+  mobileDownloadCvVariants,
+} from "@/motions/portfolio";
 
 const experienceInfoArray: ExperienceInfo[] = [
   {
@@ -131,10 +135,12 @@ const PortfolioPage: NextPage = () => {
       <div className={s.skillsAndExperience}>
         {isMobile && (
           <motion.div
-            variants={downloadCvVariants}
-            initial="hidden"
-            animate="visible"
+            className={s.downloadContainer}
+            variants={mobileDownloadCvVariants}
             exit="exit"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
           >
             {downloadButton}
           </motion.div>
@@ -145,6 +151,7 @@ const PortfolioPage: NextPage = () => {
         <div className={s.skills}>
           {!isMobile && (
             <motion.div
+              className={s.downloadContainer}
               variants={downloadCvVariants}
               initial="hidden"
               animate="visible"
