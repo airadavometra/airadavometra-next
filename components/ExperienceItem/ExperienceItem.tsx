@@ -15,7 +15,6 @@ type ExperienceItemProps = {
   title: string;
   year: string;
   isOpen: boolean;
-  isSmall: boolean;
 };
 
 export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
@@ -23,9 +22,9 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
   title,
   year,
   isOpen,
-  isSmall,
 }) => {
   const [open, setOpen] = useState(false);
+  const isSmall = useMedia("(max-width: 768px)");
 
   useEffect(() => {
     if (!isSmall) {
