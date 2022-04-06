@@ -8,9 +8,10 @@ import s from "./Header.module.css";
 import { motion } from "framer-motion";
 import { photoVariants } from "@/motions/aboutPage";
 import { mapVariants } from "@/motions/contactPage";
-import { burgerVariants } from "@/motions/header";
+import { burgerVariants, menuItemVariants } from "@/motions/header";
 import { photoHeaderVariants } from "@/motions/photo";
 import { videoHeaderVariants } from "@/motions/video";
+import { portfolioHeaderVariants } from "@/motions/portfolio";
 
 type HeaderProps = {
   navigation: NavigationItem[];
@@ -33,7 +34,7 @@ const Header: FC<HeaderProps> = ({
       : router.pathname === "/video"
       ? undefined
       : router.pathname === "/portfolio"
-      ? photoVariants
+      ? portfolioHeaderVariants
       : undefined;
   }, []);
   const linkVariants = useMemo(() => {
@@ -53,9 +54,9 @@ const Header: FC<HeaderProps> = ({
       <motion.nav
         className={s.navigation}
         variants={navVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
+        initial={navVariants?.hidden}
+        animate={navVariants?.visible}
+        exit={navVariants?.exit}
       >
         {navigation.map(({ id, title, path }, index) => (
           <Link key={id} href={path}>
@@ -63,16 +64,19 @@ const Header: FC<HeaderProps> = ({
               className={classNames(s.link, {
                 [s.selected]: id === selectedMenuItemId,
               })}
-              variants={linkVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{
-                delay: 2 + index * 0.3,
-                type: "tween",
-                duration: 0.3,
-                ease: "easeOut",
+              variants={{ ...linkVariants, ...menuItemVariants }}
+              initial={linkVariants?.hidden}
+              whileHover={menuItemVariants.hover}
+              animate={{
+                ...linkVariants?.visible,
+                transition: {
+                  delay: 2 + index * 0.3,
+                  type: "tween",
+                  duration: 0.3,
+                  ease: "easeOut",
+                },
               }}
+              exit={linkVariants?.exit}
             >
               {title}
             </motion.a>
@@ -83,9 +87,9 @@ const Header: FC<HeaderProps> = ({
         className={s.menuButton}
         onClick={onOpenMenu}
         variants={burgerVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
+        initial={burgerVariants.hidden}
+        animate={burgerVariants.visible}
+        exit={burgerVariants.exit}
       >
         <Burger className={s.menuIcon} />
       </motion.button>

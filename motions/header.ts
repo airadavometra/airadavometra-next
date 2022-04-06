@@ -9,3 +9,9 @@ export const burgerVariants = {
     transition: { type: "tween", duration: 0.5, ease: "easeInOut" },
   },
 };
+export const menuItemVariants = {
+  hover: {
+    scale: 1.15,
+    transition: { type: "spring", stiffness: 300, duration: 1.5 },
+  },
+};

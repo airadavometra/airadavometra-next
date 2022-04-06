@@ -63,3 +63,10 @@ export const mobileContactListVariants = {
     transition: { type: "tween", duration: 0.7, ease: "easeInOut" },
   },
 };
+export const contactLinkVariants = {
+  hover: {
+    originX: 0,
+    scale: 1.3,
+    transition: { type: "spring", stiffness: 300 },
+  },
+};
