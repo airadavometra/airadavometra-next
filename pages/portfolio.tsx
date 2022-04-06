@@ -26,6 +26,8 @@ import { Github } from "@/icons/contacts/Github";
 import WatchList from "@/public/projects/WatchList.png";
 import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
 import FamilyTree from "@/public/projects/FamilyTree.png";
+import { motion } from "framer-motion";
+import { downloadCvVariants, githubLinkVariants } from "@/motions/portfolio";
 
 const experienceInfoArray: ExperienceInfo[] = [
   {
@@ -127,27 +129,55 @@ const PortfolioPage: NextPage = () => {
   return (
     <div className={s.main}>
       <div className={s.skillsAndExperience}>
-        {isMobile && downloadButton}
+        {isMobile && (
+          <motion.div
+            variants={downloadCvVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            {downloadButton}
+          </motion.div>
+        )}
         <section>
           <ExperienceList experienceInfoArray={experienceInfoArray} />
         </section>
         <div className={s.skills}>
-          {!isMobile && downloadButton}
+          {!isMobile && (
+            <motion.div
+              variants={downloadCvVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              {downloadButton}
+            </motion.div>
+          )}
           <SkillList skillInfoArray={skillInfoArray} />
         </div>
       </div>
       <ProjectList projectInfoArray={projectInfoArray} />
-      <a
+      <motion.div
         className={s.githubSection}
-        href="https://github.com/airadavometra"
-        target="_blank"
-        rel="noopener noreferrer"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true }}
+        whileHover="hover"
+        exit="exit"
       >
-        <p className={s.githubText}>
-          Please feel free {isMobile && <br />} to check out my github account
-        </p>
-        <Github className={s.githubLogo} />
-      </a>
+        <motion.a
+          className={s.githubLink}
+          href="https://github.com/airadavometra"
+          target="_blank"
+          rel="noopener noreferrer"
+          variants={githubLinkVariants}
+        >
+          <p className={s.githubText}>
+            Please feel free {isMobile && <br />} to check out my github account
+          </p>
+          <Github className={s.githubLogo} />
+        </motion.a>
+      </motion.div>
     </div>
   );
 };

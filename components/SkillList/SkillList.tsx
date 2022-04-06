@@ -2,6 +2,8 @@ import { SkillInfo } from "@/types/skillInfo";
 import React, { FunctionComponent } from "react";
 import { SkillItem } from "../SkillItem/SkillItem";
 import s from "./SkillList.module.css";
+import { motion } from "framer-motion";
+import { skillsVariants } from "@/motions/portfolio";
 
 type SkillListProps = {
   skillInfoArray: SkillInfo[];
@@ -11,7 +13,13 @@ export const SkillList: FunctionComponent<SkillListProps> = ({
   skillInfoArray,
 }) => {
   return (
-    <section className={s.skillsSection}>
+    <motion.section
+      className={s.skillsSection}
+      variants={skillsVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <div className={s.title}>Skills</div>
       <div className={s.skillsContainer}>
         {skillInfoArray.map((item, index) => (
@@ -23,6 +31,6 @@ export const SkillList: FunctionComponent<SkillListProps> = ({
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };

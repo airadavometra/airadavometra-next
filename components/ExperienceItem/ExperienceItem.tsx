@@ -1,8 +1,13 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
 import s from "./ExperienceItem.module.css";
 import classNames from "classnames";
 import { Expand } from "@/icons/Expand";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  expandExperienceItem,
+  experienceButtonIconVariants,
+  experienceButtonVariants,
+} from "@/motions/portfolio";
 
 type ExperienceItemProps = {
   text: string;
@@ -17,41 +22,44 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
   year,
   isOpen,
 }) => {
-  const [open, setOpen] = useState(isOpen);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setOpen(isOpen), 2700);
+  }, []);
 
   return (
     <>
-      <button className={s.titleButton} onClick={() => setOpen(!open)}>
+      <motion.button
+        className={s.titleButton}
+        onClick={() => setOpen(!open)}
+        whileTap="rotate"
+        whileHover="hover"
+        exit="exit"
+        variants={experienceButtonVariants}
+      >
         <div className={classNames(s.titleContainer)}>
           <h2 className={classNames(s.year)}>{year}</h2>
           <h2 className={classNames(s.title)}>{title}</h2>
         </div>
-        {
-          //TODO вращающаяся анимация на клик
-        }
-        <motion.div whileTap={{ rotate: 180 }}>
+        <motion.div variants={experienceButtonIconVariants}>
           <Expand
             className={classNames(s.expandBtn, {
               [s.collapse]: !open,
             })}
           />
         </motion.div>
-      </button>
+      </motion.button>
       <AnimatePresence initial={false}>
         {open && (
-          <motion.p
-            className={classNames(s.text)}
-            initial="collapsed"
-            animate="open"
-            exit="collapsed"
-            variants={{
-              open: { opacity: 1, height: "auto" },
-              collapsed: { opacity: 0, height: 0 },
-            }}
-            transition={{ duration: 0.8 }}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={expandExperienceItem}
           >
-            {text}
-          </motion.p>
+            <p className={classNames(s.text)}>{text}</p>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

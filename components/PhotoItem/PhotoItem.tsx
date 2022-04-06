@@ -22,16 +22,18 @@ export const PhotoItem: FunctionComponent<PhotoItemProps> = ({
     <motion.div
       className={classNames(s.photoOuterContainer, cssClassNames)}
       variants={photoContainerVariants}
-      whileHover="hover"
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      transition={{
-        delay: 0.2 + imgId * 0.3,
-        type: "tween",
-        duration: 0.6,
-        ease: "easeOut",
+      initial={photoContainerVariants.hidden}
+      animate={{
+        ...photoContainerVariants.visible,
+        transition: {
+          delay: 0.2 + imgId * 0.3,
+          type: "tween",
+          duration: 0.6,
+          ease: "easeOut",
+        },
       }}
+      exit={photoContainerVariants.exit}
+      whileHover={photoContainerVariants.hover}
     >
       <motion.div
         className={classNames(s.photoContainer, cssClassNames)}

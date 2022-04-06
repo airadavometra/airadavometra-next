@@ -16,15 +16,17 @@ export const VideoItem: FunctionComponent<VideoItemProps> = ({
     <motion.div
       className={s.main}
       variants={videoVariants}
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-      transition={{
-        delay: 0.2 + index * 0.5,
-        type: "tween",
-        duration: 0.6,
-        ease: "easeOut",
+      initial={videoVariants.hidden}
+      animate={{
+        ...videoVariants.visible,
+        transition: {
+          delay: 0.2 + index * 0.5,
+          type: "tween",
+          duration: 0.6,
+          ease: "easeOut",
+        },
       }}
+      exit={videoVariants.exit}
     >
       <iframe
         className={s.videoItem}
