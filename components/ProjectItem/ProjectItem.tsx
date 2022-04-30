@@ -6,8 +6,6 @@ import Image from "next/image";
 import { useMedia } from "react-use";
 import { motion } from "framer-motion";
 import {
-  projectDescriptionVariants,
-  projectImageVariants,
   projectLinkVariants,
   projectPhotoLinkVariants,
   projectTagsVariants,
@@ -32,10 +30,7 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
       {isSmallScreen && (
         <div className={s.title}>{projectInfo.projectName}</div>
       )}
-      <motion.section
-        className={s.imageContainer}
-        variants={projectImageVariants}
-      >
+      <section className={s.imageContainer}>
         <div className={s.linksContainer}>
           <motion.a
             className={classNames(s.link)}
@@ -73,19 +68,12 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
             placeholder="blur"
           />
         </motion.a>
-      </motion.section>
+      </section>
       <section className={s.descriptionContainer}>
         {!isSmallScreen && (
-          <motion.div className={s.title} variants={projectDescriptionVariants}>
-            {projectInfo.projectName}
-          </motion.div>
+          <div className={s.title}>{projectInfo.projectName}</div>
         )}
-        <motion.div
-          className={s.description}
-          variants={projectDescriptionVariants}
-        >
-          {projectInfo.projectDesc}
-        </motion.div>
+        <div className={s.description}>{projectInfo.projectDesc}</div>
         <div className={s.tagsContainer}>
           {projectInfo.projectTechnologies.map((item, index) => (
             <motion.div

@@ -8,7 +8,6 @@ import {
   experienceButtonIconVariants,
   experienceButtonVariants,
 } from "@/motions/portfolio";
-import { useMedia } from "react-use";
 
 type ExperienceItemProps = {
   text: string;
@@ -24,14 +23,9 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
   isOpen,
 }) => {
   const [open, setOpen] = useState(false);
-  const isSmall = useMedia("(max-width: 768px)");
 
   useEffect(() => {
-    if (!isSmall) {
-      setTimeout(() => setOpen(isOpen), 2700);
-    } else {
-      setTimeout(() => setOpen(isOpen), 1000);
-    }
+    setTimeout(() => setOpen(isOpen), 1000);
   }, []);
 
   return (

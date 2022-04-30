@@ -27,11 +27,7 @@ import WatchList from "@/public/projects/WatchList.png";
 import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
 import FamilyTree from "@/public/projects/FamilyTree.png";
 import { motion } from "framer-motion";
-import {
-  downloadCvVariants,
-  githubLinkVariants,
-  mobileDownloadCvVariants,
-} from "@/motions/portfolio";
+import { downloadLinkVariants, githubLinkVariants } from "@/motions/portfolio";
 
 const experienceInfoArray: ExperienceInfo[] = [
   {
@@ -136,11 +132,8 @@ const PortfolioPage: NextPage = () => {
         {isMobile && (
           <motion.div
             className={s.downloadContainer}
-            variants={mobileDownloadCvVariants}
-            exit="exit"
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true }}
+            variants={downloadLinkVariants}
+            animate="animate"
           >
             {downloadButton}
           </motion.div>
@@ -152,10 +145,8 @@ const PortfolioPage: NextPage = () => {
           {!isMobile && (
             <motion.div
               className={s.downloadContainer}
-              variants={downloadCvVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
+              variants={downloadLinkVariants}
+              animate="animate"
             >
               {downloadButton}
             </motion.div>
