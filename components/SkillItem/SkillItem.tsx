@@ -2,8 +2,7 @@ import { SkillLogo } from "@/types/skillLogo";
 import React, { FunctionComponent } from "react";
 import { Tooltip } from "../Tooltip/Tooltip";
 import s from "./SkillItem.module.css";
-import { motion } from "framer-motion";
-import { useMedia } from "react-use";
+import { AnimatePresence, motion } from "framer-motion";
 
 type SkillItemProps = {
   skillLogos: SkillLogo[];
@@ -16,30 +15,27 @@ export const SkillItem: FunctionComponent<SkillItemProps> = ({
   skillName,
   className,
 }) => {
-  const isSmall = useMedia("max-width: 768px");
   return (
     <div className={className}>
       <h2 className={s.header}>{skillName}</h2>
       <div className={s.iconsContainer}>
         {skillLogos.map(({ logo: Logo, logoAlt }, index) => (
-          <Tooltip text={logoAlt} key={index}>
-            <motion.div
-              style={{
-                width: isSmall ? "48rem" : "64rem",
-                height: isSmall ? "48rem" : "64rem",
-              }}
-              className={s.iconContainer}
-              whileHover={{
-                rotate: [0, -2, 0, 2, 0],
-                transition: {
-                  repeat: Infinity,
-                  duration: 0.3,
-                },
-              }}
-            >
-              <Logo className={s.icon} />
-            </motion.div>
-          </Tooltip>
+          <AnimatePresence initial={false}>
+            <Tooltip text={logoAlt} key={index}>
+              <motion.div
+                className={s.iconContainer}
+                whileHover={{
+                  rotate: [0, -2, 0, 2, 0],
+                  transition: {
+                    repeat: Infinity,
+                    duration: 0.3,
+                  },
+                }}
+              >
+                <Logo className={s.icon} />
+              </motion.div>
+            </Tooltip>
+          </AnimatePresence>
         ))}
       </div>
     </div>

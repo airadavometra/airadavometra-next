@@ -62,11 +62,6 @@ export const projectTagsVariants = {
   onscreen: {
     scale: 1,
   },
-  exit: {
-    x: "150vw",
-    opacity: 0,
-    transition: { type: "tween", duration: 0.7, ease: "easeInOut" },
-  },
   hover: {
     rotate: [0, -2, 0, 2, 0],
     transition: {
@@ -99,11 +94,7 @@ export const githubLinkVariants = {
     opacity: 1,
     transition: { delay: 0.2, type: "spring", stiffness: 90 },
   },
-  exit: {
-    x: "150vw",
-    opacity: 0,
-    transition: { type: "tween", duration: 0.7, ease: "easeInOut" },
-  },
+
   hover: {
     scale: 1.1,
     transition: { type: "spring", stiffness: 300 },

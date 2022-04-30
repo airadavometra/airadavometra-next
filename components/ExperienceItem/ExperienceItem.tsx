@@ -8,7 +8,6 @@ import {
   experienceButtonIconVariants,
   experienceButtonVariants,
 } from "@/motions/portfolio";
-import { useMedia } from "react-use";
 
 type ExperienceItemProps = {
   text: string;
@@ -24,7 +23,6 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
   isOpen,
 }) => {
   const [open, setOpen] = useState(false);
-  const isSmall = useMedia("max-width: 768px");
 
   useEffect(() => {
     setTimeout(() => setOpen(isOpen), 1000);
@@ -32,34 +30,30 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
 
   return (
     <>
-      <motion.button
-        className={s.titleButton}
-        onClick={() => setOpen(!open)}
-        whileTap="rotate"
-        whileHover="hover"
-        exit="exit"
-        variants={experienceButtonVariants}
-      >
-        <div className={classNames(s.titleContainer)}>
-          <h2 className={classNames(s.year)}>{year}</h2>
-          <h2 className={classNames(s.title)}>{title}</h2>
-        </div>
-        <motion.div
-          variants={experienceButtonIconVariants}
-          style={{
-            width: isSmall ? "18rem" : "32rem",
-            height: isSmall ? "18rem" : "32rem",
-          }}
-          className={s.expandBtnContainer}
-        >
-          <Expand
-            className={classNames(s.expandBtn, {
-              [s.collapse]: !open,
-            })}
-          />
-        </motion.div>
-      </motion.button>
       <AnimatePresence initial={false}>
+        <motion.button
+          className={s.titleButton}
+          onClick={() => setOpen(!open)}
+          whileTap="rotate"
+          whileHover="hover"
+          exit="exit"
+          variants={experienceButtonVariants}
+        >
+          <div className={classNames(s.titleContainer)}>
+            <h2 className={classNames(s.year)}>{year}</h2>
+            <h2 className={classNames(s.title)}>{title}</h2>
+          </div>
+          <motion.div
+            variants={experienceButtonIconVariants}
+            className={s.expandBtnContainer}
+          >
+            <Expand
+              className={classNames(s.expandBtn, {
+                [s.collapse]: !open,
+              })}
+            />
+          </motion.div>
+        </motion.button>
         {open && (
           <motion.div
             initial="hidden"
