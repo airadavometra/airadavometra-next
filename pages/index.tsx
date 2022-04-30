@@ -2,25 +2,11 @@ import type { NextPage } from "next";
 import s from "@/pagesStyles/MainPage.module.css";
 import Image from "next/image";
 import photo from "@/public/myPhoto.webp";
-import { motion } from "framer-motion";
-import {
-  descriptionVariants,
-  mobileVariants,
-  photoVariants,
-} from "@/motions/aboutPage";
-import { useMedia } from "react-use";
 
 const Home: NextPage = () => {
-  const isSmall = useMedia("(max-width: 1024px)");
   return (
     <div className={s.main}>
-      <motion.div
-        className={s.description}
-        variants={isSmall ? mobileVariants : descriptionVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
+      <div className={s.description}>
         <h2 className={s.textHeader}>Hey. I’m Daria,</h2>
         <p className={s.text}>
           <b>
@@ -41,21 +27,15 @@ const Home: NextPage = () => {
           photos, flying drone, hiking. Or laying on my couch and gaining
           strength. I just adore nature and hope someday to see the whole world.
         </p>
-      </motion.div>
-      <motion.div
-        className={s.pictureWrapper}
-        variants={isSmall ? mobileVariants : photoVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
+      </div>
+      <div className={s.pictureWrapper}>
         <Image
           src={photo}
           layout="responsive"
           objectPosition="right bottom"
           alt="My photo"
         />
-      </motion.div>
+      </div>
     </div>
   );
 };
