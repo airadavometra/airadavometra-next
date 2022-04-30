@@ -1,3 +1,11 @@
+.iconContainer {
+  width: 64rem;
+  height: 64rem;
+  @media (max-width: 768px) {
+    width: 48rem;
+    height: 48rem;
+  }
+}
 .icon {
   width: 64rem;
   height: 64rem;

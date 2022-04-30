@@ -53,6 +53,7 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
+            className={s.expandBtnContainer}
             initial="hidden"
             animate="visible"
             exit="exit"

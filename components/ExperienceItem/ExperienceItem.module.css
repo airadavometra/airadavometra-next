@@ -28,6 +28,14 @@
   font-family: var(--header-text-font);
   font-size: 24rem;
 }
+.expandBtnContainer {
+  height: 32rem;
+  width: 32rem;
+  @media (max-width: 768px) {
+    height: 18rem;
+    width: 18rem;
+  }
+}
 .expandBtn {
   height: 32rem;
   width: 32rem;

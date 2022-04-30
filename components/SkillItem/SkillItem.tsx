@@ -22,6 +22,7 @@ export const SkillItem: FunctionComponent<SkillItemProps> = ({
         {skillLogos.map(({ logo: Logo, logoAlt }, index) => (
           <Tooltip text={logoAlt} key={index}>
             <motion.div
+              className={s.iconContainer}
               whileHover={{
                 rotate: [0, -2, 0, 2, 0],
                 transition: {
