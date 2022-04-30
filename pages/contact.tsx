@@ -9,7 +9,6 @@ import { YouTube } from "@/icons/contacts/YouTube";
 import type { NextPage } from "next";
 import { ContactList } from "@/components/ContactList/ContactList";
 import { ContactInfo } from "@/types/contactInfo";
-import { useMedia } from "react-use";
 
 const myCoords = [55.752068564993, 37.61748330508703];
 
@@ -47,7 +46,6 @@ const skillInfoArray: ContactInfo[] = [
 ];
 
 const ContactPage: NextPage = () => {
-  const isSmall = useMedia("(max-width: 1024px)");
   return (
     <div className={s.main}>
       <div className={s.mapContainer}>
