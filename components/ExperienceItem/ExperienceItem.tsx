@@ -54,6 +54,8 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
             />
           </motion.div>
         </motion.button>
+      </AnimatePresence>
+      <AnimatePresence initial={false}>
         {open && (
           <motion.div
             initial="hidden"
