@@ -5,13 +5,10 @@ export const Firebase: FC<WithClassName> = ({ className }) => {
   return (
     <svg
       className={className}
-      role="img"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      //fill="#FFCA28"
     >
-      <title>Firebase</title>
-      <path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z" />
+      <path d="M3.9 15.7 6.3.5a.5.5 0 0 1 1-.2L9.8 5zm16.8 3.7-2.3-14a.5.5 0 0 0-.9-.3L3.3 19.4l7.9 4.4a1.6 1.6 0 0 0 1.6 0zM14.3 7l-1.8-3.4a.5.5 0 0 0-1 0L3.5 18z" />
     </svg>
   );
 };
