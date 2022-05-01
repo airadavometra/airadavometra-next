@@ -26,6 +26,7 @@ import { Github } from "@/icons/contacts/Github";
 import WatchList from "@/public/projects/WatchList.png";
 import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
 import FamilyTree from "@/public/projects/FamilyTree.png";
+import SecretIngredient from "@/public/projects/SecretIngredient.png";
 import { motion } from "framer-motion";
 import { downloadLinkVariants, githubLinkVariants } from "@/motions/portfolio";
 
@@ -95,6 +96,23 @@ const projectInfoArray: ProjectInfo[] = [
     projectTechnologies: ["TypeScript", "React", "NextJS"],
   },
   {
+    projectName: "Secret Ingredient",
+    projectDesc:
+      "My husband and I participated in Gamedev.js Jam 2022 and made a little cute rhythm game about a kitten who learns how to cook. I was responsible for design and layout development. Also I created all the illustrations myself.",
+    projectPic: SecretIngredient,
+    projectLink: "https://rhythm-game-eight.vercel.app/",
+    projectGithubLink: "https://github.com/Omhet/rhythm-game",
+    projectTechnologies: [
+      "TypeScript",
+      "React",
+      "Effector",
+      "Vite",
+      "PixiJS",
+      "Framer Motion",
+      "Figma",
+    ],
+  },
+  {
     projectName: "JS Types Coersion Quiz",
     projectDesc:
       "Two little but tricky quizzes to practice JS types coersion rules with absolutely random levels and awesome neon design. You gonna love it!",
@@ -102,15 +120,6 @@ const projectInfoArray: ProjectInfo[] = [
     projectLink: "https://type-coersion-quiz.vercel.app/",
     projectGithubLink: "https://github.com/airadavometra/type-coersion-quiz",
     projectTechnologies: ["TypeScript", "React", "Redux", "Vite", "Firebase"],
-  },
-  {
-    projectName: "Watch List",
-    projectDesc:
-      "My first useful pet project to save all the interesting upcoming premieres and already released content. And every time you face a problem like you dont know what to watch, this app can help you.",
-    projectPic: WatchList,
-    projectLink: "https://watch-list.vercel.app/",
-    projectGithubLink: "https://github.com/airadavometra/watch-list",
-    projectTechnologies: ["TypeScript", "React", "Redux", "Vite"],
   },
 ];
 
