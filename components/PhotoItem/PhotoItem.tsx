@@ -1,9 +1,10 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState } from "react";
 import s from "./PhotoItem.module.css";
 import classNames from "classnames";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { photoContainerVariants, photoVariants } from "@/motions/photo";
+import { Spinner } from "../Spinner/Spinner";
 
 export interface PhotoItemProps {
   cssClassNames: string;
@@ -18,6 +19,7 @@ export const PhotoItem: FunctionComponent<PhotoItemProps> = ({
   imgId,
   onClick,
 }) => {
+  const [showPlaceholder, setShowPlaceholder] = useState<boolean>(true);
   return (
     <motion.div
       className={classNames(s.photoOuterContainer, cssClassNames)}
@@ -29,7 +31,13 @@ export const PhotoItem: FunctionComponent<PhotoItemProps> = ({
         variants={photoVariants}
         whileHover="hover"
       >
+        {showPlaceholder && (
+          <div className={s.placeholder}>
+            <Spinner />
+          </div>
+        )}
         <Image
+          onLoad={() => setTimeout(() => setShowPlaceholder(false), 2000)}
           onContextMenu={(e) => e.preventDefault()}
           src={src}
           onClick={() => onClick(imgId)}
