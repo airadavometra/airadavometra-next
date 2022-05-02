@@ -27,7 +27,8 @@ const skillInfoArray: ContactInfo[] = [
   {
     contactLogo: Email,
     contactText: "E-mail",
-    contactLink: "mailto:airadavometra@yandex.ru?",
+    contactValue: "airadavometra@yandex.ru",
+    //contactLink: "mailto:airadavometra@yandex.ru?",
   },
   {
     contactLogo: Telegram,

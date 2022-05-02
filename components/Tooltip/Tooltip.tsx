@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import React, { FC, useState } from "react";
 import classes from "./Tooltip.module.css";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { mobileTooltipVariants, tooltipVariants } from "@/motions/portfolio";
 import { useMedia } from "react-use";
 
@@ -15,17 +15,19 @@ export const Tooltip: FC<TooltipProps> = ({ children, text }) => {
 
   return (
     <div className={classes.tooltipContainer}>
-      {show && (
-        <motion.div
-          className={classNames(classes.tooltipBox)}
-          variants={isSmall ? mobileTooltipVariants : tooltipVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-        >
-          {text}
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {show && (
+          <motion.div
+            className={classNames(classes.tooltipBox)}
+            variants={isSmall ? mobileTooltipVariants : tooltipVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            {text}
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div
         className={classes.childrenContainer}
         onMouseEnter={() => setShow(true)}

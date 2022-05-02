@@ -1,0 +1,27 @@
+.popoverContainer {
+  position: relative;
+}
+
+.popoverBox {
+  width: max-content;
+  max-width: 50vw;
+  padding: 12rem 18rem;
+  position: absolute;
+  top: calc(100% + 8rem);
+  left: 50%;
+  background: var(--black);
+  color: var(--white);
+  font-size: 16rem;
+  font-weight: 600;
+  z-index: 2;
+  @media (max-width: 768px) {
+    left: 50%;
+    right: unset;
+  }
+}
+.childrenContainer {
+  height: fit-content;
+  svg {
+    pointer-events: none;
+  }
+}
