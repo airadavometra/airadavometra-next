@@ -2,6 +2,9 @@ import type { NextPage } from "next";
 import s from "@/pagesStyles/MainPage.module.css";
 import Image from "next/image";
 import photo from "@/public/myPhoto.webp";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { menuItemVariants } from "@/motions/header";
 
 const Home: NextPage = () => {
   return (
@@ -22,11 +25,26 @@ const Home: NextPage = () => {
           for freelance. So feel free to contact me, we’ll come up with
           something.
         </p>
-        <p className={s.text}>
-          When I’m not coding, you can catch me outside exploring, taking
-          photos, flying drone, hiking. Or laying on my couch and gaining
-          strength. I just adore nature and hope someday to see the whole world.
-        </p>
+        <div className={s.btnsContainer}>
+          <Link key="portfolio" href="/portfolio">
+            <motion.a
+              className={s.accentBtn}
+              variants={menuItemVariants}
+              whileHover={menuItemVariants.hover}
+            >
+              See my portfolio
+            </motion.a>
+          </Link>
+          <Link key="contacts" href="/contact">
+            <motion.a
+              className={s.secondaryBtn}
+              variants={menuItemVariants}
+              whileHover={menuItemVariants.hover}
+            >
+              Contact me
+            </motion.a>
+          </Link>
+        </div>
       </div>
       <div className={s.pictureWrapper}>
         <Image

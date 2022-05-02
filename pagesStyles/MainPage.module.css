@@ -46,3 +46,26 @@
     height: unset;
   }
 }
+.btnsContainer {
+  display: flex;
+  gap: 32rem;
+  flex-wrap: wrap;
+}
+.accentBtn,
+.secondaryBtn {
+  width: fit-content;
+  padding: 16rem 24rem;
+  align-self: flex-end;
+  font-size: 24rem;
+  font-weight: 700;
+  outline: 1px solid var(--black);
+  white-space: nowrap;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 16rem;
+  }
+}
+.accentBtn {
+  background-color: var(--black);
+  color: var(--yellow);
+}
