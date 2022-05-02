@@ -50,9 +50,23 @@
     gap: 18rem;
   }
 }
-.title {
+.titleSmall {
   font-family: var(--header-text-font);
   font-size: 32rem;
+  display: none;
+  @media (max-width: 1200px) {
+    display: block;
+  }
+  @media (max-width: 768px) {
+    font-size: 24rem;
+  }
+}
+.titleBig {
+  font-family: var(--header-text-font);
+  font-size: 32rem;
+  @media (max-width: 1200px) {
+    display: none;
+  }
   @media (max-width: 768px) {
     font-size: 24rem;
   }

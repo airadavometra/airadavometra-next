@@ -19,7 +19,7 @@
   @media (max-width: 1024px) {
     height: fit-content;
     width: 100vw;
-    padding: 24rem;
+    padding: 24rem 24rem 72rem 24rem;
   }
 }
 .textHeader {

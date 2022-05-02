@@ -3,7 +3,6 @@ import s from "./ProjectItem.module.css";
 import classNames from "classnames";
 import { ProjectInfo } from "@/types/projectInfo";
 import Image from "next/image";
-import { useMedia } from "react-use";
 import { motion } from "framer-motion";
 import {
   projectLinkVariants,
@@ -18,7 +17,6 @@ type ProjectItemProps = {
 export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
   projectInfo,
 }) => {
-  const isSmallScreen = useMedia("(max-width: 1200px)");
   return (
     <motion.div
       className={s.main}
@@ -27,9 +25,7 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
       viewport={{ once: true }}
       exit="exit"
     >
-      {isSmallScreen && (
-        <div className={s.title}>{projectInfo.projectName}</div>
-      )}
+      <div className={s.titleSmall}>{projectInfo.projectName}</div>
       <section className={s.imageContainer}>
         <div className={s.linksContainer}>
           <motion.a
@@ -70,9 +66,7 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
         </motion.a>
       </section>
       <section className={s.descriptionContainer}>
-        {!isSmallScreen && (
-          <div className={s.title}>{projectInfo.projectName}</div>
-        )}
+        <div className={s.titleBig}>{projectInfo.projectName}</div>
         <div className={s.description}>{projectInfo.projectDesc}</div>
         <div className={s.tagsContainer}>
           {projectInfo.projectTechnologies.map((item, index) => (
