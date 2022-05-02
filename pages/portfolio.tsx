@@ -144,7 +144,17 @@ const PortfolioPage: NextPage = () => {
   return (
     <div className={s.main}>
       <div className={s.skillsAndExperience}>
-        {isMobile && (
+        <motion.div
+          className={s.downloadContainerMobile}
+          variants={downloadLinkVariants}
+          animate="animate"
+        >
+          {downloadButton}
+        </motion.div>
+        <section>
+          <ExperienceList experienceInfoArray={experienceInfoArray} />
+        </section>
+        <div className={s.skills}>
           <motion.div
             className={s.downloadContainer}
             variants={downloadLinkVariants}
@@ -152,20 +162,6 @@ const PortfolioPage: NextPage = () => {
           >
             {downloadButton}
           </motion.div>
-        )}
-        <section>
-          <ExperienceList experienceInfoArray={experienceInfoArray} />
-        </section>
-        <div className={s.skills}>
-          {!isMobile && (
-            <motion.div
-              className={s.downloadContainer}
-              variants={downloadLinkVariants}
-              animate="animate"
-            >
-              {downloadButton}
-            </motion.div>
-          )}
           <SkillList skillInfoArray={skillInfoArray} />
         </div>
       </div>

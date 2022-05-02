@@ -12,7 +12,14 @@
 }
 .downloadContainer {
   @media (max-width: 768px) {
+    display: none;
+  }
+}
+.downloadContainerMobile {
+  display: none;
+  @media (max-width: 768px) {
     margin-top: 80rem;
+    display: block;
     align-self: center;
   }
 }
