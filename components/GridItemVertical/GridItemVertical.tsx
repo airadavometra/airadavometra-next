@@ -34,14 +34,14 @@ export const GridItemVertical: FunctionComponent<GridItemVerticalProps> = ({
           [s.verticalImgRight]:
             verticalImgPosition === VerticalImgPosition.Right,
         })}
-        src={isMobile ? verticalImg.smallPath : verticalImg.mediumPath}
+        src={isMobile ? verticalImg.mediumPath : verticalImg.bigPath}
         imgId={verticalImg.photoId}
         onClick={onClick}
       />
       {horizontalPhotos.map((item) => (
         <PhotoItem
           cssClassNames={s.horizontalImg}
-          src={isMobile ? item.smallPath : item.mediumPath}
+          src={isMobile ? item.mediumPath : item.bigPath}
           key={item.photoId}
           imgId={item.photoId}
           onClick={onClick}
