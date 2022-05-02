@@ -43,7 +43,6 @@ export const PhotoItem: FunctionComponent<PhotoItemProps> = ({
           onClick={() => onClick(imgId)}
           alt="photo"
           loading="lazy"
-          //placeholder="blur" Нельзя нормально использовать с loading="lazy", подумать над генерацией плейсхолдеров, чтобы задать их через ссылки явно
           quality={100}
           layout="fill"
           objectFit="cover"
