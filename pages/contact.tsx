@@ -9,6 +9,8 @@ import { YouTube } from "@/icons/contacts/YouTube";
 import type { NextPage } from "next";
 import { ContactList } from "@/components/ContactList/ContactList";
 import { ContactInfo } from "@/types/contactInfo";
+import { useState } from "react";
+import { Spinner } from "@/components/Spinner/Spinner";
 
 const myCoords = [55.752068564993, 37.61748330508703];
 
@@ -27,7 +29,6 @@ const skillInfoArray: ContactInfo[] = [
     contactLogo: Email,
     contactText: "E-mail",
     contactValue: "airadavometra@yandex.ru",
-    //contactLink: "mailto:airadavometra@yandex.ru?",
   },
   {
     contactLogo: Telegram,
@@ -47,11 +48,19 @@ const skillInfoArray: ContactInfo[] = [
 ];
 
 const ContactPage: NextPage = () => {
+  const [showPlaceholder, setShowPlaceholder] = useState<boolean>(true);
+
   return (
     <div className={s.main}>
       <div className={s.mapContainer}>
+        {showPlaceholder && (
+          <div className={s.placeholder}>
+            <Spinner />
+          </div>
+        )}
         <YMaps key={"en_US"} query={{ lang: "en_US" }}>
           <Map
+            onLoad={() => setTimeout(() => setShowPlaceholder(false), 2000)}
             className={s.map}
             defaultState={{
               center: myCoords,
