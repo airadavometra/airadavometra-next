@@ -49,6 +49,7 @@ const skillInfoArray: ContactInfo[] = [
 
 const ContactPage: NextPage = () => {
   const [showPlaceholder, setShowPlaceholder] = useState<boolean>(true);
+
   return (
     <div className={s.main}>
       <div className={s.mapContainer}>
@@ -57,12 +58,9 @@ const ContactPage: NextPage = () => {
             <Spinner />
           </div>
         )}
-        <YMaps
-          onload={() => setTimeout(() => setShowPlaceholder(false), 2000)}
-          key={"en_US"}
-          query={{ lang: "en_US" }}
-        >
+        <YMaps key={"en_US"} query={{ lang: "en_US" }}>
           <Map
+            onLoad={() => setTimeout(() => setShowPlaceholder(false), 2000)}
             className={s.map}
             defaultState={{
               center: myCoords,
