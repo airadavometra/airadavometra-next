@@ -47,7 +47,7 @@ const experienceInfoArray: ExperienceInfo[] = [
     isOpen: false,
     year: "2018",
     title: "Became a back-end developer",
-    text: "I'd learned the product well enough to develop myself so I started doing back-end development. There was a big refactoring task I was responsible for, and that was a knotty problem. I had to not only rewrite old code with new technologies but also to scale the solution and deal with highload.",
+    text: "I'd learned the product well enough to develop myself so I started doing back-end development. There was a big refactoring task I was responsible for, and that was a knotty problem. I had to not only rewrite old code with new technologies but also scale the solution and deal with highload.",
   },
   {
     isOpen: false,
