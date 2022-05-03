@@ -16,7 +16,7 @@ export const PageHead = () => (
       />
       <meta name="keywords" content="portfolio resume cv Daria Artemova" />
       <meta property="og:title" content="Daria Artemova portfolio" />
-      <meta property="og:image" content="/share.jpg" />
+      <meta property="og:image" content="/share.png" />
     </NextHead>
     {process.env.NODE_ENV === "production" &&
       process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && <GoogleAnalytics />}
