@@ -43,16 +43,18 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
             <h2 className={classNames(s.year)}>{year}</h2>
             <h2 className={classNames(s.title)}>{title}</h2>
           </div>
-          <motion.div
-            variants={experienceButtonIconVariants}
-            className={s.expandBtnContainer}
-          >
-            <Expand
-              className={classNames(s.expandBtn, {
-                [s.collapse]: !open,
-              })}
-            />
-          </motion.div>
+          <AnimatePresence initial={false}>
+            <motion.div
+              variants={experienceButtonIconVariants}
+              className={s.expandBtnContainer}
+            >
+              <Expand
+                className={classNames(s.expandBtn, {
+                  [s.collapse]: !open,
+                })}
+              />
+            </motion.div>
+          </AnimatePresence>
         </motion.button>
       </AnimatePresence>
       <AnimatePresence initial={false}>
