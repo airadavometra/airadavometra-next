@@ -37,6 +37,7 @@
     color: var(--yellow);
     box-shadow: inset 6.5em 0 0 0 var(--black);
   }
+  will-change: transform;
   @media (max-width: 768px) {
     font-size: 32rem;
   }
