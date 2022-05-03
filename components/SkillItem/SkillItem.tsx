@@ -20,8 +20,8 @@ export const SkillItem: FunctionComponent<SkillItemProps> = ({
       <h2 className={s.header}>{skillName}</h2>
       <div className={s.iconsContainer}>
         {skillLogos.map(({ logo: Logo, logoAlt }, index) => (
-          <Tooltip text={logoAlt}>
-            <AnimatePresence key={index} initial={false}>
+          <Tooltip key={index} text={logoAlt}>
+            <AnimatePresence initial={false}>
               <motion.div
                 className={s.iconContainer}
                 whileHover={{
