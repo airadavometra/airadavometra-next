@@ -21,9 +21,9 @@ const Home: NextPage = () => {
           especially UX, and I’m working on improving my designer skills.
         </p>
         <p className={s.text}>
-          I’m currently working with the fine folks in Raiffeisen, but also open
-          for freelance. So feel free to contact me, we’ll come up with
-          something.
+          When I’m not coding, you can catch me outside exploring, taking
+          photos, flying drone, hiking. I just adore nature and hope someday to
+          see the whole world.
         </p>
         <div className={s.btnsContainer}>
           <Link key="portfolio" href="/portfolio">
