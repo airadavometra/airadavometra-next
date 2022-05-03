@@ -54,11 +54,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           onOpenMenu={openMenu}
           selectedMenuItemId={selectedMenuItemId}
         />
-        <AnimatePresence exitBeforeEnter>
-          <div className={s.pageContainer} key={router.pathname}>
-            {children}
-          </div>
-        </AnimatePresence>
+        <div className={s.pageContainer} key={router.pathname}>
+          {children}
+        </div>
       </div>
       <AnimatePresence exitBeforeEnter>
         {isMenuOpen && (
