@@ -23,3 +23,17 @@ export const photoVariants = {
     transition: { type: "spring", stiffness: 120, duration: 1.5 },
   },
 };
+export const fullScreenPhoto = {
+  hidden: { scale: 0 },
+  visible: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+    },
+  },
+  exit: {
+    scale: 0,
+    transition: { type: "tween", duration: 0.3, ease: "easeInOut" },
+  },
+};

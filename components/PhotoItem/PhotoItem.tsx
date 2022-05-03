@@ -30,6 +30,7 @@ export const PhotoItem: FunctionComponent<PhotoItemProps> = ({
         className={classNames(s.photoContainer, cssClassNames)}
         variants={photoVariants}
         whileHover="hover"
+        layoutId={imgId.toString()}
       >
         {showPlaceholder && (
           <div className={s.placeholder}>

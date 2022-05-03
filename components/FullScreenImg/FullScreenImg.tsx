@@ -7,7 +7,11 @@ import { PhotoInfo } from "@/types/photoInfo";
 import classnames from "classnames";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { closeButtonVariants, nextButtonVariants } from "@/motions/photo";
+import {
+  closeButtonVariants,
+  fullScreenPhoto,
+  nextButtonVariants,
+} from "@/motions/photo";
 import ReactDOM from "react-dom";
 
 type FullScreenImgProps = {
@@ -40,7 +44,14 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
         >
           <Previous className={s.icon} />
         </motion.button>
-        <div className={s.photo}>
+        <motion.div
+          className={s.photo}
+          layoutId={img.photoId.toString()}
+          // variants={fullScreenPhoto}
+          // initial="hidden"
+          // animate="visible"
+          // exit="exit"
+        >
           <Image
             src={img.bigPath}
             alt="Photo"
@@ -49,7 +60,7 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
             layout="fill"
             objectFit="contain"
           />
-        </div>
+        </motion.div>
         <motion.button
           onClick={() => onMoveClick(img.photoId + 1)}
           variants={nextButtonVariants}

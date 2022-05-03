@@ -7,6 +7,7 @@ import { FullScreenImg } from "@/components/FullScreenImg/FullScreenImg";
 import { PhotoInfo } from "@/types/photoInfo";
 import { GetStaticProps } from "next";
 import { getPhotoPaths } from "@/utils/getPhotoPaths";
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 type PhotoPageProps = {
   verticalPhotos: PhotoInfo[];
@@ -59,17 +60,19 @@ const PhotoPage: NextPage<PhotoPageProps> = ({
             />
           ))}
       </div>
-      {isBigPhotoOpen && (
-        <FullScreenImg
-          img={
-            [...verticalPhotos, ...horizontalPhotos].find(
-              (photo) => photo.photoId === bigImgId
-            ) || verticalPhotos[0]
-          }
-          onCloseClick={closePhoto}
-          onMoveClick={changePhoto}
-        ></FullScreenImg>
-      )}
+      <AnimatePresence exitBeforeEnter>
+        {isBigPhotoOpen && (
+          <FullScreenImg
+            img={
+              [...verticalPhotos, ...horizontalPhotos].find(
+                (photo) => photo.photoId === bigImgId
+              ) || verticalPhotos[0]
+            }
+            onCloseClick={closePhoto}
+            onMoveClick={changePhoto}
+          ></FullScreenImg>
+        )}
+      </AnimatePresence>
     </>
   ) : null;
 };
