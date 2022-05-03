@@ -94,8 +94,22 @@ const skillInfoArray: SkillInfo[] = [
 const projectInfoArray: ProjectInfo[] = [
   {
     projectName: "Family tree",
-    projectDesc:
-      "Here you can explore the Artemov family tree. And also find some additional info about each person and a list of other families connected with Artemov family members. This project is made in partnership with Vladimir Ivanov. The information is provided by my father and uncles.",
+    projectDesc: (
+      <>
+        Here you can explore the Artemov family tree. And also find some
+        additional info about each person and a list of other families connected
+        with Artemov family members. This project is made in partnership with{" "}
+        <a
+          className={s.projectDescLink}
+          href="https://vlivanov.space/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Vladimir Ivanov
+        </a>
+        . The information is provided by my father and uncles.
+      </>
+    ),
     projectPic: FamilyTree,
     projectLink: "https://family-tree-tau.vercel.app/",
     projectGithubLink: "https://github.com/airadavometra/family-tree",
@@ -103,8 +117,30 @@ const projectInfoArray: ProjectInfo[] = [
   },
   {
     projectName: "Secret Ingredient",
-    projectDesc:
-      "My husband and I participated in Gamedev.js Jam 2022 and made a little cute rhythm game about a kitten who learns how to cook. I was responsible for design and layout development. Also I created all the illustrations myself.",
+    projectDesc: (
+      <>
+        <a
+          className={s.projectDescLink}
+          href="https://vlivanov.space/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          My husband
+        </a>{" "}
+        and I participated in{" "}
+        <a
+          className={s.projectDescLink}
+          href="https://itch.io/jam/gamedevjs-2022"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Gamedev.js Jam 2022
+        </a>{" "}
+        and made a little cute rhythm game about a kitten who learns how to
+        cook. I was responsible for design and layout development. Also I
+        created all the illustrations myself.
+      </>
+    ),
     projectPic: SecretIngredient,
     projectLink: "https://rhythm-game-eight.vercel.app/",
     projectGithubLink: "https://github.com/Omhet/rhythm-game",
