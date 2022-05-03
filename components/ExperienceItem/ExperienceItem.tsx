@@ -25,7 +25,7 @@ export const ExperienceItem: FunctionComponent<ExperienceItemProps> = ({
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setOpen(isOpen), 1000);
+    setTimeout(() => setOpen(isOpen), 500);
   }, []);
 
   return (

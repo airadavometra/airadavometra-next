@@ -44,14 +44,7 @@ export const FullScreenImg: FunctionComponent<FullScreenImgProps> = ({
         >
           <Previous className={s.icon} />
         </motion.button>
-        <motion.div
-          className={s.photo}
-          layoutId={img.photoId.toString()}
-          // variants={fullScreenPhoto}
-          // initial="hidden"
-          // animate="visible"
-          // exit="exit"
-        >
+        <motion.div className={s.photo} layoutId={img.photoId.toString()}>
           <Image
             src={img.bigPath}
             alt="Photo"
