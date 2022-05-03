@@ -11,7 +11,7 @@
 .description {
   height: 100%;
   width: 50vw;
-  padding: 0px 72rem 0px 72rem;
+  padding: 0px 72rem 32rem 72rem;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -47,6 +47,7 @@
   }
 }
 .btnsContainer {
+  width: fit-content;
   display: flex;
   gap: 32rem;
   flex-wrap: wrap;
