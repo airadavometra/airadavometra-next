@@ -13,7 +13,8 @@ const Home: NextPage = () => {
         <h2 className={s.textHeader}>Hey. I’m Daria,</h2>
         <p className={s.text}>
           <b>
-            a passionate front-end developer <br /> based in Moscow, Russia.
+            a passionate front-end developer <br /> based in Amsterdam, The
+            Netherlands.
           </b>
         </p>
         <p className={s.text}>

@@ -12,7 +12,7 @@ import { ContactInfo } from "@/types/contactInfo";
 import { useState } from "react";
 import { Spinner } from "@/components/Spinner/Spinner";
 
-const myCoords = [55.752068564993, 37.61748330508703];
+const myCoords = [52.370882, 4.897449];
 
 const skillInfoArray: ContactInfo[] = [
   {
