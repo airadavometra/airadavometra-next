@@ -35,7 +35,7 @@ const experienceInfoArray: ExperienceInfo[] = [
     isOpen: true,
     year: "2022",
     title: "Joined Reaktor and moved to Amsterdam",
-    text: "I've always wanted to live abroad, and the year 2022 pushed me to realize this dream. Reaktor hired me and helped me to relocate to Amsterdam. I will definitely finish this section, for now I am still settling down. Let's see what an interesting future awaits us.",
+    text: "I've always wanted to live abroad, and the year 2022 pushed me to realize this dream. So after a while I joined Reaktor and they kindly helped me to relocate to Amsterdam. I will definitely update this section, for now I am still settling down. Let's see what an interesting future awaits us.",
   },
   {
     isOpen: false,
