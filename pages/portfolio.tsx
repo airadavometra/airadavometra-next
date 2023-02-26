@@ -101,7 +101,7 @@ const projectInfoArray: ProjectInfo[] = [
         with Artemov family members. This project is made in partnership with{" "}
         <a
           className={s.projectDescLink}
-          href="https://vlivanov.space/"
+          href="https://www.linkedin.com/in/vlivanoff/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -121,7 +121,7 @@ const projectInfoArray: ProjectInfo[] = [
       <>
         <a
           className={s.projectDescLink}
-          href="https://vlivanov.space/"
+          href="https://www.linkedin.com/in/vlivanoff/"
           target="_blank"
           rel="noopener noreferrer"
         >
