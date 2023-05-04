@@ -64,7 +64,7 @@ const ContactPage: NextPage = () => {
             className={s.map}
             defaultState={{
               center: myCoords,
-              zoom: 4,
+              zoom: 6,
             }}
             options={{
               suppressMapOpenBlock: true,
