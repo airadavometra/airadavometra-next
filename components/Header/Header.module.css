@@ -9,6 +9,7 @@
   font-size: 24rem;
   background-color: var(--yellow);
   z-index: 3;
+  backdrop-filter: blur(5px);
   @media (max-width: 1024px) {
     padding: 24rem;
   }
