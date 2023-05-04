@@ -2,6 +2,7 @@
 
 html {
   --yellow: #f7c003;
+  --yellow-transparent: #f7c003cc;
   --black: #333;
   --white: #e4e4e4;
   --black-transparent: rgb(51, 51, 51, 0.8);
