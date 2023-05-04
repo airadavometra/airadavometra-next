@@ -7,7 +7,7 @@
   top: 0;
   font-family: var(--header-text-font);
   font-size: 24rem;
-  background-color: var(--yellow);
+  background-color: var(--yellow-transparent);
   z-index: 3;
   backdrop-filter: blur(5px);
   @media (max-width: 1024px) {
