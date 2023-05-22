@@ -26,6 +26,9 @@ import { Github } from "@/icons/contacts/Github";
 import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
 import FamilyTree from "@/public/projects/FamilyTree.png";
 import AccessDenied from "@/public/projects/AccessDenied.png";
+import AccessDenied2 from "@/public/projects/AccessDenied2.png";
+import AccessDenied3 from "@/public/projects/AccessDenied3.png";
+import AccessDenied4 from "@/public/projects/AccessDenied4.png";
 import SecretIngredient from "@/public/projects/SecretIngredient.png";
 import { motion } from "framer-motion";
 import { downloadLinkVariants, githubLinkVariants } from "@/motions/portfolio";
@@ -104,6 +107,78 @@ const projectInfoArray: ProjectInfo[] = [
       </>
     ),
     projectPic: AccessDenied,
+    projectLink: "https://access-denied.vercel.app/",
+    projectGithubLink: "https://github.com/airadavometra/accessibility_project",
+    projectTechnologies: [
+      "TypeScript",
+      "React",
+      "NextJS",
+      "Vite",
+      "Zustand",
+      "HeadlessUI",
+      "Framer Motion",
+    ],
+  },
+  {
+    projectName: "Access denied?",
+    projectDesc: (
+      <>
+        On this website you can find some interactive exercises that will show
+        you what challenges people with different abilities have to face in the
+        web. This projects is meant to cultivate empathy and help everyone
+        realise that accessibility is not a feature, websites should be
+        accessible by default.
+      </>
+    ),
+    projectPic: AccessDenied2,
+    projectLink: "https://access-denied.vercel.app/",
+    projectGithubLink: "https://github.com/airadavometra/accessibility_project",
+    projectTechnologies: [
+      "TypeScript",
+      "React",
+      "NextJS",
+      "Vite",
+      "Zustand",
+      "HeadlessUI",
+      "Framer Motion",
+    ],
+  },
+  {
+    projectName: "Access denied?",
+    projectDesc: (
+      <>
+        On this website you can find some interactive exercises that will show
+        you what challenges people with different abilities have to face in the
+        web. This projects is meant to cultivate empathy and help everyone
+        realise that accessibility is not a feature, websites should be
+        accessible by default.
+      </>
+    ),
+    projectPic: AccessDenied3,
+    projectLink: "https://access-denied.vercel.app/",
+    projectGithubLink: "https://github.com/airadavometra/accessibility_project",
+    projectTechnologies: [
+      "TypeScript",
+      "React",
+      "NextJS",
+      "Vite",
+      "Zustand",
+      "HeadlessUI",
+      "Framer Motion",
+    ],
+  },
+  {
+    projectName: "Access denied?",
+    projectDesc: (
+      <>
+        On this website you can find some interactive exercises that will show
+        you what challenges people with different abilities have to face in the
+        web. This projects is meant to cultivate empathy and help everyone
+        realise that accessibility is not a feature, websites should be
+        accessible by default.
+      </>
+    ),
+    projectPic: AccessDenied4,
     projectLink: "https://access-denied.vercel.app/",
     projectGithubLink: "https://github.com/airadavometra/accessibility_project",
     projectTechnologies: [

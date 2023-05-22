@@ -81,7 +81,6 @@ export const projectLinkVariants = {
 
 export const projectPhotoLinkVariants = {
   hover: {
-    originX: 0,
     scale: 0.98,
     transition: { type: "spring", stiffness: 300 },
   },

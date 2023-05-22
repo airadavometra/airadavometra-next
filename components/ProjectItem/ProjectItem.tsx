@@ -25,30 +25,17 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
       viewport={{ once: true }}
       exit="exit"
     >
-      <div className={s.titleSmall}>{projectInfo.projectName}</div>
+      <motion.a
+        className={s.titleSmall}
+        href={projectInfo.projectLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        variants={projectLinkVariants}
+        whileHover="hover"
+      >
+        {projectInfo.projectName}
+      </motion.a>
       <section className={s.imageContainer}>
-        <div className={s.linksContainer}>
-          <motion.a
-            className={classNames(s.link)}
-            href={projectInfo.projectGithubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            variants={projectLinkVariants}
-            whileHover="hover"
-          >
-            Github
-          </motion.a>
-          <motion.a
-            className={classNames(s.link)}
-            href={projectInfo.projectLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            variants={projectLinkVariants}
-            whileHover="hover"
-          >
-            Project
-          </motion.a>
-        </div>
         <motion.a
           href={projectInfo.projectLink}
           target="_blank"
@@ -66,7 +53,16 @@ export const ProjectItem: FunctionComponent<ProjectItemProps> = ({
         </motion.a>
       </section>
       <section className={s.descriptionContainer}>
-        <div className={s.titleBig}>{projectInfo.projectName}</div>
+        <motion.a
+          className={s.titleBig}
+          href={projectInfo.projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          variants={projectLinkVariants}
+          whileHover="hover"
+        >
+          {projectInfo.projectName}
+        </motion.a>
         <div className={s.description}>{projectInfo.projectDesc}</div>
         <div className={s.tagsContainer}>
           {projectInfo.projectTechnologies.map((item, index) => (
