@@ -23,9 +23,9 @@ import { StyledComponents } from "@/icons/skills/frontend/StyledComponents";
 import { Photoshop } from "@/icons/skills/design/Photoshop";
 import { Figma } from "@/icons/skills/design/Figma";
 import { Github } from "@/icons/contacts/Github";
-import WatchList from "@/public/projects/WatchList.png";
 import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
 import FamilyTree from "@/public/projects/FamilyTree.png";
+import AccessDenied from "@/public/projects/AccessDenied.png";
 import SecretIngredient from "@/public/projects/SecretIngredient.png";
 import { motion } from "framer-motion";
 import { downloadLinkVariants, githubLinkVariants } from "@/motions/portfolio";
@@ -92,6 +92,30 @@ const skillInfoArray: SkillInfo[] = [
   },
 ];
 const projectInfoArray: ProjectInfo[] = [
+  {
+    projectName: "Access denied?",
+    projectDesc: (
+      <>
+        On this website you can find some interactive exercises that will show
+        you what challenges people with different abilities have to face in the
+        web. This projects is meant to cultivate empathy and help everyone
+        realise that accessibility is not a feature, websites should be
+        accessible by default.
+      </>
+    ),
+    projectPic: AccessDenied,
+    projectLink: "https://access-denied.vercel.app/",
+    projectGithubLink: "https://github.com/airadavometra/accessibility_project",
+    projectTechnologies: [
+      "TypeScript",
+      "React",
+      "NextJS",
+      "Vite",
+      "Zustand",
+      "HeadlessUI",
+      "Framer Motion",
+    ],
+  },
   {
     projectName: "Family tree",
     projectDesc: (
