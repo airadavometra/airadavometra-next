@@ -10,12 +10,12 @@
 }
 .closeIconButton {
   position: absolute;
-  top: 24rem;
-  right: 24rem;
+  top: 1.5rem;
+  right: 1.5rem;
 }
 .closeIcon {
-  width: 32rem;
-  height: 32rem;
+  width: 2rem;
+  height: 2rem;
   stroke: var(--black);
 }
 .menu {
@@ -23,13 +23,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48rem;
+  gap: 3rem;
 }
 .link {
   width: fit-content;
   display: inline-block;
   font-family: var(--header-text-font);
-  font-size: 24rem;
+  font-size: 1.5rem;
   opacity: 50%;
   &:hover,
   &:focus {

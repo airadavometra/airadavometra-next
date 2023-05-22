@@ -1,13 +1,13 @@
 .main {
   height: max-content;
-  padding: 32rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 112rem;
-  font-size: 24rem;
+  gap: 7rem;
+  font-size: 1.5rem;
   @media (max-width: 768px) {
-    padding: 24rem;
-    gap: 48rem;
+    padding: 1.5rem;
+    gap: 3rem;
   }
 }
 .downloadContainer {
@@ -18,17 +18,17 @@
 .downloadContainerMobile {
   display: none;
   @media (max-width: 768px) {
-    margin-top: 80rem;
+    margin-top: 5rem;
     display: block;
     align-self: center;
   }
 }
 .download {
   width: fit-content;
-  padding: 16rem 24rem;
+  padding: 1rem 1.5rem;
   align-self: flex-end;
   font-family: var(--header-text-font);
-  font-size: 48rem;
+  font-size: 3rem;
   outline: 1px solid var(--black);
   white-space: nowrap;
   transition: all 0.5s ease-in-out;
@@ -39,7 +39,7 @@
   }
   will-change: transform;
   @media (max-width: 768px) {
-    font-size: 32rem;
+    font-size: 2rem;
   }
 }
 .skillsAndExperience {
@@ -57,7 +57,7 @@
   flex-direction: column;
   align-items: flex-end;
   @media (max-width: 768px) {
-    margin-bottom: 48rem;
+    margin-bottom: 3rem;
     align-items: flex-start;
   }
 }
@@ -70,16 +70,16 @@
 .githubLink {
   width: fit-content;
   height: fit-content;
-  padding: 80rem 0;
+  padding: 5rem 0;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(2, auto);
   align-items: center;
   justify-items: center;
-  grid-gap: 24rem;
+  grid-gap: 1.5rem;
   @media (max-width: 1024px) {
     padding: 0;
-    padding-top: 48rem;
+    padding-top: 3rem;
     grid-template-columns: repeat(1, auto);
   }
   @media (max-width: 768px) {
@@ -89,15 +89,15 @@
   }
 }
 .githubLogo {
-  height: 32rem;
+  height: 2rem;
   fill: var(--black);
 }
 .githubText {
   font-family: var(--header-text-font);
-  font-size: 32rem;
+  font-size: 2rem;
   @media (max-width: 768px) {
     text-align: center;
-    font-size: 24rem;
+    font-size: 1.5rem;
   }
 }
 .projectDescLink {

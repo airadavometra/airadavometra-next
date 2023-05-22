@@ -1,27 +1,27 @@
 .contactsContainer {
   @media (max-width: 1024px) {
     margin: auto;
-    margin-left: 48rem;
+    margin-left: 3rem;
   }
 }
 
 .title {
-  margin-bottom: 32rem;
+  margin-bottom: 2rem;
   font-family: var(--header-text-font);
-  font-size: 32rem;
+  font-size: 2rem;
   @media (max-width: 768px) {
-    margin-bottom: 24rem;
+    margin-bottom: 1.5rem;
   }
 }
 .contacts {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 32rem;
+  grid-gap: 2rem;
   @media (max-width: 1024px) {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 32rem 64rem;
+    grid-gap: 2rem 4rem;
   }
   @media (max-width: 768px) {
-    grid-gap: 24rem 32rem;
+    grid-gap: 1.5rem 2rem;
   }
 }

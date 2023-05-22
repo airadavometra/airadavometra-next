@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 24rem;
+  gap: 1.5rem;
   @media (max-width: 768px) {
     width: 100%;
     align-items: baseline;
@@ -16,7 +16,7 @@
   flex-direction: row;
   align-items: baseline;
   justify-content: flex-start;
-  gap: 24rem;
+  gap: 1.5rem;
   flex-shrink: 1;
   @media (max-width: 768px) {
     width: 100%;
@@ -26,25 +26,25 @@
 }
 .linkText {
   font-family: var(--header-text-font);
-  font-size: 24rem;
+  font-size: 1.5rem;
 }
 .expandBtnContainer {
-  height: 32rem;
-  width: 32rem;
+  height: 2rem;
+  width: 2rem;
   @media (max-width: 768px) {
-    height: 18rem;
-    width: 18rem;
+    height: 1.125rem;
+    width: 1.125rem;
   }
 }
 .expandBtn {
-  height: 32rem;
-  width: 32rem;
+  height: 2rem;
+  width: 2rem;
   flex-shrink: 0;
   //transition: all 0.5s ease-in-out;
   stroke: var(--black);
   @media (max-width: 768px) {
-    height: 18rem;
-    width: 18rem;
+    height: 1.125rem;
+    width: 1.125rem;
   }
 }
 .collapse {
@@ -53,10 +53,10 @@
 .title,
 .year {
   font-family: var(--header-text-font);
-  font-size: 32rem;
+  font-size: 2rem;
   text-align: left;
   @media (max-width: 768px) {
-    font-size: 24rem;
+    font-size: 1.5rem;
   }
 }
 .year {
@@ -64,12 +64,12 @@
 }
 .text {
   max-width: 55vw;
-  padding-left: 80rem;
-  padding-top: 32rem;
+  padding-left: 5rem;
+  padding-top: 2rem;
   @media (max-width: 768px) {
     max-width: 100%;
     padding-left: 0;
-    padding-top: 24rem;
-    font-size: 18rem;
+    padding-top: 1.5rem;
+    font-size: 1.125rem;
   }
 }

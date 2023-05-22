@@ -19,5 +19,5 @@ a:focus > .linkLogo {
 } */
 .linkText {
   font-family: var(--header-text-font);
-  font-size: 24rem;
+  font-size: 1.5rem;
 }

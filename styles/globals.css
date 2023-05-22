@@ -61,7 +61,6 @@ select {
 
 html {
   font-family: var(--simple-text-font);
-  font-size: 1px;
 }
 body {
   line-height: 1.5;
@@ -81,7 +80,6 @@ h2 {
   outline: 0;
   font-weight: inherit;
   font-style: inherit;
-  font-size: 100%;
   font-family: inherit;
   vertical-align: baseline;
 }
@@ -106,9 +104,4 @@ a {
 }
 [class*="ymaps-2"][class*="-copyright"] {
   display: none;
-}
-@media (max-width: 562px) {
-  html {
-    font-size: 0.24155vw;
-  }
 }

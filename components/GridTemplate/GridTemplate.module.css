@@ -2,8 +2,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 32rem;
+  gap: 2rem;
   @media (max-width: 1024px) {
-    gap: 24rem;
+    gap: 1.5rem;
   }
 }

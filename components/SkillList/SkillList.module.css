@@ -7,30 +7,30 @@
   }
 }
 .title {
-  padding: 80rem 0;
+  padding: 5rem 0;
   font-family: var(--header-text-font);
-  font-size: 48rem;
+  font-size: 3rem;
   @media (max-width: 768px) {
     padding: 0;
-    padding-bottom: 48rem;
-    font-size: 32rem;
+    padding-bottom: 3rem;
+    font-size: 2rem;
   }
 }
 .skillsContainer {
   display: flex;
   flex-direction: column;
-  gap: 48rem;
+  gap: 3rem;
   @media (max-width: 768px) {
-    gap: 32rem;
+    gap: 2rem;
   }
 }
 .skillsItem {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 32rem;
+  gap: 2rem;
   @media (max-width: 768px) {
     align-items: flex-start;
-    gap: 24rem;
+    gap: 1.5rem;
   }
 }

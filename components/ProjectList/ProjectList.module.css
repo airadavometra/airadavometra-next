@@ -1,17 +1,17 @@
 .title {
-  padding: 80rem 0;
+  padding: 5rem 0;
   font-family: var(--header-text-font);
-  font-size: 48rem;
+  font-size: 3rem;
   @media (max-width: 768px) {
-    font-size: 32rem;
-    padding: 48rem 0;
+    font-size: 2rem;
+    padding: 3rem 0;
   }
 }
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 80rem;
+  gap: 5rem;
   @media (max-width: 768px) {
-    gap: 48rem;
+    gap: 3rem;
   }
 }

@@ -3,9 +3,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  grid-gap: 32rem;
+  grid-gap: 2rem;
   @media (max-width: 1024px) {
-    grid-gap: 24rem;
+    grid-gap: 1.5rem;
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

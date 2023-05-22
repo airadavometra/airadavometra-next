@@ -11,7 +11,7 @@
 .description {
   height: 100%;
   width: 50vw;
-  padding: 0px 72rem 32rem 72rem;
+  padding: 0px 4.5rem 2rem 4.5rem;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -19,27 +19,27 @@
   @media (max-width: 1024px) {
     height: fit-content;
     width: 100vw;
-    padding: 24rem 24rem 72rem 24rem;
+    padding: 1.5rem 1.5rem 4.5rem 1.5rem;
   }
 }
 .textHeader {
   font-weight: 700;
-  font-size: 72rem;
+  font-size: 4.5rem;
   @media (max-width: 768px) {
-    font-size: 48rem;
+    font-size: 3rem;
   }
 }
 .text {
-  font-size: 24rem;
+  font-size: 1.5rem;
   &:not(:last-child) {
-    margin-bottom: 32rem;
+    margin-bottom: 2rem;
   }
   @media (max-width: 768px) {
-    font-size: 16rem;
+    font-size: 1rem;
   }
 }
 .pictureWrapper {
-  width: 600rem;
+  width: 37.5rem;
   align-self: flex-end;
   @media (max-width: 1024px) {
     width: 100vw;
@@ -49,21 +49,21 @@
 .btnsContainer {
   width: fit-content;
   display: flex;
-  gap: 32rem;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 .accentBtn,
 .secondaryBtn {
   width: fit-content;
-  padding: 16rem 24rem;
+  padding: 1rem 1.5rem;
   align-self: flex-end;
-  font-size: 24rem;
+  font-size: 1.5rem;
   font-weight: 700;
   outline: 1px solid var(--black);
   white-space: nowrap;
   cursor: pointer;
   @media (max-width: 768px) {
-    font-size: 16rem;
+    font-size: 1rem;
   }
 }
 .accentBtn {

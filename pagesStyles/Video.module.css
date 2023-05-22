@@ -1,14 +1,14 @@
 .main {
   width: 100%;
   height: max-content;
-  padding: 32rem;
+  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 32rem;
+  grid-gap: 2rem;
   background-color: var(--white);
   @media (max-width: 1024px) {
-    padding: 24rem;
-    grid-gap: 24rem;
+    padding: 1.5rem;
+    grid-gap: 1.5rem;
   }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

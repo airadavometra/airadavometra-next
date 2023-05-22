@@ -1,25 +1,25 @@
 .iconContainer {
-  width: 64rem;
-  height: 64rem;
+  width: 4rem;
+  height: 4rem;
   @media (max-width: 768px) {
-    width: 48rem;
-    height: 48rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 .icon {
-  width: 64rem;
-  height: 64rem;
+  width: 4rem;
+  height: 4rem;
   fill: var(--black);
   @media (max-width: 768px) {
-    width: 48rem;
-    height: 48rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 .header {
   font-family: var(--header-text-font);
-  font-size: 32rem;
+  font-size: 2rem;
   @media (max-width: 768px) {
-    font-size: 24rem;
+    font-size: 1.5rem;
   }
 }
 .iconsContainer {
@@ -28,10 +28,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 24rem;
+  gap: 1.5rem;
   @media (max-width: 768px) {
     max-width: 70vw;
-    gap: 18rem;
+    gap: 1.125rem;
     justify-content: flex-start;
   }
 }

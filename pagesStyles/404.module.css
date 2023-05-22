@@ -6,14 +6,14 @@
 }
 .notFoundImage {
   width: 30%;
-  margin-bottom: 24rem;
+  margin-bottom: 1.5rem;
 }
 .notFoundTitle {
   text-align: center;
   font-family: var(--header-text-font);
-  font-size: 32rem;
+  font-size: 2rem;
 }
 .notFoundText {
   text-align: center;
-  font-size: 18rem;
+  font-size: 1.125rem;
 }
