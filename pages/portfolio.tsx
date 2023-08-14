@@ -27,6 +27,7 @@ import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
 import FamilyTree from "@/public/projects/FamilyTree.png";
 import AccessDenied from "@/public/projects/AccessDenied.png";
 import SecretIngredient from "@/public/projects/SecretIngredient.png";
+import Simulator from "@/public/projects/Simulator.png";
 import { motion } from "framer-motion";
 import { downloadLinkVariants, githubLinkVariants } from "@/motions/portfolio";
 
@@ -98,9 +99,9 @@ const projectInfoArray: ProjectInfo[] = [
       <>
         On this website you can find some interactive exercises that will show
         you what challenges people with different abilities have to face in the
-        web. This projects is meant to cultivate empathy and help everyone
-        realise that accessibility is not a feature, websites should be
-        accessible by default.
+        web. This projects is meant to cultivate empathy and spread the idea
+        that accessibility is not a feature, websites should be accessible by
+        default.
       </>
     ),
     projectPic: AccessDenied,
@@ -115,6 +116,24 @@ const projectInfoArray: ProjectInfo[] = [
       "HeadlessUI",
       "Framer Motion",
     ],
+  },
+  {
+    projectName: "Simulator of visual impairments",
+    projectDesc: (
+      <>
+        A Chrome extension which applies a visual filter on any website and
+        helps us to check if our websites are accessible and what can be
+        improved. It can simulate different stages of myopia, some types of
+        color blindness and blindness. For myopia we can also change the root
+        font size and check if our website scales properly.
+      </>
+    ),
+    projectPic: Simulator,
+    projectLink:
+      "https://chrome.google.com/webstore/detail/simulator-of-visual-impai/imohhjdbajiihdogpnphgbocfodbofip?hl=en-GB&authuser=0",
+    projectGithubLink:
+      "https://github.com/airadavometra/accessibility-simulator-plasmo",
+    projectTechnologies: ["Plasmo", "TypeScript", "React", "Tailwind CSS"],
   },
   {
     projectName: "Family tree",
