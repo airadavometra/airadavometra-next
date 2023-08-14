@@ -13,14 +13,14 @@ const Home: NextPage = () => {
         <h2 className={s.textHeader}>Hey. I&apos;m Daria,</h2>
         <p className={s.text}>
           <b>
-            a passionate front-end developer <br /> based in Amsterdam, The
-            Netherlands.
+            a passionate front-end developer <br />
+            based in Amsterdam, The Netherlands.
           </b>
         </p>
         <p className={s.text}>
-          Besides my love for web development, I&apos;m also interested in
-          design, especially UX, and I&apos;m working on improving my designer
-          skills.
+          My main focus now is on web accessibility. Besides my love for web
+          development, I&apos;m also interested in design, especially UX, and
+          I&apos;m working on improving my designer skills.
         </p>
         <p className={s.text}>
           When I&apos;m not coding, you can catch me outside exploring, taking
