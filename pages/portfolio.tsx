@@ -93,30 +93,30 @@ const skillInfoArray: SkillInfo[] = [
   },
 ];
 const projectInfoArray: ProjectInfo[] = [
-  {
-    projectName: "Access denied?",
-    projectDesc: (
-      <>
-        On this website you can find some interactive exercises that will show
-        you what challenges people with different abilities have to face in the
-        web. This projects is meant to cultivate empathy and spread the idea
-        that accessibility is not a feature, websites should be accessible by
-        default.
-      </>
-    ),
-    projectPic: AccessDenied,
-    projectLink: "https://access-denied.vercel.app/",
-    projectGithubLink: "https://github.com/airadavometra/accessibility_project",
-    projectTechnologies: [
-      "TypeScript",
-      "React",
-      "NextJS",
-      "Vite",
-      "Zustand",
-      "HeadlessUI",
-      "Framer Motion",
-    ],
-  },
+  // {
+  //   projectName: "Access denied?",
+  //   projectDesc: (
+  //     <>
+  //       On this website you can find some interactive exercises that will show
+  //       you what challenges people with different abilities have to face in the
+  //       web. This projects is meant to cultivate empathy and spread the idea
+  //       that accessibility is not a feature, websites should be accessible by
+  //       default.
+  //     </>
+  //   ),
+  //   projectPic: AccessDenied,
+  //   projectLink: "https://access-denied.vercel.app/",
+  //   projectGithubLink: "https://github.com/airadavometra/accessibility_project",
+  //   projectTechnologies: [
+  //     "TypeScript",
+  //     "React",
+  //     "NextJS",
+  //     "Vite",
+  //     "Zustand",
+  //     "HeadlessUI",
+  //     "Framer Motion",
+  //   ],
+  // },
   {
     projectName: "Simulator of visual impairments",
     projectDesc: (
