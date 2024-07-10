@@ -28,6 +28,7 @@ import FamilyTree from "@/public/projects/FamilyTree.png";
 import AccessDenied from "@/public/projects/AccessDenied.png";
 import SecretIngredient from "@/public/projects/SecretIngredient.png";
 import Simulator from "@/public/projects/Simulator.png";
+import Planner from "@/public/projects/Planner.png";
 import { motion } from "framer-motion";
 import { downloadLinkVariants, githubLinkVariants } from "@/motions/portfolio";
 
@@ -117,6 +118,30 @@ const projectInfoArray: ProjectInfo[] = [
   //     "Framer Motion",
   //   ],
   // },
+  {
+    projectName: "Just a planner",
+    projectDesc: (
+      <>
+        I was looking for a nice and simple planning tool for ages until I
+        finally made one myself. It is inspired by{" "}
+        <a
+          className={s.projectDescLink}
+          href="https://tweek.so/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Tweek
+        </a>{" "}
+        and adapted for my personal needs and preferences. <br />
+        You can use it if you like it, just keep in mind that I can access all
+        the data. I won&apos;t read it, promise, but I just can.
+      </>
+    ),
+    projectPic: Planner,
+    projectLink: "https://planner-fawn.vercel.app/",
+    projectGithubLink: "https://github.com/airadavometra/planner/",
+    projectTechnologies: ["TypeScript", "React", "Vite", "Zustand", "Firebase"],
+  },
   {
     projectName: "Simulator of visual impairments",
     projectDesc: (
