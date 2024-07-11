@@ -140,7 +140,14 @@ const projectInfoArray: ProjectInfo[] = [
     projectPic: Planner,
     projectLink: "https://planner-fawn.vercel.app/",
     projectGithubLink: "https://github.com/airadavometra/planner/",
-    projectTechnologies: ["TypeScript", "React", "Vite", "Zustand", "Firebase"],
+    projectTechnologies: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "PWA",
+      "Zustand",
+      "Firebase",
+    ],
   },
   {
     projectName: "Simulator of visual impairments",
