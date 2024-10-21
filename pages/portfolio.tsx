@@ -23,7 +23,7 @@ import { StyledComponents } from "@/icons/skills/frontend/StyledComponents";
 import { Photoshop } from "@/icons/skills/design/Photoshop";
 import { Figma } from "@/icons/skills/design/Figma";
 import { Github } from "@/icons/contacts/Github";
-import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.jpg";
+import TypesCoercionQuiz from "@/public/projects/TypesCoercionQuiz.jpg";
 import FamilyTree from "@/public/projects/FamilyTree.png";
 import AccessDenied from "@/public/projects/AccessDenied.png";
 import SecretIngredient from "@/public/projects/SecretIngredient.png";
@@ -235,9 +235,9 @@ const projectInfoArray: ProjectInfo[] = [
         handy cheat sheet for quick, on-the-spot learning.
       </>
     ),
-    projectPic: TypesCoersionQuiz,
-    projectLink: "https://type-coersion-quiz.vercel.app/",
-    projectGithubLink: "https://github.com/airadavometra/type-coersion-quiz",
+    projectPic: TypesCoercionQuiz,
+    projectLink: "https://type-coercion-quiz.vercel.app/",
+    projectGithubLink: "https://github.com/airadavometra/type-coercion-quiz",
     projectTechnologies: ["TypeScript", "React", "Vite"],
   },
 ];
