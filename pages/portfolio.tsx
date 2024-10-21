@@ -23,7 +23,7 @@ import { StyledComponents } from "@/icons/skills/frontend/StyledComponents";
 import { Photoshop } from "@/icons/skills/design/Photoshop";
 import { Figma } from "@/icons/skills/design/Figma";
 import { Github } from "@/icons/contacts/Github";
-import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.png";
+import TypesCoersionQuiz from "@/public/projects/TypesCoersionQuiz.jpg";
 import FamilyTree from "@/public/projects/FamilyTree.png";
 import AccessDenied from "@/public/projects/AccessDenied.png";
 import SecretIngredient from "@/public/projects/SecretIngredient.png";
@@ -122,8 +122,8 @@ const projectInfoArray: ProjectInfo[] = [
     projectName: "Just a planner",
     projectDesc: (
       <>
-        I was looking for a nice and simple planning tool for ages until I
-        finally made one myself. It is inspired by{" "}
+        After searching for the perfect planning tool, I decided to create my
+        own, inspired by{" "}
         <a
           className={s.projectDescLink}
           href="https://tweek.so/"
@@ -132,9 +132,9 @@ const projectInfoArray: ProjectInfo[] = [
         >
           Tweek
         </a>{" "}
-        and adapted for my personal needs and preferences. <br />
-        You can use it if you like it, just keep in mind that I can access all
-        the data. I won&apos;t read it, promise, but I just can.
+        but tailored to fit my needs. <br />
+        Feel free to use it if you like, just note that I have access to the
+        data — though I promise not to read it!
       </>
     ),
     projectPic: Planner,
@@ -153,11 +153,10 @@ const projectInfoArray: ProjectInfo[] = [
     projectName: "Simulator of visual impairments",
     projectDesc: (
       <>
-        A Chrome extension which applies a visual filter on any website and
-        helps us to check if our websites are accessible and what can be
-        improved. It can simulate different stages of myopia, some types of
-        color blindness and blindness. For myopia we can also change the root
-        font size and check if our website scales properly.
+        A Chrome extension that applies visual filters to any website, helping
+        assess accessibility. It simulates various stages of myopia, types of
+        color blindness, and blindness, with an option to adjust root font size
+        to check proper scaling for myopia.
       </>
     ),
     projectPic: Simulator,
@@ -171,9 +170,8 @@ const projectInfoArray: ProjectInfo[] = [
     projectName: "Family tree",
     projectDesc: (
       <>
-        Here you can explore the Artemov family tree. And also find some
-        additional info about each person and a list of other families connected
-        with Artemov family members. This project is made in partnership with{" "}
+        Discover the Artemov family tree, complete with detailed info on each
+        person and connected families. Created in collaboration with{" "}
         <a
           className={s.projectDescLink}
           href="https://www.linkedin.com/in/vlivanoff/"
@@ -182,7 +180,7 @@ const projectInfoArray: ProjectInfo[] = [
         >
           Vladimir Ivanov
         </a>
-        . The information is provided by my father and uncles.
+        , using information provided by my father and uncles..
       </>
     ),
     projectPic: FamilyTree,
@@ -202,7 +200,7 @@ const projectInfoArray: ProjectInfo[] = [
         >
           My husband
         </a>{" "}
-        and I participated in{" "}
+        and I created a cute rhythm game about a kitten learning to cook for{" "}
         <a
           className={s.projectDescLink}
           href="https://itch.io/jam/gamedevjs-2022"
@@ -210,10 +208,9 @@ const projectInfoArray: ProjectInfo[] = [
           rel="noopener noreferrer"
         >
           Gamedev.js Jam 2022
-        </a>{" "}
-        and made a little cute rhythm game about a kitten who learns how to
-        cook. I was responsible for design and layout development. Also I
-        created all the illustrations myself.
+        </a>
+        , placing 7th in the top 10! I took charge of the design, home page
+        layout, and crafted all the fun illustrations.
       </>
     ),
     projectPic: SecretIngredient,
@@ -230,13 +227,18 @@ const projectInfoArray: ProjectInfo[] = [
     ],
   },
   {
-    projectName: "JS Types Coersion Quiz",
-    projectDesc:
-      "Two little but tricky quizzes to practice JS types coersion rules with absolutely random levels and awesome neon design. You gonna love it!",
+    projectName: "JS Type Coercion Quiz",
+    projectDesc: (
+      <>
+        An interactive platform to sharpen your JavaScript type coercion skills!
+        Tackle an endless quiz with randomly generated questions, and use the
+        handy cheat sheet for quick, on-the-spot learning.
+      </>
+    ),
     projectPic: TypesCoersionQuiz,
     projectLink: "https://type-coersion-quiz.vercel.app/",
     projectGithubLink: "https://github.com/airadavometra/type-coersion-quiz",
-    projectTechnologies: ["TypeScript", "React", "Redux", "Vite", "Firebase"],
+    projectTechnologies: ["TypeScript", "React", "Vite"],
   },
 ];
 
