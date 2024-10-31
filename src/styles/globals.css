@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Staatliches&display=swap");
+
+html {
+  --yellow: #f7c003;
+  --yellow-transparent: #f7c003cc;
+  --black: #333;
+  --black-transparent: #333333cc;
+  --white: #e4e4e4;
+  --text-color: var(--black);
+  --background-color: var(--yellow);
+
+  --text-font: "Montserrat", sans-serif;
+  --header-font: "Staatliches", sans-serif;
+
+  --font-size-16-20: clamp(1rem, 0.8214rem + 0.8929vw, 1.25rem);
+  --font-size-20-24: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.5rem);
+
+  --spacing-8: min(0.5rem, 12px);
+  --spacing-12: min(0.75rem, 16px);
+  --spacing-16: min(1rem, 24px);
+  --spacing-24: min(1.5rem, 32px);
+  --spacing-32: min(2rem, 40px);
+  --spacing-40: min(2.5rem, 48px);
+  --spacing-48: min(3rem, 64px);
+  --spacing-56: min(3.5rem, 80px);
+  --spacing-64: min(4rem, 96px);
+  --spacing-96: min(6rem, 128px);
+}
+
+html,
+body {
+  max-width: 100vw;
+  height: 100%;
+}
+
+body {
+  font-family: var(--text-font);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+p,
+h2 {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+.frozen {
+  overflow: hidden;
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+  filter: grayscale(1);
+}
+[class*="ymaps-2"][class*="-copyright"] {
+  display: none;
+}
