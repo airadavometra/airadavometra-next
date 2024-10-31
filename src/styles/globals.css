@@ -14,6 +14,8 @@ html {
 
   --font-size-16-20: clamp(1rem, 0.8214rem + 0.8929vw, 1.25rem);
   --font-size-20-24: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.5rem);
+  --font-size-16-24: clamp(1rem, 0.6429rem + 1.7857vw, 1.5rem);
+  --font-size-32-48: clamp(2rem, 1.2857rem + 3.5714vw, 3rem);
 
   --spacing-8: min(0.5rem, 12px);
   --spacing-12: min(0.75rem, 16px);
@@ -35,8 +37,6 @@ body {
 
 body {
   font-family: var(--text-font);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color-scheme: light;
   color: var(--text-color);
@@ -58,29 +58,12 @@ a {
   font-size: inherit;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
 ul {
   padding: 0;
   list-style-type: none;
 }
 
-p,
-h2 {
+p {
   padding: 0;
   border: 0;
   outline: 0;

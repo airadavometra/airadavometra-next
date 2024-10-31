@@ -1,19 +1,15 @@
 .header {
   width: 100%;
+  padding: var(--spacing-32);
   position: sticky;
   top: 0;
-  font-family: var(--header-font);
-  font-size: var(--font-size-20-24);
-  background-color: var(--yellow-transparent);
-  z-index: 3;
-  backdrop-filter: blur(5px);
-}
-.widthContainer {
-  padding-top: var(--spacing-32);
-  padding-bottom: var(--spacing-32);
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-family: var(--header-font);
+  font-size: var(--font-size-20-24);
+  background-color: var(--yellow);
+  z-index: 3;
 }
 .navigation {
   display: flex;
@@ -42,8 +38,7 @@
 
 @media (max-width: 48rem) {
   .widthContainer {
-    padding-top: var(--spacing-24);
-    padding-bottom: var(--spacing-24);
+    padding: var(--spacing-16);
   }
   .navigation {
     display: none;
