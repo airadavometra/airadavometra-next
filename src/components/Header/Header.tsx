@@ -5,7 +5,7 @@ import s from "./Header.module.css";
 import classNames from "classnames";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { menuItemVariants } from "@/motions/header";
 import { NAVIGATION } from "@/constants/navigation";
 import { Burger } from "@/icons/Burger";
@@ -54,7 +54,9 @@ export const Header = () => {
           </button>
         </WidthContainer>
       </header>
-      {isMenuOpen && <>Mobile menu open</>}
+      <AnimatePresence mode="wait">
+        {isMenuOpen && <>Mobile menu open</>}
+      </AnimatePresence>
     </>
   );
 };

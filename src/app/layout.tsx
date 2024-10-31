@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Daria Artemova personal website",
     images: [
       {
-        url: "https://example.com/og.png", //TODO: replace with share img from public
+        url: "/share.png",
       },
     ],
   },
