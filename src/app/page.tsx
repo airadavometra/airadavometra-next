@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <WidthContainer className={s.widthContainer}>
+    <WidthContainer>
       <section className={s.section}>
         <div className={s.description}>
           <p className={s.boldText}>
@@ -40,7 +40,7 @@ export default function Home() {
             height={0}
             sizes="100vw"
             className={s.picture}
-            alt="My photo"
+            alt="Daria's photo"
             aria-hidden
           />
         </div>

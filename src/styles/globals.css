@@ -13,8 +13,9 @@ html {
   --header-font: "Staatliches", sans-serif;
 
   --font-size-16-20: clamp(1rem, 0.8214rem + 0.8929vw, 1.25rem);
-  --font-size-20-24: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.5rem);
   --font-size-16-24: clamp(1rem, 0.6429rem + 1.7857vw, 1.5rem);
+  --font-size-20-24: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.5rem);
+  --font-size-24-32: clamp(1.5rem, 1.1429rem + 1.7857vw, 2rem);
   --font-size-32-48: clamp(2rem, 1.2857rem + 3.5714vw, 3rem);
 
   --spacing-8: min(0.5rem, 12px);

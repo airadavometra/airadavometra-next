@@ -1,7 +1,8 @@
-import { ReactNode } from "react";
+import { FC } from "react";
+import { WithClassName } from "./withClassName";
 
 export type ContactInfo = {
-  contactLogo: ReactNode;
+  contactLogo: FC<WithClassName>;
   contactText: string;
   contactLink?: string;
   contactValue?: string;
