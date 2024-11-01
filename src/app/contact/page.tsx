@@ -7,7 +7,7 @@ import { WidthContainer } from "@/components/WidthContainer/WidthContainer";
 import { CONTACTS } from "@/constants/contacts";
 import { ContactLink } from "@/components/ContactLink/ContactLink";
 
-export default function Contact() {
+export default function ContactPage() {
   return (
     <WidthContainer className={s.widthContainer}>
       <section className={s.section}>

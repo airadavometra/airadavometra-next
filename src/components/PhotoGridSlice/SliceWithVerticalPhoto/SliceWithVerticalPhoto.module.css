@@ -1,0 +1,51 @@
+.pattern {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--spacing-32);
+}
+.verticalPhoto {
+  height: inherit;
+  aspect-ratio: 2 / 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.verticalPhoto .left {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.verticalPhoto .middle {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.verticalPhoto .right {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.horizontalPhoto {
+  aspect-ratio: 2.8 / 2;
+}
+
+@media (max-width: 48rem) {
+  .pattern {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: var(--spacing-16);
+  }
+  .verticalPhoto .left {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .verticalPhoto .middle {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .verticalPhoto .right {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  .horizontalPhoto {
+    aspect-ratio: 3 / 2;
+  }
+}

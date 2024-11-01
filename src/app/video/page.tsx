@@ -1,8 +1,8 @@
-import { VIDEO_LINKS } from "@/constants/videoLinks";
 import s from "./page.module.css";
+import { VIDEO_LINKS } from "@/constants/videoLinks";
 import { VideoItem } from "@/components/VideoItem/VideoItem";
 
-export default function Contact() {
+export default function VideoPage() {
   return (
     <section className={s.section}>
       <ul className={s.videoList}>

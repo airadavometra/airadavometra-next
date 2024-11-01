@@ -3,7 +3,7 @@ import s from "./page.module.css";
 import { WidthContainer } from "@/components/WidthContainer/WidthContainer";
 import Image from "next/image";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <WidthContainer>
       <section className={s.section}>
