@@ -1,15 +1,13 @@
 export const expandExperienceItem = {
-  hidden: { opacity: 0, height: 0, paddingTop: 0 },
+  hidden: { opacity: 0, height: 0 },
   visible: {
     opacity: [0, 0, 1],
     height: "auto",
-    paddingTop: "auto",
     transition: { duration: 0.7, ease: "easeInOut" },
   },
   exit: {
     opacity: [1, 0, 0],
     height: 0,
-    paddingTop: 0,
     transition: { duration: 0.7, ease: "easeInOut" },
   },
 };

@@ -21,12 +21,14 @@ html {
   --spacing-8: min(0.5rem, 12px);
   --spacing-12: min(0.75rem, 16px);
   --spacing-16: min(1rem, 24px);
+  --spacing-20: min(1.25rem, 28px);
   --spacing-24: min(1.5rem, 32px);
   --spacing-32: min(2rem, 40px);
   --spacing-40: min(2.5rem, 48px);
   --spacing-48: min(3rem, 64px);
   --spacing-56: min(3.5rem, 80px);
   --spacing-64: min(4rem, 96px);
+  --spacing-80: min(5rem, 112px);
   --spacing-96: min(6rem, 128px);
 }
 

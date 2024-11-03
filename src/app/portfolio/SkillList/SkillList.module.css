@@ -1,0 +1,71 @@
+.skillSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-80);
+}
+.sectionTitle {
+  font-family: var(--header-font);
+  font-weight: 400;
+  font-size: var(--font-size-32-48);
+}
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-48);
+}
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-32);
+}
+.skillTitle {
+  font-family: var(--header-font);
+  font-weight: 400;
+  font-size: var(--font-size-24-32);
+}
+.iconList {
+  max-width: 25vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--spacing-24);
+}
+.iconWrapper {
+  width: 4rem;
+  height: 4rem;
+}
+.icon {
+  width: 4rem;
+  height: 4rem;
+  fill: var(--black);
+}
+
+@media (max-width: 48rem) {
+  .skillSection {
+    align-items: flex-start;
+    gap: var(--spacing-48);
+  }
+  .skillList {
+    gap: var(--spacing-32);
+  }
+  .skillItem {
+    align-items: flex-start;
+    gap: var(--spacing-24);
+  }
+  .iconList {
+    max-width: 70vw;
+    gap: var(--spacing-20);
+    justify-content: flex-start;
+  }
+  .iconWrapper {
+    width: 3rem;
+    height: 3rem;
+  }
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}

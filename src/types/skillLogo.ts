@@ -1,6 +1,7 @@
-import { ReactNode } from "react";
+import { FC } from "react";
+import { WithClassName } from "./withClassName";
 
 export type SkillLogo = {
-  logo: ReactNode;
+  logo: FC<WithClassName>;
   logoAlt: string;
 };

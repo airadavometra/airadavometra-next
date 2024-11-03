@@ -1,6 +1,6 @@
 import s from "./page.module.css";
 import { HORIZONTAL_PHOTOS, VERTICAL_PHOTOS } from "@/constants/photos";
-import { PhotoGridSlice } from "@/components/PhotoGridSlice/PhotoGridSlice";
+import { PhotoGridSlice } from "@/app/photo/PhotoGridSlice/PhotoGridSlice";
 
 export default function PhotoPage() {
   const numberOfGroups =

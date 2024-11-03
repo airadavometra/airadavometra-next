@@ -1,6 +1,5 @@
-export type ExperienceInfo = {
+export type CareerTimelineItem = {
   year: string;
   title: string;
   text: string;
-  isOpen: boolean;
 };

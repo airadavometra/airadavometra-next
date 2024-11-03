@@ -5,7 +5,7 @@ import { YMaps, Map, Placemark } from "react-yandex-maps";
 import { MY_COORDINATES } from "@/constants/myCoordinates";
 import { WidthContainer } from "@/components/WidthContainer/WidthContainer";
 import { CONTACTS } from "@/constants/contacts";
-import { ContactLink } from "@/components/ContactLink/ContactLink";
+import { ContactLink } from "@/app/contact/ContactLink/ContactLink";
 
 export default function ContactPage() {
   return (

@@ -7,7 +7,7 @@
 }
 @media (max-width: 48rem) {
   .widthContainer {
-    padding-left: var(--spacing-16);
-    padding-right: var(--spacing-16);
+    padding-left: var(--spacing-24);
+    padding-right: var(--spacing-24);
   }
 }
