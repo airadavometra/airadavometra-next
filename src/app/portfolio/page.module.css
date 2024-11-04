@@ -5,6 +5,11 @@
   flex-direction: column;
   gap: var(--spacing-80);
 }
+.reverseOrderOnMobile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-80);
+}
 .downloadCv {
   width: 100%;
   display: flex;
@@ -17,7 +22,7 @@
 }
 
 @media (max-width: 48rem) {
-  .widthContainer {
+  .reverseOrderOnMobile {
     flex-direction: column-reverse;
   }
   .downloadCv {

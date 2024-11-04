@@ -1,0 +1,88 @@
+"use client";
+
+import { FC } from "react";
+import s from "./Project.module.css";
+import { ProjectInfo } from "@/types/projectInfo";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+  projectLinkVariants,
+  projectPhotoLinkVariants,
+  projectTagsVariants,
+} from "@/motions/portfolio";
+import { VisuallyHidden } from "@/components/VisuallyHidden/VisuallyHidden";
+import ReactMarkdown from "react-markdown";
+import Link from "next/link";
+import classNames from "classnames";
+
+type ProjectProps = {
+  project: ProjectInfo;
+};
+
+export const Project: FC<ProjectProps> = ({ project }) => {
+  return (
+    <div className={s.projectContainer}>
+      <motion.h2
+        className={classNames(s.title, s.titleMobile)}
+        variants={projectLinkVariants}
+        whileHover="hover"
+      >
+        <Link href={project.link}>{project.name}</Link>
+      </motion.h2>
+      <motion.div
+        className={s.imageWrapper}
+        variants={projectPhotoLinkVariants}
+        whileHover="hover"
+      >
+        <Link className={s.imageLinkWrapper} href={project.link}>
+          <Image
+            src={project.imgPath}
+            alt={`${project.name} screenshot`}
+            loading="lazy"
+            quality={100}
+            layout="fill"
+            objectFit="cover"
+            aria-hidden
+          />
+          <VisuallyHidden>{project.name}</VisuallyHidden>
+        </Link>
+      </motion.div>
+      <div className={s.descriptionContainer}>
+        <motion.h2
+          className={classNames(s.title, s.titleDesktop)}
+          variants={projectLinkVariants}
+          whileHover="hover"
+        >
+          <Link href={project.link}>{project.name}</Link>
+        </motion.h2>
+        <div className={s.description}>
+          {project.description.map((item, index) => (
+            <ReactMarkdown key={index}>{item}</ReactMarkdown>
+          ))}
+        </div>
+        <ul className={s.tagsContainer}>
+          {project.techStack.map((item, index) => (
+            <motion.li
+              className={s.tag}
+              key={item}
+              variants={projectTagsVariants}
+              initial="offscreen"
+              viewport={{ once: true }}
+              whileHover="hover"
+              whileInView={{
+                ...projectTagsVariants.onscreen,
+                transition: {
+                  delay: index * 0.6,
+                  type: "spring",
+                  stiffness: 120,
+                },
+              }}
+            >
+              {`${item}`}
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
