@@ -4,6 +4,7 @@ import { DownloadCvButton } from "./DownloadCvButton/DownloadCvButton";
 import { SkillList } from "./SkillList/SkillList";
 import { CareerTimeline } from "./CareerTimeline/CareerTimeline";
 import { ProjectList } from "./ProjectList/ProjectList";
+import { GithubLink } from "./GithubLink/GithubLink";
 
 export default function PortfolioPage() {
   return (
@@ -18,6 +19,7 @@ export default function PortfolioPage() {
         </div>
       </div>
       <ProjectList />
+      <GithubLink />
     </WidthContainer>
   );
 }
