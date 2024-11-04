@@ -1,6 +1,11 @@
 import s from "./page.module.css";
 import { HORIZONTAL_PHOTOS, VERTICAL_PHOTOS } from "@/constants/photos";
 import { PhotoGridSlice } from "@/app/photo/PhotoGridSlice/PhotoGridSlice";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Daria Artemova - Photo gallery",
+};
 
 export default function PhotoPage() {
   const numberOfGroups =

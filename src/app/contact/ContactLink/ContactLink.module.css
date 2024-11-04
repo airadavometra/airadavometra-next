@@ -6,6 +6,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  font-family: var(--header-font);
+  font-weight: 400;
+  font-size: var(--font-size-16-24);
   color: inherit;
   text-decoration: inherit;
 }
@@ -14,8 +17,4 @@
   width: 1.5rem;
   margin-right: var(--spacing-12);
   fill: var(--black);
-}
-.linkText {
-  font-family: var(--header-font);
-  font-size: var(--font-size-16-24);
 }

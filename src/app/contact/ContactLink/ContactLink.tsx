@@ -1,11 +1,9 @@
-"use client";
-
 import { FC } from "react";
 import s from "./ContactLink.module.css";
 import { ContactInfo } from "@/types/contactInfo";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { contactLinkVariants } from "@/motions/contactPage";
+import { ContactLinkMotionWrapper } from "./ContactLinkMotionWrapper";
+import { EmailButton } from "./EmailButton";
 
 type ContactLinkProps = {
   contact: ContactInfo;
@@ -20,27 +18,18 @@ export const ContactLink: FC<ContactLinkProps> = ({
   },
 }) => {
   return link ? (
-    <motion.div
-      className={s.linksContainer}
-      variants={contactLinkVariants}
-      whileHover={contactLinkVariants.hover}
-    >
+    <ContactLinkMotionWrapper>
       <Link href={link} className={s.link}>
         <Logo className={s.linkLogo} />
-        <p className={s.linkText}>{text}</p>
+        {text}
       </Link>
-    </motion.div>
+    </ContactLinkMotionWrapper>
   ) : value ? (
-    <motion.button
-      className={s.link}
-      variants={contactLinkVariants}
-      whileHover={contactLinkVariants.hover}
-      onClick={() => {
-        navigator.clipboard.writeText(value);
-      }}
-    >
-      <Logo className={s.linkLogo} />
-      <p className={s.linkText}>{text}</p>
-    </motion.button>
+    <ContactLinkMotionWrapper>
+      <EmailButton email={value}>
+        <Logo className={s.linkLogo} />
+        {text}
+      </EmailButton>
+    </ContactLinkMotionWrapper>
   ) : null;
 };

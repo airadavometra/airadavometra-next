@@ -5,6 +5,11 @@ import { SkillList } from "./SkillList/SkillList";
 import { CareerTimeline } from "./CareerTimeline/CareerTimeline";
 import { ProjectList } from "./ProjectList/ProjectList";
 import { GithubLink } from "./GithubLink/GithubLink";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Daria Artemova - Portfolio",
+};
 
 export default function PortfolioPage() {
   return (
