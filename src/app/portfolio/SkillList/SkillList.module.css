@@ -43,6 +43,18 @@
   fill: var(--black);
 }
 
+.tooltipTrigger {
+  cursor: default;
+}
+.tooltip {
+  padding: var(--spacing-12) var(--spacing-20);
+  --anchor-gap: var(--spacing-12);
+  --anchor-offset: -2rem;
+  background: var(--black);
+  color: var(--white);
+  font-weight: 600;
+}
+
 @media (max-width: 48rem) {
   .skillSection {
     align-items: flex-start;

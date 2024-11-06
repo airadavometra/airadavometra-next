@@ -33,15 +33,17 @@ export const Project: FC<ProjectProps> = ({ project }) => {
         className={s.imageWrapper}
         variants={projectPhotoLinkVariants}
         whileHover="hover"
+        aria-hidden
       >
-        <Link className={s.imageLinkWrapper} href={project.link}>
+        <Link className={s.imageLinkWrapper} href={project.link} aria-hidden>
           <Image
+            className={s.image}
             src={project.imgPath}
             alt={`${project.name} screenshot`}
             loading="lazy"
-            quality={100}
-            layout="fill"
-            objectFit="cover"
+            width={0}
+            height={0}
+            sizes="100vw"
             aria-hidden
           />
           <VisuallyHidden>{project.name}</VisuallyHidden>

@@ -17,7 +17,7 @@ export const SliceHorizontalPhotos: FC<SliceHorizontalPhotosProps> = ({
       {horizontalPhotos.map((item) => (
         <Photo
           key={item.photoId}
-          className={s.horizontalPhoto}
+          photoClassName={s.horizontalPhoto}
           src={item.bigPath}
           photoId={item.photoId}
           //onClick={onClick}

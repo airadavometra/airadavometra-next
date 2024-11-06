@@ -20,6 +20,12 @@
   position: relative;
   aspect-ratio: 3 / 2;
 }
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top left;
+}
 .descriptionContainer {
   display: flex;
   flex-direction: column;

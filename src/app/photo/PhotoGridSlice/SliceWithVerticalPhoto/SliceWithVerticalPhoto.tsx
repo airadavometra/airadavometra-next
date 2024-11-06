@@ -22,7 +22,8 @@ export const SliceWithVerticalPhoto: FunctionComponent<
   return (
     <div className={s.pattern}>
       <Photo
-        className={classNames(s.verticalPhoto, s[verticalPhotoPosition])}
+        containerClassName={s[verticalPhotoPosition]}
+        photoClassName={s.verticalPhoto}
         src={verticalPhoto.bigPath}
         photoId={verticalPhoto.photoId}
         //onClick={onClick}
@@ -30,7 +31,7 @@ export const SliceWithVerticalPhoto: FunctionComponent<
       {horizontalPhotos.map((photo) => (
         <Photo
           key={photo.photoId}
-          className={s.horizontalPhoto}
+          photoClassName={s.horizontalPhoto}
           src={photo.bigPath}
           photoId={photo.photoId}
           //onClick={onClick}

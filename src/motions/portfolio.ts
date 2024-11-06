@@ -40,20 +40,6 @@ export const tooltipVariants = {
     transition: { type: "tween", duration: 0.3, ease: "easeInOut" },
   },
 };
-export const mobileTooltipVariants = {
-  hidden: { scale: 0, originX: 0, originY: 0 },
-  visible: {
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-    },
-  },
-  exit: {
-    scale: 0,
-    transition: { type: "tween", duration: 0.3, ease: "easeInOut" },
-  },
-};
 
 export const projectTagsVariants = {
   offscreen: { scale: 0 },

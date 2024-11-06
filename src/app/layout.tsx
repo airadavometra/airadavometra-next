@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "@/styles/reset.css";
 import "@/styles/globals.css";
 import { Layout } from "@/components/Layout/Layout";
+import { MotionConfig } from "framer-motion";
 
 export const metadata: Metadata = {
   title: "Daria Artemova",
@@ -41,7 +42,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Layout>{children}</Layout>
+        <MotionConfig reducedMotion="user">
+          <Layout>{children}</Layout>
+        </MotionConfig>
         <Analytics />
       </body>
     </html>

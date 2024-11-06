@@ -11,8 +11,8 @@ import {
 } from "@/motions/portfolio";
 import { useEffect, useState } from "react";
 
-const AccordionContent = motion(Accordion.Content);
-const AccordionHeader = motion(Accordion.Header);
+const AccordionContent = motion.create(Accordion.Content);
+const AccordionHeader = motion.create(Accordion.Header);
 
 export const CareerTimeline = () => {
   const [defaultValue, setDefaultValue] = useState<string[]>();

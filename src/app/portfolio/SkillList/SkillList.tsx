@@ -1,8 +1,8 @@
-"use client";
-
 import s from "./SkillList.module.css";
-import { motion } from "framer-motion";
 import { SKILLS } from "@/constants/skills";
+import { VisuallyHidden } from "@/components/VisuallyHidden/VisuallyHidden";
+import { SkillItemMotionWrapper } from "./SkillItemMotionWrapper";
+import { SkillItemTooltipWrapper } from "./SkillItemTooltipWrapper";
 
 export const SkillList = () => {
   return (
@@ -14,19 +14,17 @@ export const SkillList = () => {
             <h2 className={s.skillTitle}>{item.skillName}</h2>
             <ul className={s.iconList}>
               {item.skillLogos.map(({ logo: Logo, logoAlt }) => (
-                <motion.li
-                  key={logoAlt}
-                  className={s.iconWrapper}
-                  whileHover={{
-                    rotate: [0, -2, 0, 2, 0],
-                    transition: {
-                      repeat: Infinity,
-                      duration: 0.3,
-                    },
-                  }}
-                >
-                  <Logo className={s.icon} />
-                </motion.li>
+                <li key={logoAlt}>
+                  <SkillItemTooltipWrapper
+                    content={logoAlt}
+                    trigger={
+                      <SkillItemMotionWrapper>
+                        <Logo className={s.icon} />
+                        <VisuallyHidden>{logoAlt}</VisuallyHidden>
+                      </SkillItemMotionWrapper>
+                    }
+                  />
+                </li>
               ))}
             </ul>
           </li>
