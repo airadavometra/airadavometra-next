@@ -14,9 +14,6 @@
   align-items: flex-start;
   gap: var(--spacing-48);
 }
-.experienceItem {
-  width: 100%;
-}
 .experienceItemTrigger {
   width: 100%;
   display: flex;
@@ -40,14 +37,13 @@
   height: 2rem;
   stroke: var(--black);
 }
-.experienceItemTrigger[data-state="closed"] .expandBtn {
+.rotate {
   transform: rotate(180deg);
 }
 .experienceItemText {
   max-width: 55vw;
   padding-left: 5rem;
   padding-top: var(--spacing-32);
-  font-size: var(--font-size-20-24);
 }
 
 @media (max-width: 48rem) {
