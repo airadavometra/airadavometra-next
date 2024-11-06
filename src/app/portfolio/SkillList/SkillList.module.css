@@ -49,10 +49,12 @@
 .tooltip {
   padding: var(--spacing-12) var(--spacing-20);
   --anchor-gap: var(--spacing-12);
-  --anchor-offset: -2rem;
+  --anchor-offset: calc(var(--spacing-32) * -1);
+  --anchor-padding: var(--spacing-16);
   background: var(--black);
   color: var(--white);
   font-weight: 600;
+  font-size: var(--font-size-16-20);
 }
 
 @media (max-width: 48rem) {
@@ -79,5 +81,9 @@
   .icon {
     width: 3rem;
     height: 3rem;
+  }
+  .tooltip {
+    --anchor-offset: var(--spacing-16);
+    font-weight: 500;
   }
 }

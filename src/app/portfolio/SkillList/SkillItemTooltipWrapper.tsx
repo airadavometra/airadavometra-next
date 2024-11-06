@@ -5,6 +5,8 @@ import s from "./SkillList.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { tooltipVariants } from "@/motions/portfolio";
+import { tooltipVariants as mobileTooltipVariants } from "@/motions/contactPage";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 type SkillItemTooltipWrapperProps = {
   content: string;
@@ -18,6 +20,8 @@ export const SkillItemTooltipWrapper: FC<SkillItemTooltipWrapperProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const tooltipWrapperRef = useRef<HTMLDivElement>(null);
   const tooltipButtonRef = useRef<HTMLButtonElement>(null);
+
+  const isMobile = useMediaQuery("(max-width: 48rem)");
 
   return (
     <Popover ref={tooltipWrapperRef}>
@@ -48,8 +52,8 @@ export const SkillItemTooltipWrapper: FC<SkillItemTooltipWrapperProps> = ({
               static
               as={motion.div}
               className={s.tooltip}
-              anchor="bottom end"
-              variants={tooltipVariants}
+              anchor={isMobile ? "bottom start" : "bottom end"}
+              variants={isMobile ? mobileTooltipVariants : tooltipVariants}
               initial="hidden"
               animate="visible"
               exit="exit"

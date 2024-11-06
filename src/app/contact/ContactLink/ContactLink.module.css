@@ -18,3 +18,18 @@
   margin-right: var(--spacing-12);
   fill: var(--black);
 }
+.tooltip {
+  padding: var(--spacing-12) var(--spacing-20);
+  --anchor-gap: var(--spacing-12);
+  --anchor-offset: calc(var(--spacing-32) * -1);
+  --anchor-padding: var(--spacing-16);
+  background: var(--black);
+  color: var(--white);
+  font-weight: 600;
+  font-size: var(--font-size-16-20);
+}
+@media (max-width: 48rem) {
+  .tooltip {
+    font-weight: 500;
+  }
+}
