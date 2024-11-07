@@ -27,23 +27,14 @@
   opacity: 100%;
 }
 
-.menuButton {
-  display: none;
-}
-.menuIcon {
-  width: 2rem;
-  height: 2rem;
-  fill: var(--black);
-}
-
 @media (max-width: 48rem) {
   .widthContainer {
     padding: var(--spacing-16);
   }
+  .header {
+    padding: 0;
+  }
   .navigation {
     display: none;
-  }
-  .menuButton {
-    display: block;
   }
 }
