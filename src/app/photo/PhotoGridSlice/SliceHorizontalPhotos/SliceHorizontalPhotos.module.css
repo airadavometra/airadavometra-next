@@ -6,6 +6,7 @@
   gap: var(--spacing-32);
 }
 .horizontalPhoto {
+  width: 100%;
   aspect-ratio: 3 / 2;
 }
 

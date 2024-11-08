@@ -37,15 +37,15 @@
     grid-template-rows: 1fr;
     gap: var(--spacing-16);
   }
-  .verticalPhoto .left {
+  .left {
     grid-column-start: 1;
     grid-column-end: 1;
   }
-  .verticalPhoto .middle {
+  .middle {
     grid-column-start: 1;
     grid-column-end: 1;
   }
-  .verticalPhoto .right {
+  .right {
     grid-column-start: 1;
     grid-column-end: 1;
   }

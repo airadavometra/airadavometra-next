@@ -1,18 +1,20 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import s from "./Photo.module.css";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import classNames from "classnames";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { photoContainerVariants, photoVariants } from "@/motions/photo";
+import { VisuallyHidden } from "@/components/VisuallyHidden/VisuallyHidden";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 type PhotoItemProps = {
   src: string;
-  photoId: number;
+  photoId: string;
   containerClassName?: string;
   photoClassName: string;
-  //onClick(photoId: number): void;
 };
 
 export const Photo: FC<PhotoItemProps> = ({
@@ -20,8 +22,23 @@ export const Photo: FC<PhotoItemProps> = ({
   photoId,
   containerClassName,
   photoClassName,
-  //onClick,
 }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+
+      return params.toString();
+    },
+    [searchParams]
+  );
+
+  const isMobile = useMediaQuery("(max-width: 48rem)");
+
   return (
     <motion.div
       className={classNames(
@@ -32,7 +49,7 @@ export const Photo: FC<PhotoItemProps> = ({
       variants={photoContainerVariants}
       whileHover={photoContainerVariants.hover}
     >
-      <motion.div
+      <motion.button
         className={classNames(
           s.photoContainer,
           containerClassName,
@@ -40,21 +57,26 @@ export const Photo: FC<PhotoItemProps> = ({
         )}
         variants={photoVariants}
         whileHover="hover"
-        layoutId={photoId.toString()}
+        onClick={() =>
+          router.push(pathname + "?" + createQueryString("id", photoId), {
+            scroll: false,
+          })
+        }
+        disabled={isMobile}
       >
         <Image
           className={classNames(s.photo, photoClassName)}
           // onLoad={() => setTimeout(() => setShowPlaceholder(false), 2000)}
           onContextMenu={(e) => e.preventDefault()}
           src={src}
-          // onClick={() => onClick(photoId)}
           alt="photo"
           loading="lazy"
           width={0}
           height={0}
           sizes="100vw"
         />
-      </motion.div>
+        <VisuallyHidden>Open this photo full screen</VisuallyHidden>
+      </motion.button>
     </motion.div>
   );
 };

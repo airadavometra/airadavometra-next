@@ -8,17 +8,11 @@ type SliceWithVerticalPhotoProps = {
   verticalPhoto: PhotoInfo;
   horizontalPhotos: PhotoInfo[];
   verticalPhotoPosition: "left" | "middle" | "right";
-  //onClick(photoId: number): void;
 };
 
 export const SliceWithVerticalPhoto: FunctionComponent<
   SliceWithVerticalPhotoProps
-> = ({
-  verticalPhoto,
-  horizontalPhotos,
-  verticalPhotoPosition,
-  //onClick,
-}) => {
+> = ({ verticalPhoto, horizontalPhotos, verticalPhotoPosition }) => {
   return (
     <div className={s.pattern}>
       <Photo
@@ -26,7 +20,6 @@ export const SliceWithVerticalPhoto: FunctionComponent<
         photoClassName={s.verticalPhoto}
         src={verticalPhoto.bigPath}
         photoId={verticalPhoto.photoId}
-        //onClick={onClick}
       />
       {horizontalPhotos.map((photo) => (
         <Photo
@@ -34,7 +27,6 @@ export const SliceWithVerticalPhoto: FunctionComponent<
           photoClassName={s.horizontalPhoto}
           src={photo.bigPath}
           photoId={photo.photoId}
-          //onClick={onClick}
         />
       ))}
     </div>
