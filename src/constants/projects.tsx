@@ -2,6 +2,17 @@ import { ProjectInfo } from "@/types/projectInfo";
 
 export const PROJECTS: ProjectInfo[] = [
   {
+    name: "Eyes That Hypnotise",
+    description: [
+      "Eyes That Hypnotise is a cozy, hand-drawn puzzle game I'm working on with [my partner](https://www.linkedin.com/in/vlivanoff/). I've been busy creating detailed, hand-drawn assets and designing levels that balance chill vibes with fun challenges.",
+      "If it sounds like your thing, we'd love your support — [wishlist it](https://store.steampowered.com/app/3156370/Eyes_That_Hypnotise/)!",
+    ],
+    imgPath: "/projects/EyesThatHypnotise.jpg",
+    link: "https://store.steampowered.com/app/3156370/Eyes_That_Hypnotise/",
+    githubLink: "",
+    techStack: ["Unity", "Procreate"],
+  },
+  {
     name: "Just a planner",
     description: [
       "After searching for the perfect planning tool, I decided to create my own, inspired by [Tweek](https://tweek.so/) but tailored to fit my needs.",

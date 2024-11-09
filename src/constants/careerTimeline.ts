@@ -3,32 +3,32 @@ import { CareerTimelineItem } from "@/types/careerTimelineItem";
 export const CAREER_TIMELINE: CareerTimelineItem[] = [
   {
     year: "2023",
-    title: "Discovered accessibility topic",
-    text: "lalala",
+    title: "Dived into Web Accessibility",
+    text: "I shifted my focus to web accessibility, aiming to put users first. This drives me to build solutions people enjoy, not struggle with. I created 'fluid layout' principles for scalable, accessible interfaces and keep learning to ensure my work meets standards and truly enhances user experience.",
   },
   {
     year: "2022",
-    title: "Joined Reaktor and moved to Amsterdam",
-    text: "I've always wanted to live abroad, and the year 2022 pushed me to realize this dream. So after a while I joined Reaktor and they kindly helped me to relocate to Amsterdam. I will definitely update this section, for now I am still settling down. Let's see what an interesting future awaits us.",
+    title: "Joined Reaktor as a Consultant",
+    text: "Consulting has given me a fresh perspective, letting me work closely with clients to understand their goals, create tailored solutions, and tackle complex development challenges. It’s been rewarding to use my skills across different projects, delivering real results and learning something new from each experience.",
   },
   {
     year: "2021",
-    title: "Joined Raiffeisen as a front-end developer",
-    text: "I decided it was time to change my job and find out what it's like to work in another company. So I joined a team in Raiffeisen Bank and started working on some internal products for managers. Our solutions helped (and still do) them to do budget distribution, increase employees salaries and divide bonuses between teammates. I have integrated Redux to our apps which was quite useful. Also we completely redesigned our salary increasing and bonuses dividing apps and created a handy admin tools. All this helped us to flexibly set up and launch the 2022 processes. We received a lot of positive feedback from users, so we were very happy :)",
+    title: "Joined Raiffeisen as a Front-End Developer",
+    text: "Made the leap to Raiffeisen Bank to broaden my experience in front-end development and work on data-heavy internal tools. I introduced Redux to our apps and contributed to redesigning our interfaces. Our team's work received positive feedback, making the effort truly rewarding.",
   },
   {
     year: "2018",
-    title: "Became a full-stack developer",
-    text: "I realized that I'm actually very interested in front-end development. So I started working with an old and ugly CRM UI for MTS operators. I started developing a React components library and made a new web app with React, Redux and TypeScript. There was also a big back-end refactoring task I was responsible for, and that was a knotty problem. I had to not only rewrite but also scale the solution and deal with highload. And I managed it!",
+    title: "Transitioned to Full-Stack Developer",
+    text: "I realized my interest in front-end development while working on an outdated CRM UI at MTS. I started building a React component library and developed a new interface with React, Redux, and TypeScript. I also tackled a major back-end refactoring project, scaling the solution to handle high loads successfully.",
   },
   {
     year: "2017",
-    title: "Became an SQA automation engineer in MTS",
-    text: "I started my career as an SQA automation engineer in CRM system just after my university graduation. I was the only SQA engineer in a team and I had covered the whole code base with autotests. After that I had been mentoring a new team of SQA engineers and participating in the improvement of autotesting process and tools.",
+    title: "QA automation engineer in MTS",
+    text: "Kicked off my career as a QA automation engineer right after graduating. As the first QA in the team, I covered the entire codebase with automated tests, mentored new QA engineers, and enhanced our testing tools and processes.",
   },
   {
     year: "2017",
     title: "Got my bachelor",
-    text: "I had been studying a lot of maths and programming, something about AI, just a little bit of everything. Oh, I wish I could remember all of that... It's such a hype now, I couldn't even imagine back then.",
+    text: "Wrapped up my bachelor's in Computer Science with a mix of math, coding, and some early AI. It was a great foundation that sharpened my problem-solving skills and kickstarted my passion for tech — fueling what I do today.",
   },
 ];

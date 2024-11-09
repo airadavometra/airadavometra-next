@@ -11,7 +11,7 @@ export const GithubLink = () => {
     <section className={s.section}>
       <motion.div variants={githubLinkVariants} whileHover="hover">
         <Link href="https://github.com/airadavometra" className={s.link}>
-          Please feel free to check out my github account
+          Feel free to check out my github
           <Github className={s.logo} />
         </Link>
       </motion.div>

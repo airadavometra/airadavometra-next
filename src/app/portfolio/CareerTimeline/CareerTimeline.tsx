@@ -25,7 +25,7 @@ export const CareerTimeline = () => {
 
   return (
     <section className={s.section}>
-      <h1 className={s.sectionTitle}>Key Points</h1>
+      <h1 className={s.sectionTitle}>Career Path</h1>
       <div className={s.experienceList}>
         {CAREER_TIMELINE.map((item, index) => (
           <Disclosure as="div" key={item.title} defaultOpen={index === 0}>

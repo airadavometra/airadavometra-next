@@ -12,17 +12,18 @@ export default function HomePage() {
             <span className={s.bigText}>Hey. I&apos;m Daria,</span>
             <br />
             a passionate web developer <br />
-            based in the Netherlands.
+            and accessibility advocate.
           </p>
           <p>
-            My main focus is digital accessibility — not just meeting
-            requirements but creating solutions that feel welcoming for
-            everyone. I&apos;m learning all I can to build a more empathetic
-            approach.
+            My main focus now is digital accessibility — not just meeting
+            requirements but creating experiences that feel welcoming for
+            everyone. I believe an empathetic approach and strong fundamentals
+            are the key to truly user-friendly solutions.
           </p>
           <p>
-            Outside work, I&apos;ve returned to drawing and am enjoying indie
-            game development with my partner, crafting hand-drawn game assets.
+            Outside work, I&apos;m enjoying indie game development with my
+            partner, crafting hand-drawn game assets. It&apos;s a lot of fun and
+            a constant learning adventure.
           </p>
           <div className={s.linksContainer}>
             <MainPageLink type="primary" href="/portfolio">
