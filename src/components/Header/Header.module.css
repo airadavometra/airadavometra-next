@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   padding: var(--spacing-32);
-  position: sticky;
+  position: fixed;
   top: 0;
   display: flex;
   justify-content: flex-end;
@@ -10,6 +10,11 @@
   font-size: var(--font-size-20-24);
   background-color: var(--yellow);
   z-index: 3;
+}
+.headerHidden {
+  position: static;
+  opacity: 0;
+  pointer-events: none;
 }
 .navigation {
   display: flex;
