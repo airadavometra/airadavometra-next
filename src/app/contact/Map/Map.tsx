@@ -3,7 +3,7 @@
 import { Loader } from "@/components/Loader/Loader";
 import s from "./Map.module.css";
 import { MY_COORDINATES } from "@/constants/myCoordinates";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { YMaps, Map as YMap, Placemark } from "react-yandex-maps";
 
 export const Map = () => {
