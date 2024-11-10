@@ -15,7 +15,7 @@ import { menuVariants } from "@/motions/mobileMenu";
 
 export const MobileMenu = () => {
   const pathname = usePathname();
-  let [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>

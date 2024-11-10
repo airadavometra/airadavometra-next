@@ -11,7 +11,7 @@ import {
 } from "@headlessui/react";
 import { motion } from "framer-motion";
 import { Close } from "@/icons/Close";
-import { useCallback, useEffect } from "react";
+import { Suspense, useCallback, useEffect } from "react";
 import { VisuallyHidden } from "@/components/VisuallyHidden/VisuallyHidden";
 import classNames from "classnames";
 import { Previous } from "@/icons/Previous";
@@ -19,7 +19,7 @@ import { Next } from "@/icons/Next";
 import { menuItemVariants } from "@/motions/header";
 import { PHOTOS_ORDER } from "@/constants/photos";
 
-export const FullScreenGallery = () => {
+const FullScreenGalleryInner = () => {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -42,7 +42,7 @@ export const FullScreenGallery = () => {
 
   const photoId = searchParams.get("id");
 
-  const openPreviousPhoto = () => {
+  const openPreviousPhoto = useCallback(() => {
     if (photoId === null) {
       return;
     }
@@ -55,8 +55,9 @@ export const FullScreenGallery = () => {
       ];
 
     updateSearchParam(previousPhotoId);
-  };
-  const openNextPhoto = () => {
+  }, [photoId]);
+
+  const openNextPhoto = useCallback(() => {
     if (photoId === null) {
       return;
     }
@@ -66,7 +67,7 @@ export const FullScreenGallery = () => {
     const nextPhotoId = PHOTOS_ORDER[(photoIndex + 1) % PHOTOS_ORDER.length];
 
     updateSearchParam(nextPhotoId);
-  };
+  }, [photoId]);
 
   useEffect(() => {
     function handleKeydown(event: KeyboardEvent) {
@@ -85,7 +86,7 @@ export const FullScreenGallery = () => {
     return () => {
       window.removeEventListener("keydown", handleKeydown);
     };
-  }, [router, photoId]);
+  }, [router, photoId, openPreviousPhoto, openNextPhoto]);
 
   if (photoId === null) {
     return null;
@@ -151,5 +152,13 @@ export const FullScreenGallery = () => {
         </DialogPanel>
       </div>
     </Dialog>
+  );
+};
+
+export const FullScreenGallery = () => {
+  return (
+    <Suspense>
+      <FullScreenGalleryInner />
+    </Suspense>
   );
 };

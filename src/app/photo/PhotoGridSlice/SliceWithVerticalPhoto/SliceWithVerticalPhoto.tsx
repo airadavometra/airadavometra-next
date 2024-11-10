@@ -1,5 +1,4 @@
 import { PhotoInfo } from "@/types/photoInfo";
-import classNames from "classnames";
 import React, { FunctionComponent } from "react";
 import s from "./SliceWithVerticalPhoto.module.css";
 import { Photo } from "../Photo/Photo";

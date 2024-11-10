@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useCallback } from "react";
+import { FC, Suspense, useCallback } from "react";
 import s from "./Photo.module.css";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import classNames from "classnames";
@@ -18,7 +18,7 @@ type PhotoItemProps = {
   photoClassName: string;
 };
 
-export const Photo: FC<PhotoItemProps> = ({
+const PhotoInner: FC<PhotoItemProps> = ({
   src,
   alt,
   photoId,
@@ -80,5 +80,13 @@ export const Photo: FC<PhotoItemProps> = ({
         <VisuallyHidden>Open this photo full screen</VisuallyHidden>
       </motion.button>
     </motion.div>
+  );
+};
+
+export const Photo: FC<PhotoItemProps> = (props) => {
+  return (
+    <Suspense>
+      <PhotoInner {...props} />
+    </Suspense>
   );
 };

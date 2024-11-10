@@ -65,33 +65,4 @@ export const SkillItemTooltipWrapper: FC<SkillItemTooltipWrapperProps> = ({
       </>
     </Popover>
   );
-  // return (
-  //   <Tooltip.Provider delayDuration={200}>
-  //     <Tooltip.Root defaultOpen={false} open={open} onOpenChange={setOpen}>
-  //       <Tooltip.Trigger className={s.tooltipTrigger}>
-  //         {trigger}
-  //       </Tooltip.Trigger>
-  //       <Tooltip.Portal forceMount>
-  //         <AnimatePresence initial={false}>
-  //           {open && (
-  //             <TooltipContent
-  //               forceMount
-  //               className={s.tooltip}
-  //               side="bottom"
-  //               initial={{ opacity: 0 }}
-  //               animate={{ opacity: 1 }}
-  //               exit={{ opacity: 0 }}
-  //               //variants={tooltipVariants}
-  //               //initial="hidden"
-  //               //animate="visible"
-  //               //exit="exit"
-  //             >
-  //               {content}
-  //             </TooltipContent>
-  //           )}
-  //         </AnimatePresence>
-  //       </Tooltip.Portal>
-  //     </Tooltip.Root>
-  //   </Tooltip.Provider>
-  // );
 };

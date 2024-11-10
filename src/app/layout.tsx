@@ -19,10 +19,11 @@ export const metadata: Metadata = {
     "software",
     "engineer",
   ],
+  metadataBase: new URL("https://www.airadavometra.space/"),
   openGraph: {
     locale: "en_US",
     type: "website",
-    url: "https://www.airadavometra.space/",
+    url: new URL("https://www.airadavometra.space/"),
     title: "Daria Artemova",
     description: "Daria Artemova personal website",
     siteName: "Daria Artemova personal website",
