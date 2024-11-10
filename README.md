@@ -13,5 +13,5 @@ My personal website with portfolio, CV, photo and video gallery and contacts
 
 ## Contribution Guidelines
 
-Since it's my personal website, I don't accept contributions. Though if you want to repost a bug or suggest an improvement - please create an issue, I'll appreciate it.
+Since it's my personal website, I don't accept contributions. Though if you want to report a bug or suggest an improvement - please create an issue, I'll appreciate it.
 
