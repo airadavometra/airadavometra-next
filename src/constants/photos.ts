@@ -794,7 +794,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h80.jpg",
     photoId: "h80",
     isVertical: false,
-    alt: "Russi, Kamchatka. A winding path through green hills leading into the foggy distance, with mountains partially covered by clouds.",
+    alt: "Russia, Kamchatka. A winding path through green hills leading into the foggy distance, with mountains partially covered by clouds.",
   },
   {
     bigPath: "/photos/big/h81.jpg",
@@ -802,7 +802,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h81.jpg",
     photoId: "h81",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Ngorongoro. A buffalo with large, curved horns standing in a grassy field and looking directly at the camera.",
   },
   {
     bigPath: "/photos/big/h82.jpg",
@@ -810,7 +810,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h82.jpg",
     photoId: "h82",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Kamchatka. A cityscape with a snow-capped mountain in the background under a clear sky.",
   },
   {
     bigPath: "/photos/big/h83.jpg",
@@ -818,7 +818,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h83.jpg",
     photoId: "h83",
     isVertical: false,
-    alt: "",
+    alt: "A stingray swimming gracefully in an aquarium with a deep blue background and other fish in the distance.",
   },
   {
     bigPath: "/photos/big/h84.jpg",
@@ -826,7 +826,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h84.jpg",
     photoId: "h84",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Moscow. People walking and gathering near Lenin's Mausoleum in Red Square with trees and historical architecture in the background.",
   },
   {
     bigPath: "/photos/big/h85.jpg",
@@ -834,7 +834,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h85.jpg",
     photoId: "h85",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Serengeti. A lioness sitting on a grassy plain, gazing into the distance with a hazy mountain in the background.",
   },
   {
     bigPath: "/photos/big/h86.jpg",
@@ -842,7 +842,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h86.jpg",
     photoId: "h86",
     isVertical: false,
-    alt: "",
+    alt: "Germany, Berlin Zoo. Three white wolves howling in unison while standing on rocks in an enclosure.",
   },
   {
     bigPath: "/photos/big/h87.jpg",
@@ -850,7 +850,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h87.jpg",
     photoId: "h87",
     isVertical: false,
-    alt: "",
+    alt: "Portugal, Porto. Black and white photo of an empty beach with a lifeguard post and dramatic clouds over the ocean.",
   },
   {
     bigPath: "/photos/big/h88.jpg",
@@ -858,7 +858,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h88.jpg",
     photoId: "h88",
     isVertical: false,
-    alt: "",
+    alt: "Portugal, Porto. A scenic view of a hillside city with colorful buildings and greenery, set against a cloudy sky.",
   },
   {
     bigPath: "/photos/big/h89.jpg",
@@ -866,7 +866,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h89.jpg",
     photoId: "h89",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Ngorongoro. An elephant holding a leafy branch in its trunk while standing amidst lush greenery.",
   },
   {
     bigPath: "/photos/big/h90.jpg",
@@ -874,7 +874,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h90.jpg",
     photoId: "h90",
     isVertical: false,
-    alt: "",
+    alt: "Portugal, Porto. A street view at night with light trails from passing cars and illuminated historic buildings.",
   },
   {
     bigPath: "/photos/big/h91.jpg",
@@ -882,7 +882,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h91.jpg",
     photoId: "h91",
     isVertical: false,
-    alt: "",
+    alt: "Portugal, Cintra. A path winds through a dense forest shrouded in fog, with tall trees and large rocks adding to the mysterious atmosphere.",
   },
   {
     bigPath: "/photos/big/h92.jpg",
@@ -890,7 +890,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h92.jpg",
     photoId: "h92",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania. Two baboons interact playfully on the branch of a tall tree surrounded by green leaves.",
   },
   {
     bigPath: "/photos/big/h93.jpg",
@@ -898,7 +898,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h93.jpg",
     photoId: "h93",
     isVertical: false,
-    alt: "",
+    alt: "Crimea. Rugged cliffs in the shape of a rhino rise sharply by a shimmering sea, under a bright, clear blue sky.",
   },
   {
     bigPath: "/photos/big/h94.jpg",
@@ -906,7 +906,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h94.jpg",
     photoId: "h94",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Kamchatka. Ocean waves rise and fall, with a small rock formation visible on the horizon against a serene sky.",
   },
   {
     bigPath: "/photos/big/h95.jpg",
@@ -914,7 +914,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h95.jpg",
     photoId: "h95",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Ngorongoro. A group of flamingos stands and feeds in a wetland, surrounded by lush greenery and distant hills.",
   },
   {
     bigPath: "/photos/big/h96.jpg",
@@ -922,7 +922,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h96.jpg",
     photoId: "h96",
     isVertical: false,
-    alt: "",
+    alt: "Portugal, Cabo da Roca. A view of a rugged coastline, with large waves crashing against jagged rocks, under a partly cloudy sky.",
   },
   {
     bigPath: "/photos/big/h97.jpg",
@@ -930,7 +930,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h97.jpg",
     photoId: "h97",
     isVertical: false,
-    alt: "",
+    alt: "Portugal, Lisbon. A black and white photo capturing the blurred movement of people walking out of a subway station.",
   },
   {
     bigPath: "/photos/big/h98.jpg",
@@ -938,7 +938,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h98.jpg",
     photoId: "h98",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Tarangire. An antelope stands protectively over its new born in tall grass, surrounded by natural vegetation.",
   },
   {
     bigPath: "/photos/big/h99.jpg",
@@ -946,7 +946,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h99.jpg",
     photoId: "h99",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Anapa. Stacks of carefully balanced stones create cairns on a beach, with the sun filtering through dramatic clouds.",
   },
   {
     bigPath: "/photos/big/h100.jpg",
@@ -954,7 +954,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h100.jpg",
     photoId: "h100",
     isVertical: false,
-    alt: "",
+    alt: "The upper half of a crocodile is visible as it swims just beneath the water surface, displaying sharp teeth.",
   },
   {
     bigPath: "/photos/big/h101.jpg",
@@ -962,7 +962,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h101.jpg",
     photoId: "h101",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Moscow. A raven flying in a cloudy sky above leafless trees, with a lone evergreen tree standing tall.",
   },
   {
     bigPath: "/photos/big/h102.jpg",
@@ -970,7 +970,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h102.jpg",
     photoId: "h102",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Kamchatka. A scenic view of a wide sea, with ships in the foreground and a majestic, snow-capped mountain in the background.",
   },
   {
     bigPath: "/photos/big/h103.jpg",
@@ -978,7 +978,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h103.jpg",
     photoId: "h103",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Serengeti. A giraffe gracefully walking across a grassy plain, with scattered trees and a light sky.",
   },
   {
     bigPath: "/photos/big/h104.jpg",
@@ -986,7 +986,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h104.jpg",
     photoId: "h104",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Ural, Iremel. A misty mountain scene with rocky terrain and pine trees, creating a mysterious atmosphere.",
   },
   {
     bigPath: "/photos/big/h105.jpg",
@@ -994,7 +994,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h105.jpg",
     photoId: "h105",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Kamchatka. A mother bear playfully interacting with two cubs in shallow water.",
   },
   {
     bigPath: "/photos/big/h106.jpg",
@@ -1002,7 +1002,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h106.jpg",
     photoId: "h106",
     isVertical: false,
-    alt: "",
+    alt: "Portugal, Porto. A beautiful sunset view over a river cityscape, with the sun casting a warm glow and a bird flying in the sky.",
   },
   {
     bigPath: "/photos/big/h107.jpg",
@@ -1010,7 +1010,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h107.jpg",
     photoId: "h107",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Tarangire. A group of giraffes, including a tall adult and younger ones, standing and grazing in a grassy field surrounded by trees.",
   },
 ];
 
