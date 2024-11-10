@@ -7,7 +7,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v0.jpg",
     photoId: "v0",
     isVertical: true,
-    alt: "",
+    alt: "Russia, Anapa. A colorful, large Ferris wheel glows brightly in the dark, showcasing a vivid display of multicolored lights that create a mesmerizing spiral effect",
   },
   {
     bigPath: "/photos/big/v1.jpg",
@@ -15,7 +15,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v1.jpg",
     photoId: "v1",
     isVertical: true,
-    alt: "",
+    alt: "The Netherlands, Amsterdam. A vertical arrangement of petri dishes, each containing unique patterns and growths of mold and fungi, seen under display lights.",
   },
   {
     bigPath: "/photos/big/v2.jpg",
@@ -23,7 +23,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v2.jpg",
     photoId: "v2",
     isVertical: true,
-    alt: "",
+    alt: "Portugal, Lisbon. A tall palm tree with sparse leaves stands prominently against a clear blue sky, symbolizing simplicity and tropical vibes.",
   },
   {
     bigPath: "/photos/big/v3.jpg",
@@ -31,7 +31,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v3.jpg",
     photoId: "v3",
     isVertical: true,
-    alt: "",
+    alt: "A detailed view of an octopus floating in a blue aquarium tank, showcasing its tentacles with visible suction cups.",
   },
   {
     bigPath: "/photos/big/v4.jpg",
@@ -39,7 +39,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v4.jpg",
     photoId: "v4",
     isVertical: true,
-    alt: "",
+    alt: "Russia, Kamchatka. A majestic snow-covered mountain mirrored perfectly in the still water below, under a partly cloudy sky.",
   },
   {
     bigPath: "/photos/big/v5.jpg",
@@ -47,7 +47,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v5.jpg",
     photoId: "v5",
     isVertical: true,
-    alt: "",
+    alt: "Three glowing jellyfish float gracefully in dark water, their delicate tentacles trailing behind them.",
   },
   {
     bigPath: "/photos/big/v6.jpg",
@@ -55,7 +55,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v6.jpg",
     photoId: "v6",
     isVertical: true,
-    alt: "",
+    alt: "Tanzania. A small vervet monkey sits upright on a tree stump, looking curiously at the camera in a natural setting.",
   },
   {
     bigPath: "/photos/big/v7.jpg",
@@ -63,7 +63,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v7.jpg",
     photoId: "v7",
     isVertical: true,
-    alt: "",
+    alt: "Russia, Kamchatka. A thin waterfall cascades down a jagged, rocky canyon, surrounded by a rugged and barren landscape with patches of snow.",
   },
   {
     bigPath: "/photos/big/v8.jpg",
@@ -71,7 +71,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v8.jpg",
     photoId: "v8",
     isVertical: true,
-    alt: "",
+    alt: "Portugal, Cintra. A narrow, winding path lined with fallen leaves cuts through a forest blanketed in mist, creating a serene and mysterious atmosphere.",
   },
   {
     bigPath: "/photos/big/v9.jpg",
@@ -79,7 +79,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v9.jpg",
     photoId: "v9",
     isVertical: true,
-    alt: "",
+    alt: "Tanzania, Arusha. A black-and-white colobus monkey sits among the branches, its long white tail hanging down as it gazes out thoughtfully.",
   },
   {
     bigPath: "/photos/big/v10.jpg",
@@ -87,7 +87,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v10.jpg",
     photoId: "v10",
     isVertical: true,
-    alt: "",
+    alt: "A close-up of a multicolored Munchkin cat sitting on a ledge against a vibrant orange background, looking alert and slightly off to the side.",
   },
   {
     bigPath: "/photos/big/v11.jpg",
@@ -95,7 +95,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v11.jpg",
     photoId: "v11",
     isVertical: true,
-    alt: "",
+    alt: "The Netherlands, Zaanse Schans. A black-and-white photo of traditional windmills in an open landscape with a body of water in the foreground.",
   },
   {
     bigPath: "/photos/big/v12.jpg",
@@ -103,7 +103,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v12.jpg",
     photoId: "v12",
     isVertical: true,
-    alt: "",
+    alt: "Russia, Kamchatka. A portrait of a woman wearing traditional Itelmen attire, adorned with intricate beaded headwear, standing in a grassy field.",
   },
   {
     bigPath: "/photos/big/v13.jpg",
@@ -111,7 +111,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v13.jpg",
     photoId: "v13",
     isVertical: true,
-    alt: "",
+    alt: "Russia, Anapa. A seagull standing on a rock, its beak open as if calling out, with a blurred background of rocky terrain.",
   },
   {
     bigPath: "/photos/big/v14.jpg",
@@ -119,7 +119,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v14.jpg",
     photoId: "v14",
     isVertical: true,
-    alt: "",
+    alt: "Russia, Anapa. A striking sunset behind silhouetted thatched beach umbrellas, with the sun casting a warm glow over the sea.",
   },
   {
     bigPath: "/photos/big/v15.jpg",
@@ -127,7 +127,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v15.jpg",
     photoId: "v15",
     isVertical: true,
-    alt: "",
+    alt: "Russia, Moscow. The view of a grand indoor shopping mall with an arched ceiling lit by hundreds of small lights, featuring multiple floors and bustling shoppers.",
   },
   {
     bigPath: "/photos/big/v16.jpg",
@@ -135,7 +135,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v16.jpg",
     photoId: "v16",
     isVertical: true,
-    alt: "",
+    alt: "Tanzania. A Maasai man wrapped in a blue checked robe, holding a wooden staff, standing outside with trees and open land in the background.",
   },
   {
     bigPath: "/photos/big/v17.jpg",
@@ -143,7 +143,7 @@ export const VERTICAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/v17.jpg",
     photoId: "v17",
     isVertical: true,
-    alt: "",
+    alt: "Russia, Kamchatka. A snow-covered mountain partially obscured by clouds, reflected in a tranquil body of water.",
   },
 ];
 
