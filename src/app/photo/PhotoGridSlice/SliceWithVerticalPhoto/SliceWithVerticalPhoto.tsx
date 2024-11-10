@@ -20,6 +20,7 @@ export const SliceWithVerticalPhoto: FunctionComponent<
         photoClassName={s.verticalPhoto}
         src={verticalPhoto.bigPath}
         photoId={verticalPhoto.photoId}
+        alt={verticalPhoto.alt}
       />
       {horizontalPhotos.map((photo) => (
         <Photo
@@ -27,6 +28,7 @@ export const SliceWithVerticalPhoto: FunctionComponent<
           photoClassName={s.horizontalPhoto}
           src={photo.bigPath}
           photoId={photo.photoId}
+          alt={photo.alt}
         />
       ))}
     </div>

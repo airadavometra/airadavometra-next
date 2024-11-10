@@ -13,3 +13,8 @@
   color: var(--yellow);
   box-shadow: inset 6.5em 0 0 0 var(--black);
 }
+@media (prefers-reduced-motion) {
+  .download {
+    transition: none;
+  }
+}

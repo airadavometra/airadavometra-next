@@ -4,4 +4,5 @@ export type PhotoInfo = {
   smallPath: string;
   photoId: string;
   isVertical: boolean;
+  alt: string;
 };

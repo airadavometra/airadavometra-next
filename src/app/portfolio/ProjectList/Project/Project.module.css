@@ -97,3 +97,8 @@
     font-weight: 500;
   }
 }
+@media (prefers-reduced-motion) {
+  .description a:before {
+    transition: none;
+  }
+}

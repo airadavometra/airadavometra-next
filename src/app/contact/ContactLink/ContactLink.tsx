@@ -20,14 +20,14 @@ export const ContactLink: FC<ContactLinkProps> = ({
   return link ? (
     <ContactLinkMotionWrapper>
       <Link href={link} className={s.link}>
-        <Logo className={s.linkLogo} />
+        <Logo className={s.linkLogo} aria-hidden />
         {text}
       </Link>
     </ContactLinkMotionWrapper>
   ) : value ? (
     <ContactLinkMotionWrapper>
       <EmailButton email={value}>
-        <Logo className={s.linkLogo} />
+        <Logo className={s.linkLogo} aria-hidden />
         {text}
       </EmailButton>
     </ContactLinkMotionWrapper>

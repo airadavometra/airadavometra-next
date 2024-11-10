@@ -12,6 +12,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 
 type PhotoItemProps = {
   src: string;
+  alt: string;
   photoId: string;
   containerClassName?: string;
   photoClassName: string;
@@ -19,6 +20,7 @@ type PhotoItemProps = {
 
 export const Photo: FC<PhotoItemProps> = ({
   src,
+  alt,
   photoId,
   containerClassName,
   photoClassName,
@@ -69,7 +71,7 @@ export const Photo: FC<PhotoItemProps> = ({
           // onLoad={() => setTimeout(() => setShowPlaceholder(false), 2000)}
           onContextMenu={(e) => e.preventDefault()}
           src={src}
-          alt="photo"
+          alt={alt}
           loading="lazy"
           width={0}
           height={0}

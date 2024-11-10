@@ -12,7 +12,7 @@ export const GithubLink = () => {
       <motion.div variants={githubLinkVariants} whileHover="hover">
         <Link href="https://github.com/airadavometra" className={s.link}>
           Feel free to check out my github
-          <Github className={s.logo} />
+          <Github className={s.logo} aria-hidden />
         </Link>
       </motion.div>
     </section>

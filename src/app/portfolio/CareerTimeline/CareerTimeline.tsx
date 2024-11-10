@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useEffect, useState } from "react";
+import { Fragment } from "react";
 import s from "./CareerTimeline.module.css";
 import { CAREER_TIMELINE } from "@/constants/careerTimeline";
 import { Expand } from "@/icons/Expand";
@@ -17,12 +17,6 @@ import {
 import classNames from "classnames";
 
 export const CareerTimeline = () => {
-  const [defaultValue, setDefaultValue] = useState<string[]>();
-
-  useEffect(() => {
-    setTimeout(() => setDefaultValue([CAREER_TIMELINE[0].title]), 500);
-  }, []);
-
   return (
     <section className={s.section}>
       <h1 className={s.sectionTitle}>Career Path</h1>

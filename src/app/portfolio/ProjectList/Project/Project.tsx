@@ -10,7 +10,6 @@ import {
   projectPhotoLinkVariants,
   projectTagsVariants,
 } from "@/motions/portfolio";
-import { VisuallyHidden } from "@/components/VisuallyHidden/VisuallyHidden";
 import ReactMarkdown from "react-markdown";
 import Link from "next/link";
 import classNames from "classnames";
@@ -46,7 +45,6 @@ export const Project: FC<ProjectProps> = ({ project }) => {
             sizes="100vw"
             aria-hidden
           />
-          <VisuallyHidden>{project.name}</VisuallyHidden>
         </Link>
       </motion.div>
       <div className={s.descriptionContainer}>

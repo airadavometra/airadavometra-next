@@ -12,12 +12,13 @@ export const SliceHorizontalPhotos: FC<SliceHorizontalPhotosProps> = ({
 }) => {
   return (
     <div className={s.pattern}>
-      {horizontalPhotos.map((item) => (
+      {horizontalPhotos.map((photo) => (
         <Photo
-          key={item.photoId}
+          key={photo.photoId}
           photoClassName={s.horizontalPhoto}
-          src={item.bigPath}
-          photoId={item.photoId}
+          src={photo.bigPath}
+          photoId={photo.photoId}
+          alt={photo.alt}
         />
       ))}
     </div>

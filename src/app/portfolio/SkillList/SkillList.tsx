@@ -19,7 +19,7 @@ export const SkillList = () => {
                     content={logoAlt}
                     trigger={
                       <SkillItemMotionWrapper>
-                        <Logo className={s.icon} />
+                        <Logo className={s.icon} aria-hidden />
                         <VisuallyHidden>{logoAlt}</VisuallyHidden>
                       </SkillItemMotionWrapper>
                     }
