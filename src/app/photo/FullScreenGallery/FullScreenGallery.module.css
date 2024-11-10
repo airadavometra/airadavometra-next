@@ -1,0 +1,80 @@
+.dialog {
+  position: fixed;
+  inset: 0;
+}
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--black-transparent);
+}
+.panelContainer {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  inset: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  padding: var(--spacing-12);
+  position: absolute;
+  background-color: var(--black-transparent);
+  border-radius: 100px;
+}
+.button.close {
+  top: var(--spacing-16);
+  right: var(--spacing-16);
+}
+.button.previous {
+  margin: auto;
+  height: fit-content;
+  top: 0;
+  bottom: 0;
+  left: var(--spacing-16);
+}
+.button.next {
+  margin: auto;
+  height: fit-content;
+  top: 0;
+  bottom: 0;
+  right: var(--spacing-16);
+}
+.icon {
+  width: 2rem;
+  height: 2rem;
+  stroke: var(--white);
+}
+.icon.previous {
+  margin: auto;
+}
+.icon.next {
+  margin: auto;
+}
+.photoWrapper {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.photoWrapper.horisontal {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+.photoWrapper.vertical {
+  width: auto;
+  height: 100%;
+  aspect-ratio: 2 / 3;
+}
+.photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
