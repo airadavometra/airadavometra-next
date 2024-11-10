@@ -722,7 +722,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h71.jpg",
     photoId: "h71",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Kamchatka. A person standing on a grassy field taking photos of a mountain landscape with dramatic clouds at sunset.",
   },
   {
     bigPath: "/photos/big/h72.jpg",
@@ -730,7 +730,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h72.jpg",
     photoId: "h72",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Tarangire. A hyena standing on a dirt path, looking directly at the camera with a grassy backdrop.",
   },
   {
     bigPath: "/photos/big/h73.jpg",
@@ -738,7 +738,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h73.jpg",
     photoId: "h73",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania. A group of Maasai people wearing traditional red and blue clothing, smiling.",
   },
   {
     bigPath: "/photos/big/h74.jpg",
@@ -746,7 +746,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h74.jpg",
     photoId: "h74",
     isVertical: false,
-    alt: "",
+    alt: "A school of fish swimming together in clear blue water.",
   },
   {
     bigPath: "/photos/big/h75.jpg",
@@ -754,7 +754,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h75.jpg",
     photoId: "h75",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Zanzibar. A sailboat on the ocean with the sun setting in the background, casting a golden glow over the water and a pier in the foreground.",
   },
   {
     bigPath: "/photos/big/h76.jpg",
@@ -762,7 +762,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h76.jpg",
     photoId: "h76",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Kamchatka. A close-up view of a snow-capped mountain peak with wisps of clouds around it.",
   },
   {
     bigPath: "/photos/big/h77.jpg",
@@ -770,7 +770,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h77.jpg",
     photoId: "h77",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Ngorongoro. A herd of wildebeests grazing on a grassy plain with a mountain range and low-lying clouds in the background.",
   },
   {
     bigPath: "/photos/big/h78.jpg",
@@ -778,7 +778,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h78.jpg",
     photoId: "h78",
     isVertical: false,
-    alt: "",
+    alt: "Tanzania, Serengeti. Black and white image of a bird perched on the branch of a bare tree against a cloudy sky.",
   },
   {
     bigPath: "/photos/big/h79.jpg",
@@ -786,7 +786,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h79.jpg",
     photoId: "h79",
     isVertical: false,
-    alt: "",
+    alt: "Russia, Kamchatka. A bear cub sitting on the shore, looking out at the water with a calm expression.",
   },
   {
     bigPath: "/photos/big/h80.jpg",
@@ -794,7 +794,7 @@ export const HORIZONTAL_PHOTOS: PhotoInfo[] = [
     smallPath: "/photos/small/h80.jpg",
     photoId: "h80",
     isVertical: false,
-    alt: "",
+    alt: "Russi, Kamchatka. A winding path through green hills leading into the foggy distance, with mountains partially covered by clouds.",
   },
   {
     bigPath: "/photos/big/h81.jpg",
