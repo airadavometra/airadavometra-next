@@ -68,7 +68,6 @@ const PhotoInner: FC<PhotoItemProps> = ({
       >
         <Image
           className={classNames(s.photo, photoClassName)}
-          // onLoad={() => setTimeout(() => setShowPlaceholder(false), 2000)}
           onContextMenu={(e) => e.preventDefault()}
           src={src}
           alt={alt}

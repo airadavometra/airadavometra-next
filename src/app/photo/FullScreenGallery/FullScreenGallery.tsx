@@ -113,7 +113,6 @@ const FullScreenGalleryInner = () => {
         >
           <Image
             className={s.photo}
-            // onLoad={() => setTimeout(() => setShowPlaceholder(false), 2000)}
             onContextMenu={(e) => e.preventDefault()}
             src={`/photos/big/${photoId}.jpg`}
             alt="photo"

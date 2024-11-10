@@ -11,7 +11,6 @@ export const VideoItem: FC<VideoItemProps> = ({ src }) => {
       <iframe
         className={s.video}
         src={src}
-        // onLoad={() => setTimeout(() => setShowPlaceholder(false), 2000)}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
