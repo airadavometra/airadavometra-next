@@ -2,10 +2,14 @@ import { MainPageLink } from "@/components/MainPageLink/MainPageLink";
 import s from "./page.module.css";
 import { WidthContainer } from "@/components/WidthContainer/WidthContainer";
 import Image from "next/image";
+import { VisuallyHidden } from "@/components/VisuallyHidden/VisuallyHidden";
 
 export default function HomePage() {
   return (
     <WidthContainer>
+      <VisuallyHidden>
+        <h1>About me</h1>
+      </VisuallyHidden>
       <section className={s.section}>
         <div className={s.description}>
           <p className={s.boldText}>

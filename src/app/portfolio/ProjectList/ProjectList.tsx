@@ -5,7 +5,7 @@ import { Project } from "./Project/Project";
 export const ProjectList = () => {
   return (
     <section className={s.section}>
-      <h1 className={s.sectionTitle}>Projects</h1>
+      <h2 className={s.sectionTitle}>Projects</h2>
       <ul className={s.projectList}>
         {PROJECTS.map((project) => (
           <li key={project.name}>

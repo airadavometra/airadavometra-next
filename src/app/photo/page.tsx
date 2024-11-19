@@ -3,6 +3,7 @@ import { HORIZONTAL_PHOTOS, VERTICAL_PHOTOS } from "@/constants/photos";
 import { PhotoGridSlice } from "@/app/photo/PhotoGridSlice/PhotoGridSlice";
 import { Metadata } from "next";
 import { FullScreenGallery } from "./FullScreenGallery/FullScreenGallery";
+import { VisuallyHidden } from "@/components/VisuallyHidden/VisuallyHidden";
 
 export const metadata: Metadata = {
   title: "Daria Artemova - Photo gallery",
@@ -14,6 +15,9 @@ export default function PhotoPage() {
 
   return (
     <>
+      <VisuallyHidden>
+        <h1>Photo gallery</h1>
+      </VisuallyHidden>
       <section className={s.section}>
         {Array(numberOfGroups)
           .fill("")

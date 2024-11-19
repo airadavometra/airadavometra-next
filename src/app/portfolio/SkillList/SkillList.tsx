@@ -7,7 +7,7 @@ import { SkillItemTooltipWrapper } from "./SkillItemTooltipWrapper";
 export const SkillList = () => {
   return (
     <section className={s.skillSection}>
-      <h1 className={s.sectionTitle}>Skills</h1>
+      <h2 className={s.sectionTitle}>Skills</h2>
       <ul className={s.skillList}>
         {SKILLS.map((item) => (
           <li className={s.skillItem} key={item.skillName}>
