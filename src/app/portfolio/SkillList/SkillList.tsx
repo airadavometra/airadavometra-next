@@ -11,7 +11,7 @@ export const SkillList = () => {
       <ul className={s.skillList}>
         {SKILLS.map((item) => (
           <li className={s.skillItem} key={item.skillName}>
-            <h2 className={s.skillTitle}>{item.skillName}</h2>
+            <h3 className={s.skillTitle}>{item.skillName}</h3>
             <ul className={s.iconList}>
               {item.skillLogos.map(({ logo: Logo, logoAlt }) => (
                 <li key={logoAlt}>

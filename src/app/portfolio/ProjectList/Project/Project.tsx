@@ -21,13 +21,13 @@ type ProjectProps = {
 export const Project: FC<ProjectProps> = ({ project }) => {
   return (
     <div className={s.projectContainer}>
-      <motion.h2
+      <motion.h3
         className={classNames(s.title, s.titleMobile)}
         variants={projectLinkVariants}
         whileHover="hover"
       >
         <Link href={project.link}>{project.name}</Link>
-      </motion.h2>
+      </motion.h3>
       <motion.div
         className={s.imageWrapper}
         variants={projectPhotoLinkVariants}
@@ -48,13 +48,13 @@ export const Project: FC<ProjectProps> = ({ project }) => {
         </Link>
       </motion.div>
       <div className={s.descriptionContainer}>
-        <motion.h2
+        <motion.h3
           className={classNames(s.title, s.titleDesktop)}
           variants={projectLinkVariants}
           whileHover="hover"
         >
           <Link href={project.link}>{project.name}</Link>
-        </motion.h2>
+        </motion.h3>
         <div className={s.description}>
           {project.description.map((item, index) => (
             <ReactMarkdown key={index}>{item}</ReactMarkdown>
