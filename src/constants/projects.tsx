@@ -5,7 +5,7 @@ export const PROJECTS: ProjectInfo[] = [
     name: "Eyes That Hypnotise",
     description: [
       "Eyes That Hypnotise is a cozy, hand-drawn puzzle game I'm working on with [my partner](https://www.linkedin.com/in/vlivanoff/). I've been busy creating detailed, hand-drawn assets and designing levels that balance chill vibes with fun challenges.",
-      "If it sounds like your thing, we'd love your support — [wishlist it](https://store.steampowered.com/app/3156370/Eyes_That_Hypnotise/)!",
+      "If it sounds like your thing, we'd love your support — [play the demo and write a review](https://store.steampowered.com/app/3156370/Eyes_That_Hypnotise/)!",
     ],
     imgPath: "/projects/EyesThatHypnotise.jpg",
     link: "https://store.steampowered.com/app/3156370/Eyes_That_Hypnotise/",
