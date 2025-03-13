@@ -13,6 +13,16 @@ export const PROJECTS: ProjectInfo[] = [
     techStack: ["Unity", "Procreate"],
   },
   {
+    name: "Possum Riot",
+    description: [
+      "A simple yet functional website for our indie studio, designed to be easy to update as our studio grows. The website features game pages, a presskit with downloadable assets, FAQ, and links to our socials, helping us connect with players and industry professionals.",
+    ],
+    imgPath: "/projects/PossumRiot.png",
+    link: "https://possumriot.com/",
+    githubLink: "",
+    techStack: ["TypeScript", "React", "Vite"],
+  },
+  {
     name: "Just a planner",
     description: [
       "After searching for the perfect planning tool, I decided to create my own, inspired by [Tweek](https://tweek.so/) but tailored to fit my needs.",
