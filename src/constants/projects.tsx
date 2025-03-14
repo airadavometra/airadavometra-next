@@ -4,8 +4,8 @@ export const PROJECTS: ProjectInfo[] = [
   {
     name: "Eyes That Hypnotise",
     description: [
-      "Eyes That Hypnotise is a cozy, hand-drawn puzzle game I'm working on with [my partner](https://www.linkedin.com/in/vlivanoff/). I've been busy creating detailed, hand-drawn assets and designing levels that balance chill vibes with fun challenges.",
-      "If it sounds like your thing, we'd love your support — [play the demo and write a review](https://store.steampowered.com/app/3156370/Eyes_That_Hypnotise/)! And stay tuned, we release in March 2025!",
+      "Eyes That Hypnotise is a cozy, hand-drawn puzzle game I created with [my partner](https://www.linkedin.com/in/vlivanoff/). I designed the levels to be both relaxing and engaging, while also crafting detailed, hand-drawn assets to bring the world to life.",
+      "The game is now available [on Steam!](https://store.steampowered.com/app/3156370/Eyes_That_Hypnotise/) If it sounds like your vibe, we'd love your support — play the game and write a review!",
     ],
     imgPath: "/projects/EyesThatHypnotise.jpg",
     link: "https://store.steampowered.com/app/3156370/Eyes_That_Hypnotise/",
