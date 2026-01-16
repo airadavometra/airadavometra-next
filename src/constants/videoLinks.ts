@@ -5,5 +5,4 @@ export const VIDEO_LINKS: string[] = [
   "https://www.youtube.com/embed/qDYJ6ewVQqY",
   "https://www.youtube.com/embed/YeFK_7b9qco",
   "https://www.youtube.com/embed/b0M5ElcKh8I",
-  "https://www.youtube.com/embed/aWFmEYVXG-A",
 ];
