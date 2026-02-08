@@ -10,7 +10,7 @@ export const DownloadCvButton = () => {
     <motion.div variants={downloadLinkVariants} animate="animate">
       <Link
         className={s.download}
-        href="/Artemova Daria CV.pdf"
+        href="/Daria Artemova CV.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >

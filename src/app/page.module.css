@@ -2,6 +2,7 @@
   width: 50%;
 }
 .description {
+  max-width: 540px;
   margin-top: var(--spacing-32);
   display: flex;
   flex-direction: column;

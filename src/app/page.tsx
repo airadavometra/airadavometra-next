@@ -13,21 +13,19 @@ export default function HomePage() {
       <section className={s.section}>
         <div className={s.description}>
           <p className={s.boldText}>
-            <span className={s.bigText}>Hey. I&apos;m Daria,</span>
-            <br />
-            a passionate web developer <br />
-            and accessibility advocate.
+            <span className={s.bigText}>Hey, I&apos;m Daria.</span>
+            <br />A passionate front-end dev, accessibility nerd,
+            <br /> and person-who-cares-about-details.
           </p>
           <p>
-            My main focus now is digital accessibility — not just meeting
-            requirements but creating experiences that feel welcoming for
-            everyone. I believe an empathetic approach and strong fundamentals
-            are the key to truly user-friendly solutions.
+            I like taking messy ideas and turning them into real shipped
+            features, working closely with designers and stakeholders along the
+            way. I care about good user experience, simple and efficient code,
+            and great teamwork.
           </p>
           <p>
             Outside work, I&apos;m enjoying indie game development with my
-            partner, crafting hand-drawn game assets. It&apos;s a lot of fun and
-            a constant learning adventure.
+            partner. It&apos;s a lot of fun and a constant learning adventure.
           </p>
           <div className={s.linksContainer}>
             <MainPageLink type="primary" href="/portfolio">
